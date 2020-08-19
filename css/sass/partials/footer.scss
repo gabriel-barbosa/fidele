@@ -1,0 +1,86 @@
+/**
+ * partials/footer
+ * ---
+ */
+
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 30px 0 75px;
+  border-top: 1px solid;
+  border-left: 1px solid;
+
+  & > div {
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+    padding: 0.2vw 0.5vw 0;
+    font-weight: 500;
+  }
+
+  .email {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .opacity-row {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    padding: 0;
+  }
+
+  .opacity-module {
+    background-color: $fideleblue;
+
+    &.opacity-10 {
+      opacity: 0.1;
+    }
+
+    &.opacity-20 {
+      opacity: 0.2;
+    }
+
+    &.opacity-30 {
+      opacity: 0.3;
+    }
+
+    &.opacity-40 {
+      opacity: 0.4;
+    }
+
+    &.opacity-50 {
+      opacity: 0.5;
+    }
+
+    &.opacity-60 {
+      opacity: 0.6;
+    }
+
+    &.opacity-70 {
+      opacity: 0.7;
+    }
+
+    &.opacity-80 {
+      opacity: 0.8;
+    }
+
+    &.opacity-90 {
+      opacity: 0.9;
+    }
+
+    &.opacity-100 {
+      opacity: 1;
+    }
+  }
+}
+
+.editions, .post-type-archive-product, .single-product, .simulateur-de-devis, .cart, .my-account, .home {
+  .footer {
+    display: none;
+  }
+}
+
+.workshops .footer {
+  margin: 0 20px 100px;
+}

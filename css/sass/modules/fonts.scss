@@ -1,0 +1,175 @@
+/**
+ * modules/fonts
+ * ---
+ * Declare fonts here
+ */
+
+
+ @font-face {
+     font-family: 'Unica77 LL';
+     src: url('fonts/Unica77LL-Thin.eot');
+     src: url('fonts/Unica77LL-Thin.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Unica77LL-Thin.woff2') format('woff2'),
+         url('fonts/Unica77LL-Thin.woff') format('woff'),
+         url('fonts/Unica77LL-Thin.ttf') format('truetype'),
+         url('fonts/Unica77LL-Thin.svg#Unica77LL-Thin') format('svg');
+     font-weight: 200;
+     font-style: normal;
+ }
+
+ @font-face {
+     font-family: 'Unica77 LL';
+     src: url('fonts/Unica77LL-ThinItalic.eot');
+     src: url('fonts/Unica77LL-ThinItalic.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Unica77LL-ThinItalic.woff2') format('woff2'),
+         url('fonts/Unica77LL-ThinItalic.woff') format('woff'),
+         url('fonts/Unica77LL-ThinItalic.ttf') format('truetype'),
+         url('fonts/Unica77LL-ThinItalic.svg#Unica77LL-ThinItalic') format('svg');
+     font-weight: 200;
+     font-style: italic;
+ }
+
+ @font-face {
+     font-family: 'Unica77 LL';
+     src: url('fonts/Unica77LL-Light.eot');
+     src: url('fonts/Unica77LL-Light.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Unica77LL-Light.woff2') format('woff2'),
+         url('fonts/Unica77LL-Light.woff') format('woff'),
+         url('fonts/Unica77LL-Light.ttf') format('truetype'),
+         url('fonts/Unica77LL-Light.svg#Unica77LL-Light') format('svg');
+     font-weight: 300;
+     font-style: normal;
+ }
+
+ @font-face {
+     font-family: 'Unica77 LL';
+     src: url('fonts/Unica77LL-LightItalic.eot');
+     src: url('fonts/Unica77LL-LightItalic.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Unica77LL-LightItalic.woff2') format('woff2'),
+         url('fonts/Unica77LL-LightItalic.woff') format('woff'),
+         url('fonts/Unica77LL-LightItalic.ttf') format('truetype'),
+         url('fonts/Unica77LL-LightItalic.svg#Unica77LL-LightItalic') format('svg');
+     font-weight: 300;
+     font-style: italic;
+ }
+
+ @font-face {
+     font-family: 'Unica77 LL';
+     src: url('fonts/Unica77LL-Regular.eot');
+     src: url('fonts/Unica77LL-Regular.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Unica77LL-Regular.woff2') format('woff2'),
+         url('fonts/Unica77LL-Regular.woff') format('woff'),
+         url('fonts/Unica77LL-Regular.ttf') format('truetype'),
+         url('fonts/Unica77LL-Regular.svg#Unica77LL-Regular') format('svg');
+     font-weight: 400;
+     font-style: normal;
+ }
+
+ @font-face {
+     font-family: 'Unica77 LL';
+     src: url('fonts/Unica77LL-Italic.eot');
+     src: url('fonts/Unica77LL-Italic.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Unica77LL-Italic.woff2') format('woff2'),
+         url('fonts/Unica77LL-Italic.woff') format('woff'),
+         url('fonts/Unica77LL-Italic.ttf') format('truetype'),
+         url('fonts/Unica77LL-Italic.svg#Unica77LL-Italic') format('svg');
+     font-weight: 400;
+     font-style: italic;
+ }
+
+ @font-face {
+     font-family: 'Unica77 LL';
+     src: url('fonts/Unica77LL-Medium.eot');
+     src: url('fonts/Unica77LL-Medium.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Unica77LL-Medium.woff2') format('woff2'),
+         url('fonts/Unica77LL-Medium.woff') format('woff'),
+         url('fonts/Unica77LL-Medium.ttf') format('truetype'),
+         url('fonts/Unica77LL-Medium.svg#Unica77LL-Medium') format('svg');
+     font-weight: 500;
+     font-style: normal;
+ }
+
+ @font-face {
+     font-family: 'Unica77 LL';
+     src: url('fonts/Unica77LL-MediumItalic.eot');
+     src: url('fonts/Unica77LL-MediumItalic.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Unica77LL-MediumItalic.woff2') format('woff2'),
+         url('fonts/Unica77LL-MediumItalic.woff') format('woff'),
+         url('fonts/Unica77LL-MediumItalic.ttf') format('truetype'),
+         url('fonts/Unica77LL-MediumItalic.svg#Unica77LL-MediumItalic') format('svg');
+     font-weight: 500;
+     font-style: italic;
+ }
+
+ @font-face {
+     font-family: 'Unica77 LL';
+     src: url('fonts/Unica77LL-Bold.eot');
+     src: url('fonts/Unica77LL-Bold.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Unica77LL-Bold.woff2') format('woff2'),
+         url('fonts/Unica77LL-Bold.woff') format('woff'),
+         url('fonts/Unica77LL-Bold.ttf') format('truetype'),
+         url('fonts/Unica77LL-Bold.svg#Unica77LL-Bold') format('svg');
+     font-weight: 700;
+     font-style: normal;
+ }
+
+ @font-face {
+     font-family: 'Unica77 LL';
+     src: url('fonts/Unica77LL-BoldItalic.eot');
+     src: url('fonts/Unica77LL-BoldItalic.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Unica77LL-BoldItalic.woff2') format('woff2'),
+         url('fonts/Unica77LL-BoldItalic.woff') format('woff'),
+         url('fonts/Unica77LL-BoldItalic.ttf') format('truetype'),
+         url('fonts/Unica77LL-BoldItalic.svg#Unica77LL-BoldItalic') format('svg');
+     font-weight: 700;
+     font-style: italic;
+ }
+
+ @font-face {
+     font-family: 'Unica77 LL';
+     src: url('fonts/Unica77LL-Black.eot');
+     src: url('fonts/Unica77LL-Black.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Unica77LL-Black.woff2') format('woff2'),
+         url('fonts/Unica77LL-Black.woff') format('woff'),
+         url('fonts/Unica77LL-Black.ttf') format('truetype'),
+         url('fonts/Unica77LL-Black.svg#Unica77LL-Black') format('svg');
+     font-weight: 800;
+     font-style: normal;
+ }
+
+ @font-face {
+     font-family: 'Unica77 LL';
+     src: url('fonts/Unica77LL-BlackItalic.eot');
+     src: url('fonts/Unica77LL-BlackItalic.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Unica77LL-BlackItalic.woff2') format('woff2'),
+         url('fonts/Unica77LL-BlackItalic.woff') format('woff'),
+         url('fonts/Unica77LL-BlackItalic.ttf') format('truetype'),
+         url('fonts/Unica77LL-BlackItalic.svg#Unica77LL-BlackItalic') format('svg');
+     font-weight: 800;
+     font-style: italic;
+ }
+
+
+ @font-face {
+     font-family: 'Unica77 LL ExtraBlack';
+     src: url('fonts/Unica77LL-ExtraBlackItalic.eot');
+     src: url('fonts/Unica77LL-ExtraBlackItalic.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Unica77LL-ExtraBlackItalic.woff2') format('woff2'),
+         url('fonts/Unica77LL-ExtraBlackItalic.woff') format('woff'),
+         url('fonts/Unica77LL-ExtraBlackItalic.ttf') format('truetype'),
+         url('fonts/Unica77LL-ExtraBlackItalic.svg#Unica77LL-ExtraBlackItalic') format('svg');
+     font-weight: 900;
+     font-style: italic;
+ }
+
+ @font-face {
+     font-family: 'Unica77 LL ExtraBlack';
+     src: url('fonts/Unica77LL-ExtraBlack.eot');
+     src: url('fonts/Unica77LL-ExtraBlack.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Unica77LL-ExtraBlack.woff2') format('woff2'),
+         url('fonts/Unica77LL-ExtraBlack.woff') format('woff'),
+         url('fonts/Unica77LL-ExtraBlack.ttf') format('truetype'),
+         url('fonts/Unica77LL-ExtraBlack.svg#Unica77LL-ExtraBlack') format('svg');
+     font-weight: 900;
+     font-style: normal;
+ }
