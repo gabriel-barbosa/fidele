@@ -8,3 +8,19 @@
   padding: 0;
   margin: 0;
 }
+
+@mixin responsive($size) {
+  @if $size == mobile {
+    @media (max-width: 480px) { @content; }
+  } @else if $size == tablet-portrait {
+    @media (max-width: 768px) { @content; }
+  } @else if $size == tablet-landscape {
+    @media (min-width: 769px) and (max-width: 991px) { @content; }
+	} @else if $size == small-desktop {
+    @media (min-width: 992px) and (max-width: 1199px) { @content; }
+  } @else if $size == desktop {
+    @media (min-width: 1200px) { @content; }
+  } @else if $size == big-desktop {
+    @media (min-width: 1800px) { @content; }
+  }
+}

@@ -16,6 +16,11 @@
 .nav {
   border: 1px solid $fideleblue;
 
+  #menu-item-258 {
+    display: none;
+    flex-grow: 1;
+  }
+
   div {
     display: flex;
   }
@@ -56,6 +61,44 @@
 
   #menu-item-42 {
     flex-grow: 1;
+  }
+}
+
+.nav-mobile {
+  opacity: 0;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  padding: 0 15px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #fff;
+  transition: all 0.3s ease;
+  font-size: var(--font-size1);
+
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  li {
+    list-style: none;
+    border-bottom: 1px solid;
+    padding-top: 1.5vw;
+
+    &.menu-item-89 {
+      border-bottom: 0;
+    }
+
+    a {
+      font-size: var(--font-size1);
+    }
+  }
+
+  .menu-item-258, .menu-item-46, .menu-item-47, .menu-item-167 {
+    display: none;
   }
 }
 
@@ -113,8 +156,29 @@
   z-index: 10;
 }
 
-.menu {}
+@include responsive(tablet-portrait) {
+  .header {
+    padding: 15px;
+  }
 
-.sub-menu {}
+  .head-title {
+    pointer-events: none; 
+    .logo {
+      width: 45vw;
+    }
 
-.menu-item {}
+    .category-icon {
+      height: 35vw;
+    }
+  }
+
+  .nav {
+    .menu-item {
+      display: none;
+    }
+
+    #menu-item-258, #menu-item-167 {
+      display: block;
+    }
+  }
+}

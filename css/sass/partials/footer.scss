@@ -73,6 +73,29 @@
       opacity: 1;
     }
   }
+
+  &.mobile {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    font-size: var(--font-size2);
+    line-height: 1.2;
+
+    & > div {
+      grid-column: span 2;
+    }
+
+    .instagram, .facebook {
+      grid-column: span 1;
+    }
+
+    .email {
+      flex-direction: column;
+    }
+
+    .opacity-row {
+      height: auto;
+    }
+  }
 }
 
 .editions, .post-type-archive-product, .single-product, .simulateur-de-devis, .cart, .my-account, .home {

@@ -90,6 +90,12 @@
 			$('.head-title').toggleClass('visible');
 		});
 
+		/* NAV MOBILE - ONCLICK SHOW HIDDEN DIV */
+		$('#menu-item-258').click(function() {
+			$(this).find('a').html('Close');
+			$('.nav-mobile').toggleClass('visible');
+		});
+
 
 		/* SIMULATEUR DE DEVIS - STEPS MENU SETUP */
 		$(".simulateur-menu .step-1").click(function() {
