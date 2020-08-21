@@ -16,7 +16,7 @@
 .nav {
   border: 1px solid $fideleblue;
 
-  #menu-item-258 {
+  #menu-item-258, #menu-item-321 {
     display: none;
     flex-grow: 1;
   }
@@ -162,7 +162,7 @@
   }
 
   .head-title {
-    pointer-events: none; 
+    pointer-events: none;
     .logo {
       width: 45vw;
     }

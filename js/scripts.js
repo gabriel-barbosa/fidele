@@ -91,7 +91,7 @@
 		});
 
 		/* NAV MOBILE - ONCLICK SHOW HIDDEN DIV */
-		$('#menu-item-258').click(function() {
+		$('#menu-item-258, #menu-item-321').click(function() {
 			$(this).find('a').html('Close');
 			$('.nav-mobile').toggleClass('visible');
 		});

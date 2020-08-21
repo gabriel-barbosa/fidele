@@ -375,7 +375,7 @@ input[type=search] {
 .nav {
   border: 1px solid #215BDF;
 }
-.nav #menu-item-258 {
+.nav #menu-item-258, .nav #menu-item-321 {
   display: none;
   flex-grow: 1;
 }
