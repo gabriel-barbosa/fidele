@@ -513,7 +513,7 @@ input[type=search] {
   .nav .menu-item {
     display: none;
   }
-  .nav #menu-item-258, .nav #menu-item-167 {
+  .nav #menu-item-258, .nav #menu-item-167, .nav #menu-item-321 {
     display: block;
   }
 }
