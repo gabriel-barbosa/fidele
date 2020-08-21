@@ -28,7 +28,7 @@ $productcounter++;
 ?>
 
 <div class="product-item nth-<?php echo $productcounter; ?>" style="z-index: <?php echo $totalproducts; ?>;">
-	<div class="background-gradient" style="background: linear-gradient(180deg, <?php the_field('background_color'); ?> 0%, transparent 100%);"></div>
+	<div class="background-gradient" style="background: linear-gradient(180deg, <?php the_field('background_color'); ?> 10%, #fff 80%); background: -moz-linear-gradient(180deg, <?php the_field('background_color'); ?> 10%, #fff 80%); background: -webkit-linear-gradient(270deg, <?php the_field('background_color'); ?> 10%, #fff 80%); background: -o-linear-gradient(180deg, <?php the_field('background_color'); ?> 10%, #fff 80%);"></div>
 	<a href="<?php the_permalink(); ?>"><img src="<?php the_post_thumbnail_url('large'); ?>" alt=""></a>
 
 	<div class="product-info" style="z-index: <?php echo $totalproducts; ?>;">

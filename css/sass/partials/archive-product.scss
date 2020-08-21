@@ -289,8 +289,32 @@
           left: 0;
           font-size: var(--font-size1);
           background: linear-gradient(0deg, #FFFFFF 80%, transparent 100%);
+          background: -webkit-linear-gradient(90deg, #FFFFFF 80%, transparent 100%);
+          background: -moz-linear-gradient(0deg, #FFFFFF 80%, transparent 100%);
+          background: -o-linear-gradient(0deg, #FFFFFF 80%, transparent 100%);
           padding: 4vw 15px 2vw;
           border-right: 0;
+
+          .more-info-wrapper {
+            padding: 10vw 15px 0;
+
+            .title {
+              font-size: var(--font-size1);
+            }
+
+            .description {
+              grid-column: span 4;
+              border-right: 0;
+              border-bottom: 1px solid;
+              padding: 2vw 0;
+            }
+
+            .details {
+              grid-column: span 4;
+              line-height: 1.2;
+              padding: 2vw 0;
+            }
+          }
         }
       }
     }
