@@ -40,7 +40,7 @@
 		    var $window = $(window);
 
 		    var docViewTop = $window.scrollTop();
-		    var docViewBottom = docViewTop + $window.height();
+		    var docViewBottom = docViewTop + $window.innerHeight();
 
 		    var elemTop = $elem.offset().top;
 		    var elemBottom = elemTop + $elem.height();
