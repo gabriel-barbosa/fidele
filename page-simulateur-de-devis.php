@@ -28,14 +28,14 @@
 			<img class="hover" src="<?php bloginfo('template_url'); ?>/img/brochures-blue.gif" alt="">
 		</div>
 
-		<div id="dos-colles" class="gif-item" data-title="Simulateur Dos Collés">
-			<img class="static" src="<?php bloginfo('template_url'); ?>/img/dos-colles.png" alt="">
-			<img class="hover" src="<?php bloginfo('template_url'); ?>/img/dos-colles-blue.gif" alt="">
-		</div>
-
 		<div id="fanzines" class="gif-item" data-title="Simulateur Fanzines">
 			<img class="static" src="<?php bloginfo('template_url'); ?>/img/fanzines.png" alt="">
 			<img class="hover" src="<?php bloginfo('template_url'); ?>/img/fanzines-blue.gif" alt="">
+		</div>
+
+		<div id="dos-colles" class="gif-item" data-title="Simulateur Dos Collés">
+			<img class="static" src="<?php bloginfo('template_url'); ?>/img/dos-colles.png" alt="">
+			<img class="hover" src="<?php bloginfo('template_url'); ?>/img/dos-colles-blue.gif" alt="">
 		</div>
 
 		<div id="spirale" class="gif-item" data-title="Simulateur Spirale">

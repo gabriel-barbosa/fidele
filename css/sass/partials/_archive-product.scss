@@ -45,6 +45,10 @@
      margin: 2vw 20px 3vw;
      font-size: var(--font-size3);;
 
+     &.mobile {
+       display: none;
+     }
+
      .cat-item {
        border-right: 1px solid;
 

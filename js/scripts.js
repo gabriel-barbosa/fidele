@@ -79,17 +79,7 @@
 		i++;
 		var thumb = $(slider.$slides[i]).data();
 		return '<a class="dot">'+i+'</a>';
-						},
-		responsive: [{
-				breakpoint: 500,
-				settings: {
-						dots: false,
-						arrows: false,
-						infinite: false,
-						slidesToShow: 2,
-						slidesToScroll: 2
-				}
-			}]
+		},
 		});
 
 		$(".product-gallery .slick-prev").text("");
@@ -149,6 +139,9 @@
 				var title = $('.step-title.current').html();
 				console.log(title);
 				$('.simulateur-header h1').html(title);
+				if ($(window).width() < 768) {
+					$('.steps li').removeClass('disabled');
+				}
 
 				/* REMOVES ARROW WHEN IT'S ON THE FINAL STEP */
 				if(currentIndex == 2) {

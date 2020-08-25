@@ -14,7 +14,13 @@
 	<div class="grid col-2">
 		<div class="simulateur-de-devis">
 			<p class="s2"><?php the_field('simulateur_de_devis'); ?></p>
+		</div>
 
+		<div class="guide-d-impression">
+			<p class="s2"><?php the_field('guide_dimpression'); ?></p>
+		</div>
+
+		<div class="simulateur-de-devis">
 			<div class="gif-item">
 				<a href="<?php bloginfo('url'); ?>/impression-riso/simulateur-de-devis">
 					<img class="static" src="<?php bloginfo('template_url'); ?>/img/simulateur.png" alt="">
@@ -24,8 +30,6 @@
 		</div>
 
 		<div class="guide-d-impression">
-			<p class="s2"><?php the_field('guide_dimpression'); ?></p>
-
 			<div class="gif-item">
 				<a href="<?php bloginfo('url'); ?>/impression-riso/guide-d-impression">
 					<img class="static" src="<?php bloginfo('template_url'); ?>/img/guide.png" alt="">

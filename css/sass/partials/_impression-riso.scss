@@ -217,16 +217,35 @@
 
  @include responsive(tablet-portrait) {
    .impression-riso {
+     .grid.col-2 {
+       grid-template-columns: repeat(1, 1fr);
+       column-gap: 15px;
+       row-gap: 15px;
+     }
+
+     .simulateur-de-devis .gif-item, .guide-d-impression .gif-item {
+       max-width: 100%;
+     }
+
      .grid.col-3.couleurs {
        grid-template-columns: repeat(1, 1fr);
        column-gap: 15px;
        row-gap: 15px;
 
+       .colour-title p {
+         padding: 1.5vw 1.5vw 0.5vw;
+       }
+
+       .form-opacity svg {
+         padding: 2vw;
+       }
+
        .colour-hex {
          font-size: 2.5vw;
 
          .hex-code, .percent-module {
-           padding-top: 0.5vw;
+           padding-top: 1vw;
+           padding-left: 0.5vw;
          }
        }
      }
