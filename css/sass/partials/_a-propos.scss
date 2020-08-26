@@ -198,6 +198,31 @@
 
 @include responsive(tablet-portrait) {
   .a-propos {
+    .wrapper {
+      overflow-x: hidden;
+    }
+
+    .header-text {
+      height: 80vh;
+      font-size: 20vw;
+      hyphens: auto;
+      word-break: break-word;
+
+      .vector.vector-1 {
+        right: 0;
+        width: 75vw;
+        top: 3vw;
+        left: initial;
+      }
+
+      .vector.vector-2 {
+        left: 0;
+        bottom: 42vw;
+        width: 52vw;
+        top: initial;
+      }
+    }
+
     section {
       margin: 25vw 0;
     }
@@ -237,6 +262,24 @@
         .image {
           border-top: 1px solid;
         }
+      }
+    }
+
+    .contact {
+      .submit-wrapper {
+        margin-top: -30vw;
+        right: -23vw;
+        position: relative;
+        background: none;
+
+        .gif-item {
+          width: 80vw;
+        }
+      }
+
+      .two-col {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 2vw;
       }
     }
   }
