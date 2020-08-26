@@ -947,6 +947,9 @@ input[type=search] {
 .simulateur-steps.step-3 .submit-hidden {
   display: none;
 }
+.simulateur-steps.step-3 .hidden {
+  display: none;
+}
 
 .calculators {
   display: none;
