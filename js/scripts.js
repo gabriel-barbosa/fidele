@@ -2,8 +2,18 @@
 
 	$(function () {
 		/* HOME - HIDE LANDING ANIMATION */
+		$(document).ready(function() {
+	    var isshow = localStorage.getItem('isshow');
+	    if (isshow== null) {
+	        localStorage.setItem('isshow', 1);
+
+	        // Show popup here
+	        $('.gradient-intro').show();
+	    }
+		});
+
 		$('.gradient-intro').click(function() {
-			$(this).addClass('hidden');
+			$(this).hide(300);
 		});
 
 		/* A PROPOS PAGE - LETTERS COLOR ON HOVER */
@@ -24,13 +34,10 @@
 		});
 
 		/* SHOP PAGE - PRODUCTS LOOP */
-		/* When the user clicks on the button,
-		toggle between hiding and showing the dropdown content */
 		$('.dropbtn').click(function() {
 		  document.getElementById("myDropdown").classList.toggle("show");
 		});
 
-		// Close the dropdown menu if the user clicks outside of it
 		window.onclick = function(event) {
 		  if (!event.target.matches('.dropbtn')) {
 		    var dropdowns = document.getElementsByClassName("dropdown-content");

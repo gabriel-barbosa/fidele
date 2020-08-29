@@ -147,16 +147,6 @@
   }
 }
 
-.bottom-gradient {
-  width: 100%;
-  height: 75px;
-  background: linear-gradient(0deg, #FF6C2F 0%, rgba(255, 255, 255, 0) 100%);
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 10;
-}
-
 @include responsive(tablet-portrait) {
   .header {
     padding: 15px;

@@ -1,5 +1,13 @@
 /* A PROPOS - PAGE */
 .a-propos {
+  .bottom-gradient {
+    display: none;
+  }
+
+  .wrapper {
+    overflow-x: hidden;
+  }
+
   .header-text {
     width: 100%;
     height: auto;
@@ -141,9 +149,11 @@
     }
 
     .submit-wrapper {
-      bottom: -6vw;
-      right: -4vw;
-      position: absolute;
+      margin-top: -13vw;
+      right: -6vw;
+      position: relative;
+      display: flex;
+      justify-content: flex-end;
 
       .submit-button {
         width: 35vw;
@@ -172,14 +182,18 @@
       .text {
         padding: 20px;
         border-right: 1px solid;
-        font-size: var(--font-size1);;
+        font-size: var(--font-size1);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
         p {
           margin-bottom: 1.5vw;
         }
 
         .map-infos {
-          font-size: var(--font-size2);;
+          font-size: var(--font-size2);
+          margin-top: 2vw;
 
           p {
             margin-bottom: 0;
@@ -267,7 +281,7 @@
 
     .contact {
       .submit-wrapper {
-        margin-top: -30vw;
+        margin-top: -38vw;
         right: -23vw;
         position: relative;
         background: none;

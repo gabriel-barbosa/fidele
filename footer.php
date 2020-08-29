@@ -7,7 +7,7 @@
 			</div>
 
 			<div class="telephone">
-				<?php the_sub_field('telephone'); ?>
+				Téléphone: <?php the_sub_field('telephone'); ?>
 			</div>
 
 			<div class="instagram">
@@ -107,6 +107,8 @@
 <?php endif; ?>
 		</div>
 		<!-- /wrapper -->
+		<div class="bottom-gradient">
+		</div>
 
 		<?php wp_footer(); ?>
 

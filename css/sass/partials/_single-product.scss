@@ -18,7 +18,7 @@ body.single-product {
 .single-product {
   overflow: hidden;
 
-  gradient {
+  .bottom-gradient {
     display: none;
   }
 
@@ -241,6 +241,14 @@ body.single-product {
   span {
     line-height: 1;
     display: flex;
+
+    bdi {
+    display: flex;
+    }
+  }
+
+  .woocommerce-Price-currencySymbol {
+    display: inherit;
   }
 
   .button-cart {

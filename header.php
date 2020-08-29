@@ -106,7 +106,4 @@
 
 				<?php endif; ?>
 			</div>
-
-			<gradient class="bottom-gradient">
-			</gradient>
 			<!-- /header -->

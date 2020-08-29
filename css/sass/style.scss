@@ -22,6 +22,7 @@
 @import "partials/impression-riso";
 @import "partials/simulateur-de-devis";
 @import "partials/guide-d-impression";
+@import "partials/workshops";
 @import "partials/a-propos";
 @import "partials/archive-product";
 @import "partials/single-product";
@@ -125,6 +126,11 @@ p.s3 {
   h3 {
     font-size: 2.5vw;
   }
+}
+
+input, textarea {
+  font-family: "Unica77 LL", sans-serif;
+  font-weight: normal;
 }
 
 .grid {
@@ -281,7 +287,7 @@ a:hover, a:focus {
 .wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output {
   border-color: $fideleblue;
   border: 1px solid;
-  padding: 4vw;
+  padding: 1vw;
   line-height: 1.2;
   margin: 2vw 0 6vw;
 }
@@ -309,6 +315,7 @@ a:hover, a:focus {
 
 .gradient-intro {
   overflow: hidden;
+  display: none;
   background-color: #fff;
   min-height: 100%;
   width: 100%;
@@ -450,6 +457,7 @@ a:hover, a:focus {
 .page, .archive {
   .page-title {
     display: flex;
+    letter-spacing: -0.1em;
 
     & > div {
       width: 50%;
@@ -459,7 +467,7 @@ a:hover, a:focus {
   .subtitle {
     font-size: var(--font-size1);
     line-height: 105%;
-    margin-top: 0.5vw;
+    margin-top: 1.5vw;
   }
 
   .content {
@@ -478,121 +486,6 @@ a:hover, a:focus {
     .page-title {
       & > div {
         width: 100%;
-      }
-    }
-  }
-}
-
-
-/* WORKSHOPS - PAGE */
-.workshops {
-  .wrapper {
-    padding: 0;
-  }
-
-  .subtitle, .row {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .head-title .category-icon {
-    height: 6.5vw;
-    width: auto;
-    margin-left: 1vw;
-    margin-top: -1vw;
-    stroke-width: 1.7;
-  }
-
-  .featured-image {
-    border-top: 1px solid;
-    border-bottom: 1px solid;
-    width: 100%;
-    height: 600px;
-    margin: 2vw 0 4vw;
-
-    img {
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  .flexible-rows {
-    .row {
-      margin-bottom: 3vw;
-      padding-bottom: 1vw;
-      border-bottom: 1px solid;
-
-      &:last-of-type {
-        border-bottom: 0;
-      }
-    }
-
-    .content {
-      font-size: var(--font-size1);;
-      line-height: 1.1;
-
-      p {
-        margin-bottom: 1.5vw;
-      }
-    }
-  }
-
-  .workshop-table {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding-left: 20px;
-    font-size: var(--font-size2);;
-    margin-bottom: 6vw;
-
-    p {
-      font-size: var(--font-size3);;
-    }
-
-    .description {
-      border-bottom: 1px solid;
-      border-right: 1px solid;
-      padding-top: 1.8vw;
-
-      &.head {
-        border-bottom: 0;
-        align-self: end;
-        padding-top: 10px;
-      }
-    }
-
-    .other-infos {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-
-      &.head {
-        div {
-          border-bottom: 0;
-          align-self: end;
-          padding-top: 10px;
-
-          &:last-of-type {
-            border-right: 0;
-          }
-        }
-      }
-
-      div {
-        border-bottom: 1px solid;
-        border-right: 1px solid;
-        padding: 1.5vw 20px 0.3vw;
-
-        &.price {
-          border-right: 0;
-        }
-      }
-
-      .subscribe {
-        grid-column: span 3;
-        padding-top: 0.5vw;
-        display: flex;
-        align-items: center;
-        padding-bottom: 0;
       }
     }
   }
@@ -625,6 +518,10 @@ a:hover, a:focus {
     tr td {
       padding: 0.5vw 0;
       line-height: 1.1;
+    }
+
+    tr td[data-title="Shipping"] {
+      max-width: 15vw;
     }
 
     .cart-subtotal {
@@ -778,7 +675,7 @@ a:hover, a:focus {
   margin: 0 0 10px;
 
   input.input-text, textarea {
-      font-size: var(--font-size2);;
+      font-size: var(--font-size2);
       line-height: 1.1;
       border: 1px solid $fideleblue;
       border-radius: 0;

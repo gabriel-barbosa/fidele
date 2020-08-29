@@ -1,4 +1,10 @@
 /* GUIDE D IMPRESSION - PAGE */
+.guide-d-impression {
+	.bottom-gradient {
+		position: relative;
+	}
+}
+
 html {
 	scroll-behavior: smooth !important;
 	scroll-padding-top: 7.9vw !important;
@@ -34,7 +40,7 @@ html {
 	font-weight: 500;
 }
 .row-content p, .row-content a, .row-content li {
-	font-size: 1.645vw;
+	font-size: var(--font-size2);
 	margin-bottom: 2vw;
 	line-height: 1.1;
 }
@@ -183,4 +189,10 @@ html {
 }
 .submenu-item span {
 	margin: 0 20px;
+}
+
+@include responsive(tablet-portrait) {
+	.row-content {
+		grid-template-columns: repeat(1, 1fr);
+	}
 }

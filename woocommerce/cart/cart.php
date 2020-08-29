@@ -135,7 +135,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 			<?php do_action( 'woocommerce_cart_contents' ); ?>
 
-			<tr>
+			<tr class="promotional-code">
 				<td colspan="2">
 					Promotional code
 				</td>

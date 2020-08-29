@@ -1,4 +1,40 @@
 /* WOOCOMMERCE CART - PAGE */
+#ship-to-different-address {
+  margin-bottom: 20px;
+}
+
+.woocommerce-form__label-for-checkbox {
+  position: relative;
+
+  span {
+    font-weight: 400;
+  }
+
+  input {
+    width: auto;
+    height: 0;
+    margin-right: 0.5vw;
+  }
+
+  input:before {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 5px 0 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 11px;
+    border: 1px solid $fideleblue;
+    background-color: transparent;
+  }
+
+  input:checked:before {
+    background-color: blue;
+  }
+}
+
 .cart {
   .woocommerce-notices-wrapper {
     .woocommerce-message {
@@ -21,6 +57,10 @@
   /* checkout */
   .wc-proceed-to-checkout {
     padding: 0 0 1vw;
+  }
+
+  .woocommerce-shipping-totals {
+    display: none !important;
   }
 }
 
@@ -64,10 +104,6 @@ body.cart, body.checkout {
   .button.hidden {
     display: none;
   }
-
-  .woocommerce-shipping-totals {
-    display: none !important;
-  }
 }
 
 .woocommerce table.shop_table {
@@ -106,6 +142,11 @@ body.cart, body.checkout {
     &:last-of-type {
       border-right: 0;
     }
+  }
+
+  tr.cart-subtotal td, tr.order-total td, tr.promotional-code td {
+    padding: 10px 20px 5px;
+    vertical-align: bottom;
   }
 
   .product-remove {

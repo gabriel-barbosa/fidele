@@ -107,6 +107,8 @@ function html5blank_header_scripts() {
             // Steps
             wp_register_script( 'steps', get_template_directory_uri() . '/js/lib/jquery.steps.js', array(), '1.1.0' );
 
+            wp_register_script( 'fittext', get_template_directory_uri() . '/js/lib/jquery.fittext.js', array(), '1.2' );
+
             // Custom scripts
             wp_register_script(
                 'html5blankscripts',
@@ -116,7 +118,8 @@ function html5blank_header_scripts() {
                     'modernizr',
                     'jquery',
                     'slick',
-                    'steps'
+                    'steps',
+                    'fittext'
                 ),
                 '1.0.0' );
 
@@ -539,3 +542,11 @@ add_filter( 'woocommerce_show_page_title', 'not_a_shop_page' );
 function not_a_shop_page() {
     return boolval();
 }
+
+function disable_shipping_calc_on_cart( $show_shipping ) {
+    if( is_cart() ) {
+        return false;
+    }
+    return $show_shipping;
+}
+add_filter( 'woocommerce_cart_ready_to_calc_shipping', 'disable_shipping_calc_on_cart', 99 );

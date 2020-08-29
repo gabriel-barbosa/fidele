@@ -1,0 +1,119 @@
+/* WORKSHOPS - PAGE */
+.workshops {
+  .bottom-gradient {
+    position: relative;
+    bottom: 0;
+    left: 0;
+  }
+
+  .wrapper {
+    padding: 0;
+  }
+
+  .subtitle, .row {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .head-title .category-icon {
+    height: 6.5vw;
+    width: auto;
+    margin-left: 1vw;
+    margin-top: -1vw;
+    stroke-width: 1.7;
+  }
+
+  .featured-image {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    width: 100%;
+    height: 50vw;
+    margin: 2vw 0 4vw;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .flexible-rows {
+    .row {
+      margin-bottom: 3vw;
+      padding-bottom: 1vw;
+      border-bottom: 1px solid;
+
+      &:last-of-type {
+        border-bottom: 0;
+      }
+    }
+
+    .content {
+      font-size: var(--font-size1);;
+      line-height: 1.1;
+
+      p {
+        margin-bottom: 1.5vw;
+      }
+    }
+  }
+
+  .workshop-table {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 20px;
+    font-size: var(--font-size2);;
+    margin-bottom: 6vw;
+
+    p {
+      font-size: var(--font-size3);;
+    }
+
+    .description {
+      border-bottom: 1px solid;
+      border-right: 1px solid;
+      padding-top: 1.8vw;
+
+      &.head {
+        border-bottom: 0;
+        align-self: end;
+        padding-top: 10px;
+      }
+    }
+
+    .other-infos {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      &.head {
+        div {
+          border-bottom: 0;
+          align-self: end;
+          padding-top: 10px;
+
+          &:last-of-type {
+            border-right: 0;
+          }
+        }
+      }
+
+      div {
+        border-bottom: 1px solid;
+        border-right: 1px solid;
+        padding: 1.5vw 20px 0.3vw;
+
+        &.price {
+          border-right: 0;
+        }
+      }
+
+      .subscribe {
+        grid-column: span 3;
+        padding-top: 0.5vw;
+        display: flex;
+        align-items: center;
+        padding-bottom: 0;
+      }
+    }
+  }
+}
