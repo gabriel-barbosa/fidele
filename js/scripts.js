@@ -130,7 +130,6 @@
 			$(this).addClass("current");
 		});
 
-
 		/* SIMULATEUR DE DEVIS - JQUERY STEPS SETUP */
 		$(".steps-wrapper").steps({
 	    headerTag: ".step-title",
@@ -336,80 +335,80 @@
 			/* NUMBER OF COPIES */
   		$('.affiches-form input.copies').val($('#affiches-calculator #ref-r2').find('.calconic--controled_input input').val());
 			/*FORMAT*/
-			$('.affiches-form .affiches-format').val($('#affiches-calculator #ref-r24').find('.rc-select-selection-selected-value').html());
+			$('.affiches-form input.affiches-format').val($('#affiches-calculator #ref-r24').find('.rc-select-selection-selected-value').html());
 			/*PAPER TYPE*/
-			$('.affiches-form .affiches-paper-type').val($('#affiches-calculator #ref-r1').find('.rc-select-selection-selected-value').html());
+			$('.affiches-form input.affiches-paper-type').val($('#affiches-calculator #ref-r1').find('.rc-select-selection-selected-value').html());
 			/*FRONT COLORS*/
-			$('.affiches-form .affiches-front-colors').val($('#affiches-calculator #ref-r3').find('.rc-slider-handle').attr('aria-valuenow'));
+			$('.affiches-form input.affiches-front-colors').val($('#affiches-calculator #ref-r3').find('.rc-slider-handle').attr('aria-valuenow'));
 			/*VERSE COLORS*/
-			$('.affiches-form .affiches-verse-colors').val($('#affiches-calculator #ref-r4').find('.rc-slider-handle').attr('aria-valuenow'));
+			$('.affiches-form input.affiches-verse-colors').val($('#affiches-calculator #ref-r4').find('.rc-slider-handle').attr('aria-valuenow'));
 			/*TOTAL HT*/
-			$('.affiches-form .price-ht-total').val($('#affiches-calculator #ref-r17').find('.result span').html());
+			$('.affiches-form input.price-ht-total').val($('#affiches-calculator #ref-r17').find('.result span').html());
 			/*TOTAL HT PER EX*/
-			$('.affiches-form .price-ht-per-ex').val($('#affiches-calculator #ref-r29').find('.result span').html());
+			$('.affiches-form input.price-ht-per-ex').val($('#affiches-calculator #ref-r29').find('.result span').html());
 			/*TOTAL TTC*/
-			$('.affiches-form .price-ttc-total').val($('#affiches-calculator #ref-r32').find('.result span').html());
+			$('.affiches-form input.price-ttc-total').val($('#affiches-calculator #ref-r32').find('.result span').html());
 			/*TOTAL TTC PER EX*/
-			$('.affiches-form .price-ttc-per-ex').val($('#affiches-calculator #ref-r33').find('.result span').html());
+			$('.affiches-form input.price-ttc-per-ex').val($('#affiches-calculator #ref-r33').find('.result span').html());
 		});
 
 		/* BROCHURES FORM - STEP 2 TO STEP 3 */
 		$(document).on("click", ".arrow.brochures", function() {
 			$('.brochures-form input.copies').val($('#brochures-calculator #ref-r2').find('.calconic--controled_input input').val());
-			$('.brochures-form .brochures-format').val($('#brochures-calculator #ref-r24').find('.rc-select-selection-selected-value').html());
-			$('.brochures-form .brochures-paper-type').val($('#brochures-calculator #ref-r1').find('.rc-select-selection-selected-value').html());
-			$('.brochures-form .brochures-front-colors').val($('#brochures-calculator #ref-r3').find('.rc-slider-handle').attr('aria-valuenow'));
-			$('.brochures-form .brochures-verse-colors').val($('#brochures-calculator #ref-r4').find('.rc-slider-handle').attr('aria-valuenow'));
-			$('.brochures-form .brochures-folding-type').val($('#brochures-calculator #ref-r32').find('.rc-select-selection-selected-value').html());
-			$('.brochures-form .price-ht-total').val($('#brochures-calculator #ref-r17').find('.result span').html());
-			$('.brochures-form .price-ht-per-ex').val($('#brochures-calculator #ref-r29').find('.result span').html());
-			$('.brochures-form .price-ttc-total').val($('#brochures-calculator #ref-r35').find('.result span').html());
-			$('.brochures-form .price-ttc-per-ex').val($('#brochures-calculator #ref-r36').find('.result span').html());
+			$('.brochures-form input.brochures-format').val($('#brochures-calculator #ref-r24').find('.rc-select-selection-selected-value').html());
+			$('.brochures-form input.brochures-paper-type').val($('#brochures-calculator #ref-r1').find('.rc-select-selection-selected-value').html());
+			$('.brochures-form input.brochures-front-colors').val($('#brochures-calculator #ref-r3').find('.rc-slider-handle').attr('aria-valuenow'));
+			$('.brochures-form input.brochures-verse-colors').val($('#brochures-calculator #ref-r4').find('.rc-slider-handle').attr('aria-valuenow'));
+			$('.brochures-form input.brochures-folding-type').val($('#brochures-calculator #ref-r32').find('.rc-select-selection-selected-value').html());
+			$('.brochures-form input.price-ht-total').val($('#brochures-calculator #ref-r17').find('.result span').html());
+			$('.brochures-form input.price-ht-per-ex').val($('#brochures-calculator #ref-r29').find('.result span').html());
+			$('.brochures-form input.price-ttc-total').val($('#brochures-calculator #ref-r35').find('.result span').html());
+			$('.brochures-form input.price-ttc-per-ex').val($('#brochures-calculator #ref-r36').find('.result span').html());
 		});
 
 		/* DOS COLLES FORM - STEP 2 TO STEP 3 */
 		$(document).on("click", ".arrow.dos-colles", function() {
 			$('.dos-colles-form input.copies').val($('#dos-colles-calculator #ref-r2').find('.calconic--controled_input input').val());
 			$('.dos-colles-form input.pages').val($('#dos-colles-calculator #ref-r49').find('.calconic--controled_input input').val());
-			$('.dos-colles-form .format').val($('#dos-colles-calculator #ref-r24').find('.rc-select-selection-selected-value').html());
-			$('.dos-colles-form .couverture-paper-type').val($('#dos-colles-calculator #ref-r1').find('.rc-select-selection-selected-value').html());
-			$('.dos-colles-form .couverture-front-colors').val($('#dos-colles-calculator #ref-r3').find('.rc-slider-handle').attr('aria-valuenow'));
-			$('.dos-colles-form .couverture-verse-colors').val($('#dos-colles-calculator #ref-r4').find('.rc-slider-handle').attr('aria-valuenow'));
-			$('.dos-colles-form .interieures-paper-type').val($('#dos-colles-calculator #ref-r28').find('.rc-select-selection-selected-value').html());
-			$('.dos-colles-form .interieures-colors').val($('#dos-colles-calculator #ref-r25').find('.rc-slider-handle').attr('aria-valuenow'));
-			$('.dos-colles-form .price-ht-total').val($('#dos-colles-calculator #ref-r17').find('.result span').html());
-			$('.dos-colles-form .price-ht-per-ex').val($('#dos-colles-calculator #ref-r39').find('.result span').html());
-			$('.dos-colles-form .price-ttc-total').val($('#dos-colles-calculator #ref-r47').find('.result span').html());
-			$('.dos-colles-form .price-ttc-per-ex').val($('#dos-colles-calculator #ref-r48').find('.result span').html());
+			$('.dos-colles-form input.format').val($('#dos-colles-calculator #ref-r24').find('.rc-select-selection-selected-value').html());
+			$('.dos-colles-form input.couverture-paper-type').val($('#dos-colles-calculator #ref-r1').find('.rc-select-selection-selected-value').html());
+			$('.dos-colles-form input.couverture-front-colors').val($('#dos-colles-calculator #ref-r3').find('.rc-slider-handle').attr('aria-valuenow'));
+			$('.dos-colles-form input.couverture-verse-colors').val($('#dos-colles-calculator #ref-r4').find('.rc-slider-handle').attr('aria-valuenow'));
+			$('.dos-colles-form input.interieures-paper-type').val($('#dos-colles-calculator #ref-r28').find('.rc-select-selection-selected-value').html());
+			$('.dos-colles-form input.interieures-colors').val($('#dos-colles-calculator #ref-r25').find('.rc-slider-handle').attr('aria-valuenow'));
+			$('.dos-colles-form input.price-ht-total').val($('#dos-colles-calculator #ref-r17').find('.result span').html());
+			$('.dos-colles-form input.price-ht-per-ex').val($('#dos-colles-calculator #ref-r39').find('.result span').html());
+			$('.dos-colles-form input.price-ttc-total').val($('#dos-colles-calculator #ref-r47').find('.result span').html());
+			$('.dos-colles-form input.price-ttc-per-ex').val($('#dos-colles-calculator #ref-r48').find('.result span').html());
 		});
 
 		/* FANZINES FORM - STEP 2 TO STEP 3 */
 		$(document).on("click", ".arrow.fanzines", function() {
 			$('.fanzines-form input.copies').val($('#fanzines-calculator #ref-r2').find('.calconic--controled_input input').val());
 			$('.fanzines-form input.pages').val($('#fanzines-calculator #ref-r46').find('.calconic--controled_input input').val());
-			$('.fanzines-form .format').val($('#fanzines-calculator #ref-r24').find('.rc-select-selection-selected-value').html());
-			$('.fanzines-form .couverture-paper-type').val($('#fanzines-calculator #ref-r1').find('.rc-select-selection-selected-value').html());
-			$('.fanzines-form .couverture-front-colors').val($('#fanzines-calculator #ref-r3').find('.rc-slider-handle').attr('aria-valuenow'));
-			$('.fanzines-form .couverture-verse-colors').val($('#fanzines-calculator #ref-r4').find('.rc-slider-handle').attr('aria-valuenow'));
-			$('.fanzines-form .interieures-paper-type').val($('#fanzines-calculator #ref-r28').find('.rc-select-selection-selected-value').html());
-			$('.fanzines-form .interieures-colors').val($('#fanzines-calculator #ref-r25').find('.rc-slider-handle').attr('aria-valuenow'));
-			$('.fanzines-form .price-ht-total').val($('#fanzines-calculator #ref-r17').find('.result span').html());
-			$('.fanzines-form .price-ht-per-ex').val($('#fanzines-calculator #ref-r39').find('.result span').html());
-			$('.fanzines-form .price-ttc-total').val($('#fanzines-calculator #ref-r47').find('.result span').html());
-			$('.fanzines-form .price-ttc-per-ex').val($('#fanzines-calculator #ref-r48').find('.result span').html());
+			$('.fanzines-form input.format').val($('#fanzines-calculator #ref-r24').find('.rc-select-selection-selected-value').html());
+			$('.fanzines-form input.couverture-paper-type').val($('#fanzines-calculator #ref-r1').find('.rc-select-selection-selected-value').html());
+			$('.fanzines-form input.couverture-front-colors').val($('#fanzines-calculator #ref-r3').find('.rc-slider-handle').attr('aria-valuenow'));
+			$('.fanzines-form input.couverture-verse-colors').val($('#fanzines-calculator #ref-r4').find('.rc-slider-handle').attr('aria-valuenow'));
+			$('.fanzines-form input.interieures-paper-type').val($('#fanzines-calculator #ref-r28').find('.rc-select-selection-selected-value').html());
+			$('.fanzines-form input.interieures-colors').val($('#fanzines-calculator #ref-r25').find('.rc-slider-handle').attr('aria-valuenow'));
+			$('.fanzines-form input.price-ht-total').val($('#fanzines-calculator #ref-r17').find('.result span').html());
+			$('.fanzines-form input.price-ht-per-ex').val($('#fanzines-calculator #ref-r39').find('.result span').html());
+			$('.fanzines-form input.price-ttc-total').val($('#fanzines-calculator #ref-r47').find('.result span').html());
+			$('.fanzines-form input.price-ttc-per-ex').val($('#fanzines-calculator #ref-r48').find('.result span').html());
 		});
 
 		/* FANZINES FORM - STEP 2 TO STEP 3 */
 		$(document).on("click", ".arrow.spirale", function() {
 			$('.spirale-form input.copies').val($('#spirale-calculator #ref-r2').find('.calconic--controled_input input').val());
 			$('.spirale-form input.pages').val($('#spirale-calculator #ref-r49').find('.calconic--controled_input input').val());
-			$('.spirale-form .format').val($('#spirale-calculator #ref-r24').find('.rc-select-selection-selected-value').html());
-			$('.spirale-form .paper-type').val($('#spirale-calculator #ref-r28').find('.rc-select-selection-selected-value').html());
-			$('.spirale-form .colors').val($('#spirale-calculator #ref-r25').find('.rc-slider-handle').attr('aria-valuenow'));
-			$('.spirale-form .price-ht-total').val($('#spirale-calculator #ref-r17').find('.result span').html());
-			$('.spirale-form .price-ht-per-ex').val($('#spirale-calculator #ref-r39').find('.result span').html());
-			$('.spirale-form .price-ttc-total').val($('#spirale-calculator #ref-r47').find('.result span').html());
-			$('.spirale-form .price-ttc-per-ex').val($('#spirale-calculator #ref-r48').find('.result span').html());
+			$('.spirale-form input.format').val($('#spirale-calculator #ref-r24').find('.rc-select-selection-selected-value').html());
+			$('.spirale-form input.paper-type').val($('#spirale-calculator #ref-r28').find('.rc-select-selection-selected-value').html());
+			$('.spirale-form input.colors').val($('#spirale-calculator #ref-r25').find('.rc-slider-handle').attr('aria-valuenow'));
+			$('.spirale-form input.price-ht-total').val($('#spirale-calculator #ref-r17').find('.result span').html());
+			$('.spirale-form input.price-ht-per-ex').val($('#spirale-calculator #ref-r39').find('.result span').html());
+			$('.spirale-form input.price-ttc-total').val($('#spirale-calculator #ref-r47').find('.result span').html());
+			$('.spirale-form input.price-ttc-per-ex').val($('#spirale-calculator #ref-r48').find('.result span').html());
 		});
 
 

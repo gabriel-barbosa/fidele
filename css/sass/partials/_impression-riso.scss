@@ -215,6 +215,18 @@
    }
  }
 
+ @include responsive(big-desktop) {
+   .impression-riso {
+     .grid.col-3.couleurs {
+       grid-template-columns: repeat(4, 1fr);
+
+       .colour-hex .percent-opacity .percent-module {
+         padding: 0.1vw 0.1vw 0;
+       }
+     }
+   }
+ }
+
  @include responsive(tablet-portrait) {
    .impression-riso {
      .grid.col-2 {

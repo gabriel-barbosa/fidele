@@ -176,13 +176,19 @@
        width: 33.4%;
        background: #fff;
        border-right: 1px solid;
-       font-size: var(--font-size2);;
+       font-size: var(--font-size2);
        z-index: 4;
        display: flex;
        padding: 4vw 0.8vw 0vw;
        justify-content: space-between;
+       align-items: flex-end;
+       align-items: center;
        cursor: pointer;
-       background: linear-gradient(0deg, #FFFFFF 40%, transparent 100%);
+       @include linear-gradient(to top, #FFFFFF 40%, transparent 100%);
+
+       .title-wrapper {
+         line-height: 1;
+       }
 
        &.stop {
          position: absolute;
@@ -254,6 +260,44 @@
        .product-info {
          border-right: 0;
          z-index: 5;
+       }
+     }
+   }
+ }
+
+ @include responsive(big-desktop) {
+   .archive {
+     ul.products {
+       &.columns-3 {
+         grid-template-columns: repeat(4, 1fr);
+       }
+
+       .product-item {
+         height: 30vw;
+
+         &:nth-of-type(3n+3) {
+           border-right: 1px solid;
+         }
+
+         &:nth-of-type(4n+4) {
+           border-right: 0;
+
+           .product-info {
+             border-right: 0;
+           }
+         }
+
+         .product-info {
+           width: 25%;
+           font-size: var(--font-size2);
+           @include linear-gradient(to top, #FFFFFF 40%, transparent 100%);
+          padding: 5vw 20px 0.2vw;
+
+           &.stop {
+             position: absolute;
+             width: 100%;
+           }
+         }
        }
      }
    }
@@ -386,10 +430,7 @@
           width: 100%;
           left: 0;
           font-size: var(--font-size1);
-          background: linear-gradient(0deg, #FFFFFF 80%, transparent 100%);
-          background: -webkit-linear-gradient(90deg, #FFFFFF 80%, transparent 100%);
-          background: -moz-linear-gradient(0deg, #FFFFFF 80%, transparent 100%);
-          background: -o-linear-gradient(0deg, #FFFFFF 80%, transparent 100%);
+          @include linear-gradient(to top, #FFFFFF 80%, transparent 100%);
           padding: 4vw 15px 2vw;
           border-right: 0;
 

@@ -477,6 +477,7 @@ input[type=search] {
   height: 9vw;
   width: auto;
   margin-left: 1vw;
+  stroke-width: 2.5;
 }
 .head-title .page-title {
   width: 50%;
@@ -515,6 +516,13 @@ input[type=search] {
   }
   .nav #menu-item-258, .nav #menu-item-167, .nav #menu-item-321 {
     display: block;
+  }
+  .nav li:hover {
+    background: white;
+    color: #215BDF;
+  }
+  .nav li:hover a {
+    color: #215BDF;
   }
 }
 /**
@@ -688,6 +696,14 @@ input[type=search] {
   background: linear-gradient(transparent 30%, #fff 100%);
 }
 
+@media (min-width: 1680px) {
+  .impression-riso .grid.col-3.couleurs {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .impression-riso .grid.col-3.couleurs .colour-hex .percent-opacity .percent-module {
+    padding: 0.1vw 0.1vw 0;
+  }
+}
 @media (max-width: 768px) {
   .impression-riso .grid.col-2 {
     grid-template-columns: repeat(1, 1fr);
@@ -1080,18 +1096,84 @@ input[type=search] {
   margin: 0;
   margin-right: 5px;
 }
-.calconic-calculator #lumi-calculator-5e99c26393d11a001e5e0fb2 .calconic-slider-wrapper#ref-r3 .rc-slider-rail, .calconic-calculator #lumi-calculator-5e99c26393d11a001e5e0fb2 .calconic-slider-wrapper#ref-r4 .rc-slider-rail,
+.calconic-calculator #lumi-calculator-5e99c26393d11a001e5e0fb2 .calconic-slider-wrapper#ref-r3 .rc-slider-rail, .calconic-calculator #lumi-calculator-5e99c26393d11a001e5e0fb2 .calconic-slider-wrapper#ref-r4 .rc-slider-rail, .calconic-calculator #lumi-calculator-5e99c26393d11a001e5e0fb2 .calconic-slider .rc-slider-rail,
 .calconic-calculator #lumi-calculator-5ea1bde1a4ca0d00290b1848 .calconic-slider-wrapper#ref-r3 .rc-slider-rail,
 .calconic-calculator #lumi-calculator-5ea1bde1a4ca0d00290b1848 .calconic-slider-wrapper#ref-r4 .rc-slider-rail,
+.calconic-calculator #lumi-calculator-5ea1bde1a4ca0d00290b1848 .calconic-slider .rc-slider-rail,
 .calconic-calculator #lumi-calculator-5f2c6f18a2d88c002959c5f1 .calconic-slider-wrapper#ref-r3 .rc-slider-rail,
 .calconic-calculator #lumi-calculator-5f2c6f18a2d88c002959c5f1 .calconic-slider-wrapper#ref-r4 .rc-slider-rail,
+.calconic-calculator #lumi-calculator-5f2c6f18a2d88c002959c5f1 .calconic-slider .rc-slider-rail,
 .calconic-calculator #lumi-calculator-5e9dbdaaa4ca0d00290b12c8 .calconic-slider-wrapper#ref-r3 .rc-slider-rail,
 .calconic-calculator #lumi-calculator-5e9dbdaaa4ca0d00290b12c8 .calconic-slider-wrapper#ref-r4 .rc-slider-rail,
+.calconic-calculator #lumi-calculator-5e9dbdaaa4ca0d00290b12c8 .calconic-slider .rc-slider-rail,
 .calconic-calculator #lumi-calculator-5ea1b573a4ca0d00290b1835 .calconic-slider-wrapper#ref-r3 .rc-slider-rail,
 .calconic-calculator #lumi-calculator-5ea1b573a4ca0d00290b1835 .calconic-slider-wrapper#ref-r4 .rc-slider-rail,
+.calconic-calculator #lumi-calculator-5ea1b573a4ca0d00290b1835 .calconic-slider .rc-slider-rail,
 .calconic-calculator #lumi-calculator-5ea1c010a4ca0d00290b1850 .calconic-slider-wrapper#ref-r3 .rc-slider-rail,
-.calconic-calculator #lumi-calculator-5ea1c010a4ca0d00290b1850 .calconic-slider-wrapper#ref-r4 .rc-slider-rail {
-  background: #e2e2e2 !important;
+.calconic-calculator #lumi-calculator-5ea1c010a4ca0d00290b1850 .calconic-slider-wrapper#ref-r4 .rc-slider-rail,
+.calconic-calculator #lumi-calculator-5ea1c010a4ca0d00290b1850 .calconic-slider .rc-slider-rail {
+  background: #fff !important;
+  border: 1px solid;
+}
+.calconic-calculator #lumi-calculator-5e99c26393d11a001e5e0fb2 .calconic-formula p, .calconic-calculator #lumi-calculator-5e99c26393d11a001e5e0fb2 .calconic-element-label label,
+.calconic-calculator #lumi-calculator-5ea1bde1a4ca0d00290b1848 .calconic-formula p,
+.calconic-calculator #lumi-calculator-5ea1bde1a4ca0d00290b1848 .calconic-element-label label,
+.calconic-calculator #lumi-calculator-5f2c6f18a2d88c002959c5f1 .calconic-formula p,
+.calconic-calculator #lumi-calculator-5f2c6f18a2d88c002959c5f1 .calconic-element-label label,
+.calconic-calculator #lumi-calculator-5e9dbdaaa4ca0d00290b12c8 .calconic-formula p,
+.calconic-calculator #lumi-calculator-5e9dbdaaa4ca0d00290b12c8 .calconic-element-label label,
+.calconic-calculator #lumi-calculator-5ea1b573a4ca0d00290b1835 .calconic-formula p,
+.calconic-calculator #lumi-calculator-5ea1b573a4ca0d00290b1835 .calconic-element-label label,
+.calconic-calculator #lumi-calculator-5ea1c010a4ca0d00290b1850 .calconic-formula p,
+.calconic-calculator #lumi-calculator-5ea1c010a4ca0d00290b1850 .calconic-element-label label {
+  font-family: "Unica77 LL", sans-serif !important;
+}
+.calconic-calculator #lumi-calculator-5e99c26393d11a001e5e0fb2 .calconic-slider .slider-size-big .rc-slider-rail::after,
+.calconic-calculator #lumi-calculator-5ea1bde1a4ca0d00290b1848 .calconic-slider .slider-size-big .rc-slider-rail::after,
+.calconic-calculator #lumi-calculator-5f2c6f18a2d88c002959c5f1 .calconic-slider .slider-size-big .rc-slider-rail::after,
+.calconic-calculator #lumi-calculator-5e9dbdaaa4ca0d00290b12c8 .calconic-slider .slider-size-big .rc-slider-rail::after,
+.calconic-calculator #lumi-calculator-5ea1b573a4ca0d00290b1835 .calconic-slider .slider-size-big .rc-slider-rail::after,
+.calconic-calculator #lumi-calculator-5ea1c010a4ca0d00290b1850 .calconic-slider .slider-size-big .rc-slider-rail::after {
+  background: #fff !important;
+  top: -1px;
+  border: 1px solid;
+  border-left: 0;
+  border-radius: 0 50% 50% 0;
+}
+.calconic-calculator #lumi-calculator-5e99c26393d11a001e5e0fb2 .calconic-slider .slider-size-big .rc-slider-rail::before,
+.calconic-calculator #lumi-calculator-5ea1bde1a4ca0d00290b1848 .calconic-slider .slider-size-big .rc-slider-rail::before,
+.calconic-calculator #lumi-calculator-5f2c6f18a2d88c002959c5f1 .calconic-slider .slider-size-big .rc-slider-rail::before,
+.calconic-calculator #lumi-calculator-5e9dbdaaa4ca0d00290b12c8 .calconic-slider .slider-size-big .rc-slider-rail::before,
+.calconic-calculator #lumi-calculator-5ea1b573a4ca0d00290b1835 .calconic-slider .slider-size-big .rc-slider-rail::before,
+.calconic-calculator #lumi-calculator-5ea1c010a4ca0d00290b1850 .calconic-slider .slider-size-big .rc-slider-rail::before {
+  background: #215BDF !important;
+  top: -1px;
+  border: 1px solid;
+}
+.calconic-calculator #lumi-calculator-5e99c26393d11a001e5e0fb2 .calconic-slider .rc-slider-dot,
+.calconic-calculator #lumi-calculator-5ea1bde1a4ca0d00290b1848 .calconic-slider .rc-slider-dot,
+.calconic-calculator #lumi-calculator-5f2c6f18a2d88c002959c5f1 .calconic-slider .rc-slider-dot,
+.calconic-calculator #lumi-calculator-5e9dbdaaa4ca0d00290b12c8 .calconic-slider .rc-slider-dot,
+.calconic-calculator #lumi-calculator-5ea1b573a4ca0d00290b1835 .calconic-slider .rc-slider-dot,
+.calconic-calculator #lumi-calculator-5ea1c010a4ca0d00290b1850 .calconic-slider .rc-slider-dot {
+  border-color: #215BDF !important;
+  background-color: #215BDF !important;
+}
+.calconic-calculator #lumi-calculator-5e99c26393d11a001e5e0fb2 .calconic-slider-wrapper .rc-slider-mark-text,
+.calconic-calculator #lumi-calculator-5ea1bde1a4ca0d00290b1848 .calconic-slider-wrapper .rc-slider-mark-text,
+.calconic-calculator #lumi-calculator-5f2c6f18a2d88c002959c5f1 .calconic-slider-wrapper .rc-slider-mark-text,
+.calconic-calculator #lumi-calculator-5e9dbdaaa4ca0d00290b12c8 .calconic-slider-wrapper .rc-slider-mark-text,
+.calconic-calculator #lumi-calculator-5ea1b573a4ca0d00290b1835 .calconic-slider-wrapper .rc-slider-mark-text,
+.calconic-calculator #lumi-calculator-5ea1c010a4ca0d00290b1850 .calconic-slider-wrapper .rc-slider-mark-text {
+  color: #215BDF !important;
+}
+.calconic-calculator #lumi-calculator-5e99c26393d11a001e5e0fb2 .calconic-slider__wrapper.slider-size-big .rc-slider-handle::after,
+.calconic-calculator #lumi-calculator-5ea1bde1a4ca0d00290b1848 .calconic-slider__wrapper.slider-size-big .rc-slider-handle::after,
+.calconic-calculator #lumi-calculator-5f2c6f18a2d88c002959c5f1 .calconic-slider__wrapper.slider-size-big .rc-slider-handle::after,
+.calconic-calculator #lumi-calculator-5e9dbdaaa4ca0d00290b12c8 .calconic-slider__wrapper.slider-size-big .rc-slider-handle::after,
+.calconic-calculator #lumi-calculator-5ea1b573a4ca0d00290b1835 .calconic-slider__wrapper.slider-size-big .rc-slider-handle::after,
+.calconic-calculator #lumi-calculator-5ea1c010a4ca0d00290b1850 .calconic-slider__wrapper.slider-size-big .rc-slider-handle::after {
+  content: none;
 }
 .calconic-calculator #lumi-calculator-5e99c26393d11a001e5e0fb2 #ref-r17.calconic-element.calconic-formula,
 .calconic-calculator #lumi-calculator-5ea1bde1a4ca0d00290b1848 #ref-r17.calconic-element.calconic-formula,
@@ -2036,8 +2118,17 @@ html {
   display: flex;
   padding: 4vw 0.8vw 0vw;
   justify-content: space-between;
+  align-items: flex-end;
+  align-items: center;
   cursor: pointer;
-  background: linear-gradient(0deg, #FFFFFF 40%, transparent 100%);
+  background: #FFFFFF;
+  background: -webkit-linear-gradient(bottom, #FFFFFF 40%, transparent 100%);
+  background: -o-linear-gradient(to top, #FFFFFF 40%, transparent 100%);
+  background: -moz-linear-gradient(to top, #FFFFFF 40%, transparent 100%);
+  background: linear-gradient(to top, #FFFFFF 40%, transparent 100%);
+}
+.archive .product-item .product-info .title-wrapper {
+  line-height: 1;
 }
 .archive .product-item .product-info.stop {
   position: absolute;
@@ -2098,6 +2189,37 @@ html {
   z-index: 5;
 }
 
+@media (min-width: 1680px) {
+  .archive ul.products.columns-3 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .archive ul.products .product-item {
+    height: 30vw;
+  }
+  .archive ul.products .product-item:nth-of-type(3n+3) {
+    border-right: 1px solid;
+  }
+  .archive ul.products .product-item:nth-of-type(4n+4) {
+    border-right: 0;
+  }
+  .archive ul.products .product-item:nth-of-type(4n+4) .product-info {
+    border-right: 0;
+  }
+  .archive ul.products .product-item .product-info {
+    width: 25%;
+    font-size: var(--font-size2);
+    background: #FFFFFF;
+    background: -webkit-linear-gradient(bottom, #FFFFFF 40%, transparent 100%);
+    background: -o-linear-gradient(to top, #FFFFFF 40%, transparent 100%);
+    background: -moz-linear-gradient(to top, #FFFFFF 40%, transparent 100%);
+    background: linear-gradient(to top, #FFFFFF 40%, transparent 100%);
+    padding: 5vw 20px 0.2vw;
+  }
+  .archive ul.products .product-item .product-info.stop {
+    position: absolute;
+    width: 100%;
+  }
+}
 @media (max-width: 768px) {
   .archive .archive-header {
     margin: 0 15px;
@@ -2206,10 +2328,11 @@ html {
     width: 100%;
     left: 0;
     font-size: var(--font-size1);
-    background: linear-gradient(0deg, #FFFFFF 80%, transparent 100%);
-    background: -webkit-linear-gradient(90deg, #FFFFFF 80%, transparent 100%);
-    background: -moz-linear-gradient(0deg, #FFFFFF 80%, transparent 100%);
-    background: -o-linear-gradient(0deg, #FFFFFF 80%, transparent 100%);
+    background: #FFFFFF;
+    background: -webkit-linear-gradient(bottom, #FFFFFF 80%, transparent 100%);
+    background: -o-linear-gradient(to top, #FFFFFF 80%, transparent 100%);
+    background: -moz-linear-gradient(to top, #FFFFFF 80%, transparent 100%);
+    background: linear-gradient(to top, #FFFFFF 80%, transparent 100%);
     padding: 4vw 15px 2vw;
     border-right: 0;
   }
@@ -3262,6 +3385,7 @@ a:hover, a:focus {
   width: auto;
   margin-left: 1vw;
   margin-top: -1vw;
+  stroke-width: 1.7;
 }
 .workshops .featured-image {
   border-top: 1px solid;

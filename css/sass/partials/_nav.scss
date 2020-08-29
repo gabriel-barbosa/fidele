@@ -135,6 +135,7 @@
     height: 9vw;
     width: auto;
     margin-left: 1vw;
+    stroke-width: 2.5;
   }
 
   .page-title {
@@ -179,6 +180,15 @@
 
     #menu-item-258, #menu-item-167, #menu-item-321 {
       display: block;
+    }
+
+    li:hover {
+      background: white;
+      color: $fideleblue;
+
+      a {
+        color: $fideleblue;
+      }
     }
   }
 }

@@ -362,9 +362,44 @@
       }
     }
 
-    .calconic-slider-wrapper#ref-r3 .rc-slider-rail, .calconic-slider-wrapper#ref-r4 .rc-slider-rail {
-      background: #e2e2e2 !important;
+    .calconic-slider-wrapper#ref-r3 .rc-slider-rail, .calconic-slider-wrapper#ref-r4 .rc-slider-rail, .calconic-slider .rc-slider-rail {
+      background: #fff !important;
+      border: 1px solid;
     }
+
+    .calconic-formula p, .calconic-element-label label {
+      font-family: "Unica77 LL", sans-serif !important;
+    }
+
+    .calconic-slider .slider-size-big .rc-slider-rail::after {
+      background: #fff !important;
+      top: -1px;
+      border: 1px solid;
+      border-left: 0;
+      border-radius: 0 50% 50% 0;
+    }
+
+    .calconic-slider .slider-size-big .rc-slider-rail::before {
+      background: $fideleblue !important;
+      top: -1px;
+      border: 1px solid;
+    }
+
+    .calconic-slider .rc-slider-dot {
+      border-color: $fideleblue !important;
+      background-color: $fideleblue !important;
+    }
+
+    .calconic-slider-wrapper .rc-slider-mark-text {
+      color: $fideleblue !important;
+    }
+
+    .calconic-slider__wrapper.slider-size-big .rc-slider-handle {
+      &::after {
+        content: none;
+      }
+    }
+
 
     #ref-r17.calconic-element.calconic-formula {
       background-color: transparent !important;

@@ -3,9 +3,6 @@
 <?php if ( have_posts()) : while ( have_posts() ) : the_post(); ?>
 	<section class="header-text">
 		<div class="text">Une Maison D'édition Et Un Atelier D'impression  Riso À Paris</div>
-
-		<img class="vector vector-1" src="<?php bloginfo('template_url'); ?>/img/a-propos-vector.svg" alt="">
-		<img class="vector vector-2" src="<?php bloginfo('template_url'); ?>/img/a-propos-vector-02.svg" alt="">
 	</section>
 
 <?php if(have_rows('map_section')): while(have_rows('map_section')): the_row(); ?>
