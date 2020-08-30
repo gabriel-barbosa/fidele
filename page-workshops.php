@@ -56,36 +56,71 @@
 </section>
 
 <?php if(have_rows('workshop_table')): ?>
-<section class="workshop-table">
-	<div class="description head">
-		<div>Description</div>
-	</div>
+	<?php if(wp_is_mobile()): while(have_rows('workshop_table')): the_row(); ?>
+		<section class="workshop-table-mobile">
+			<div class="description">
+				<div class="head">
+					Description
+				</div>
 
-	<div class="other-infos head">
-		<div>Date</div>
-		<div>Duration</div>
-		<div>Spots</div>
-		<div>Price</div>
-	</div>
+				<div class="content">
+					<div class="title"><?php the_sub_field('title'); ?></div>
+					<p><?php the_sub_field('description'); ?></p>
+				</div>
+			</div>
 
-	<?php while(have_rows('workshop_table')): the_row(); ?>
-	<div class="description">
-		<div><?php the_sub_field('title'); ?></div>
-		<p><?php the_sub_field('description'); ?></p>
-	</div>
+			<div class="date">
+				<span>Date:</span> <?php the_sub_field('date'); ?>
+			</div>
 
-	<div class="other-infos">
-		<div class="date"><?php the_sub_field('date'); ?></div>
-		<div class="duration"><?php the_sub_field('duration'); ?></div>
-		<div class="spots"><?php the_sub_field('spots_available'); ?></div>
-		<div class="price"><?php the_sub_field('price'); ?></div>
-		<div style="border-right: 0;"></div>
-		<div class="subscribe" style="border-right: 0;">
-			<a href="<?php the_sub_field('subscribe'); ?>" target="_blank">Subscribe</a>
-		</div>
-	</div>
-	<?php endwhile; ?>
-</section>
+			<div class="duration">
+				<span>Duration:</span> <?php the_sub_field('duration'); ?>
+			</div>
+
+			<div class="spots">
+				<span>Spots:</span> <?php the_sub_field('spots_available'); ?>
+			</div>
+
+			<div class="price">
+				<span>Price:</span> <?php the_sub_field('price'); ?>
+			</div>
+
+			<div class="subscribe">
+				<a href="<?php the_sub_field('subscribe'); ?>" target="_blank">Subscribe</a>
+			</div>
+		</section>
+
+	<?php endwhile; else: ?>
+		<section class="workshop-table">
+			<div class="description head">
+				<div>Description</div>
+			</div>
+
+			<div class="other-infos head">
+				<div>Date</div>
+				<div>Duration</div>
+				<div>Spots</div>
+				<div>Price</div>
+			</div>
+
+			<?php while(have_rows('workshop_table')): the_row(); ?>
+			<div class="description">
+				<div><?php the_sub_field('title'); ?></div>
+				<p><?php the_sub_field('description'); ?></p>
+			</div>
+
+			<div class="other-infos">
+				<div class="date"><?php the_sub_field('date'); ?></div>
+				<div class="duration"><?php the_sub_field('duration'); ?></div>
+				<div class="spots"><?php the_sub_field('spots_available'); ?></div>
+				<div class="price"><?php the_sub_field('price'); ?></div>
+				<div class="subscribe" style="border-right: 0;">
+					<a href="<?php the_sub_field('subscribe'); ?>" target="_blank">Subscribe</a>
+				</div>
+			</div>
+			<?php endwhile; ?>
+		</section>
+	<?php endif; ?>
 <?php endif; ?>
 
 

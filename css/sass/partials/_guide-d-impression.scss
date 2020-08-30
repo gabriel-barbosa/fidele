@@ -19,7 +19,7 @@ html {
 }
 .guide-row {
 	border-bottom: solid 1px #215BDF;
-	padding: 0 20px 2vw;
+	padding: 0 20px 6vw;
   margin: 0 -20px 8vw;
 
 	&:last-of-type {
@@ -29,6 +29,7 @@ html {
 .guide-row.guide-row-no_title {
 	background-color: #FFF;
   margin-top: -10vw;
+	margin-bottom: 2vw;
 }
 .row-content {
 	display: grid;
@@ -48,7 +49,7 @@ html {
     width: 100%;
 }
 .row-title {
-	font-size: var(--font-size1);
+	font-size: 5.5vw;
 	font-weight: 500;
 	letter-spacing: -2px;
 }
@@ -228,7 +229,7 @@ html {
 		margin-bottom: 4vw;
 		line-height: 1;
 		font-size: 15vw;
-		margin-top: 30vw;
+		margin-top: 35vw;
 	}
 
 	.row-content {

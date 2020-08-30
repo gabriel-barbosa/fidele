@@ -1,9 +1,5 @@
 /* A PROPOS - PAGE */
 .a-propos {
-  .bottom-gradient {
-    display: none;
-  }
-
   .wrapper {
     overflow-x: hidden;
   }
@@ -275,6 +271,7 @@
 
         .image {
           border-top: 1px solid;
+          height: 350px;
         }
       }
     }
@@ -282,7 +279,7 @@
     .contact {
       .submit-wrapper {
         margin-top: -38vw;
-        right: -23vw;
+        right: -15vw;
         position: relative;
         background: none;
 

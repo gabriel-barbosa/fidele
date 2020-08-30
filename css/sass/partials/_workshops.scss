@@ -49,7 +49,7 @@
     }
 
     .content {
-      font-size: var(--font-size1);;
+      font-size: var(--font-size1);
       line-height: 1.1;
 
       p {
@@ -62,11 +62,15 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding-left: 20px;
-    font-size: var(--font-size2);;
+    font-size: var(--font-size2);
     margin-bottom: 6vw;
 
+    & > div:nth-last-of-type(2) {
+      border-bottom: 0 !important;
+    }
+
     p {
-      font-size: var(--font-size3);;
+      font-size: var(--font-size3);
     }
 
     .description {
@@ -108,11 +112,88 @@
       }
 
       .subscribe {
-        grid-column: span 3;
+        grid-column: span 4;
         padding-top: 0.5vw;
         display: flex;
         align-items: center;
         padding-bottom: 0;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@include responsive(tablet-portrait) {
+  .workshops {
+    .head-title .category-icon {
+      height: 23vw;
+      width: auto;
+      margin-left: 1vw;
+      margin-top: -4vw;
+      stroke-width: 1.7;
+    }
+
+    .featured-image {
+      height: 500px;
+      margin: 6vw 0 8vw;
+    }
+
+    .page-title h1 {
+      margin: 0 15px;
+    }
+
+    .grid.col-2 {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .flexible-rows .row {
+      margin-bottom: 8vw;
+      padding-bottom: 8vw;
+    }
+
+    .flexible-rows .col-1 {
+      .content p {
+        margin-bottom: 6vw;
+      }
+    }
+
+    .workshop-table-mobile {
+      font-size: var(--font-size1);
+      padding: 0 15px;
+      margin-bottom: 30vw;
+
+      & > div {
+        border-bottom: 1px solid;
+        padding: 2vw 0 1vw;
+        line-height: 1.2;
+
+        &:nth-last-of-type(2) {
+          border-bottom: 0;
+        }
+      }
+
+      .description {
+        .content {
+          padding: 2vw 0 1vw;
+        }
+
+        .title {
+          line-height: 1.1;
+          font-size: var(--font-size1);
+        }
+
+        .head {
+          border-bottom: 1px solid;
+        }
+
+        p {
+          font-size: var(--font-size2);
+        }
+      }
+
+      .subscribe {
+        border: 1px solid;
+        text-align: center;
       }
     }
   }

@@ -1,0 +1,228 @@
+/* ACCOUNT PAGES */
+.woocommerce-account {
+  .woocommerce {
+    font-size: var(--font-size3);;
+  }
+
+  button.button {
+    background: none;
+    color: $fideleblue;
+    padding: 0;
+    margin: 2vw 0;
+    font-size: var(--font-size1);;
+    font-weight: 400;
+
+    &:hover {
+      background: none;
+      color: $fideleblue;
+    }
+
+    &::after {
+      content: "";
+      background: url("img/button-arrow.svg") center center no-repeat;
+      background-size: contain;
+      height: 5vw;
+      width: 10vw;
+      margin-left: 1vw;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  .woocommerce-notices-wrapper .woocommerce-message {
+    background: none;
+  }
+
+  .woocommerce {
+    display: flex;
+    margin-top: 1vw;
+  }
+
+  .woocommerce-MyAccount-content {
+    width: 50%;
+    float: none;
+    font-size: var(--font-size2);;
+    margin-bottom: 80px;
+
+
+    .woocommerce-Addresses {
+      display: flex;
+      flex-direction: column;
+      margin-top: 1.5vw;
+
+      .col-1, .col-2 {
+        width: 100%;
+        float: none;
+        margin-bottom: 2vw;
+      }
+
+      header h3 {
+        font-size: var(--font-size1);;
+        font-weight: 400;
+        margin-bottom: 0.5vw;
+      }
+
+      address {
+        font-style: normal;
+        font-size: var(--font-size2);;
+        line-height: 1.1;
+        border: 1px solid;
+        padding: 0.5vw 0.5vw 3vw;
+      }
+    }
+
+    em {
+      display: block;
+      margin-top: 0.5vw;
+      font-size: var(--font-size3);;
+      font-style: normal;
+    }
+
+    fieldset {
+      border: 0;
+
+      legend {
+        font-size: var(--font-size1);;
+      }
+    }
+  }
+
+  .woocommerce-MyAccount-navigation {
+    width: 50%;
+    float: none;
+
+    ul {
+      list-style: none;
+      font-size: var(--font-size1);;
+      line-height: 1.3;
+
+      li.is-active {
+        font-weight: 500;
+      }
+
+      .woocommerce-MyAccount-navigation-link--downloads {
+        display: none;
+      }
+    }
+  }
+}
+
+.woocommerce-account.woocommerce-orders {
+  .woocommerce-MyAccount-content {
+    width: auto;
+    flex-grow: 1;
+  }
+
+  .woocommerce-MyAccount-navigation {
+    width: auto;
+    margin-right: 6vw;
+  }
+
+  .woocommerce table.shop_table tr th {
+    padding: 0.6vw 1.5vw 0.3vw;
+    font-size: var(--font-size3);;
+    font-weight: 400;
+    line-height: 1;
+
+    &:first-of-type {
+      padding-left: 0;
+    }
+  }
+
+  .woocommerce table.shop_table tr td {
+    padding: 0.6vw 1.5vw 0.3vw;
+    line-height: 1;
+
+    &:first-of-type {
+      padding-left: 0;
+    }
+  }
+
+  .woocommerce table.shop_table tr:first-of-type td {
+    border-top: 0;
+  }
+}
+
+/* LOGIN PAGE */
+.page-id-9 {
+  &.logged-in {
+    .woocommerce {
+      flex-direction: row;
+    }
+  }
+
+  .woocommerce {
+    flex-direction: column;
+    padding-bottom: 100px;
+
+    h2 {
+      font-size: var(--font-size1);;
+      font-weight: 400;
+    }
+
+    .woocommerce-form-login {
+      width: 100%;
+      border: 0;
+      padding: 0;
+      font-size: var(--font-size3);;
+      margin: 1vw 0;
+
+      .form-row::after {
+        clear: none;
+      }
+
+      .lost_password {
+        margin-top: 1vw;
+      }
+
+      .woocommerce-form-login__submit {
+        float: right;
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 28vw;
+          height: 15vw;
+          background: url("img/go.png") center center no-repeat #fff;
+          background-size: contain;
+          top: 5vw;
+          right: -6vw;
+        }
+
+        &:hover {
+          &::after {
+            background: url("img/go-blue.gif") center center no-repeat #fff;
+            background-size: contain;
+          }
+        }
+      }
+    }
+  }
+}
+
+.woocommerce-lost-password {
+  .woocommerce-form-row {
+    margin-top: 2vw;
+  }
+}
+
+@include responsive(tablet-portrait) {
+  .woocommerce-account {
+    .woocommerce-MyAccount-content, .woocommerce-MyAccount-navigation {
+      width: 100%;
+    }
+
+    .woocommerce-MyAccount-navigation {
+      margin-bottom: 8vw;
+    }
+  }
+
+  .page-id-9 {
+    &.logged-in {
+      .woocommerce {
+        flex-direction: column;
+      }
+    }
+  }
+}

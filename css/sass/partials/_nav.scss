@@ -42,6 +42,7 @@
     padding: 3px 9px 0;
     background: $white;
     transition: all 0.5s ease;
+    font-size: 18px;
 
     &:last-of-type {
       border-right: 0;
@@ -146,6 +147,19 @@
     }
   }
 }
+
+@include responsive(small-desktop) {
+  .nav li {
+    font-size: 16px;
+  }
+}
+
+ @include responsive(tablet-landscape) {
+   .nav li {
+     font-size: 14px;
+   }
+ }
+
 
 @include responsive(tablet-portrait) {
   .header {
