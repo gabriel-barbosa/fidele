@@ -14,9 +14,11 @@
 
 <div class="submenu"><?php
 	if( have_rows('add_content_row') ):
+		$counter = 0;
 		while ( have_rows('add_content_row') ) : the_row();
+			$counter++;
 			if (get_sub_field('row_title')) {?>
-				<div class="submenu-item"><a href="#<?php the_sub_field('row_title');?>"><?php the_sub_field('row_title');?></a><span> | </span></div><?php
+				<div class="submenu-item"><span class="counter"><?php echo $counter; ?>. <a href="#<?php the_sub_field('row_title');?>"><?php the_sub_field('row_title');?></a></div><?php
 			}
 		endwhile;
 	endif;?>
@@ -28,7 +30,7 @@ if( have_rows('add_content_row') ):
 	while ( have_rows('add_content_row') ) : the_row();
 		$counter++;?>
 		<section class="guide-row guide-row-<?php echo $counter;?> <?php if (!get_sub_field('row_title')) { ?> guide-row-no_title<?php } ?>" id="<?php the_sub_field('row_title');?>">
-			<?php if (get_sub_field('row_title')) { ?> <div class="row-title"><?php the_sub_field('row_title');?></div><?php } ?>
+			<?php if (get_sub_field('row_title')) { ?> <div class="row-title"><?php echo $counter; ?>. <?php the_sub_field('row_title');?></div><?php } ?>
 			<div class="row-content">
 				<div class="column-left"><?php the_sub_field('left_column'); ?></div>
 				<div class="column-right"><?php the_sub_field('right_column'); ?></div>

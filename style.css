@@ -1730,8 +1730,16 @@ html {
   height: 21.65vw;
 }
 
+.submenu {
+  display: flex;
+  border: 1px solid;
+  margin: 2vw 20px 3vw;
+  font-size: var(--font-size3);
+  margin-top: 10vw;
+}
+
 .submenu-item {
-  display: inline-block;
+  border-right: 1px solid;
 }
 
 .submenu-item:last-child span {
@@ -3523,6 +3531,7 @@ a:hover, a:focus {
   font-size: var(--font-size1);
   line-height: 105%;
   margin-top: 1.5vw;
+  margin-bottom: 1vw;
 }
 .page .content, .archive .content {
   font-size: var(--font-size2);
