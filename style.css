@@ -1760,6 +1760,10 @@ html {
     grid-template-columns: repeat(1, 1fr);
   }
 
+  .row-content p {
+    margin-bottom: 7vw;
+  }
+
   .row-content li {
     margin-left: 15px;
     position: relative;
