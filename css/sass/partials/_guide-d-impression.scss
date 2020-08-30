@@ -7,6 +7,10 @@
 	.wrapper {
 		overflow-x: hidden;
 	}
+
+	.footer {
+		margin-bottom: 0;
+	}
 }
 
 html {
@@ -46,6 +50,7 @@ html {
 .row-title {
 	font-size: var(--font-size1);
 	font-weight: 500;
+	letter-spacing: -2px;
 }
 .row-content p, .row-content a, .row-content li {
 	font-size: var(--font-size2);
@@ -210,6 +215,10 @@ html {
 		}
 	}
 
+	.submenu {
+		font-size: var(--font-size1);
+	}
+
 	.guide-row {
 		padding: 0px 15px 15vw;
     margin: 0 -15px 8vw;
@@ -254,6 +263,10 @@ html {
 		}
 	}
 
+	.row-content .gallery, .grid-2 {
+		margin-bottom: 8vw;
+	}
+
 	.submenu {
 		flex-direction: column;
 		border: none;
@@ -276,11 +289,21 @@ html {
 	}
 
 	.guide-row-1 {
+		.column-left {
+			img {
+				max-width: 76%;
+			}
+		}
+
 		.column-right {
 			img {
 				width: 100%;
 			}
 		}
+	}
+
+	.guide-row-2 .column-left h4 {
+    margin: 6vw 0 4vw 12vw;
 	}
 
 	.guide-row-2 .column-right h3 {
@@ -315,8 +338,12 @@ html {
 		border-bottom: 0;
 	}
 
-	.guide-row-8 .column-left .gallery {
-		margin-bottom: 15px;
+	.guide-row-8 .column-left .gallery, .guide-row-8 .column-right .gallery  {
+		margin-bottom: 0;
+	}
+
+	.guide-row-8 img, .guide-row-9 img {
+		margin-bottom: 0;
 	}
 
 	.guide-row-9.guide-row-no_title {
