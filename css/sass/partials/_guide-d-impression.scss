@@ -3,6 +3,10 @@
 	.bottom-gradient {
 		position: relative;
 	}
+
+	.wrapper {
+		overflow-x: hidden;
+	}
 }
 
 html {
@@ -199,6 +203,7 @@ html {
 	.row-title {
 		margin-bottom: 4vw;
 		line-height: 1;
+		font-size: 15vw;
 	}
 
 	.row-content {

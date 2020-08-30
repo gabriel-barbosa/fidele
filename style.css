@@ -1512,6 +1512,9 @@ input[type=search] {
 .guide-d-impression .bottom-gradient {
   position: relative;
 }
+.guide-d-impression .wrapper {
+  overflow-x: hidden;
+}
 
 html {
   scroll-behavior: smooth !important;
@@ -1750,6 +1753,7 @@ html {
   .row-title {
     margin-bottom: 4vw;
     line-height: 1;
+    font-size: 15vw;
   }
 
   .row-content {
