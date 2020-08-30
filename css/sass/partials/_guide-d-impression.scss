@@ -36,7 +36,7 @@ html {
     width: 100%;
 }
 .row-title {
-	font-size: 5.5vw;
+	font-size: var(--font-size1);
 	font-weight: 500;
 }
 .row-content p, .row-content a, .row-content li {
@@ -184,22 +184,31 @@ html {
 .submenu {
 	display: flex;
 	border: 1px solid;
-	margin: 2vw 20px 3vw;
+	margin: 10vw 0 3vw;
 	font-size: var(--font-size3);
-	margin-top: 10vw;
 }
 .submenu-item {
 	border-right: 1px solid;
 }
-.submenu-item:last-child span {
-	display: none;
-}
-.submenu-item span {
-	margin: 0 20px;
+.submenu-item:last-of-type {
+	border-right: 0;
 }
 
 @include responsive(tablet-portrait) {
 	.row-content {
 		grid-template-columns: repeat(1, 1fr);
+	}
+
+	.submenu {
+		flex-direction: column;
+		border: none;
+	}
+
+	.submenu-item {
+		margin: 2vw -20px 3vw;
+
+		span {
+			margin-right: 1vw;
+		}
 	}
 }
