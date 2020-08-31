@@ -17,6 +17,10 @@ body.single-product {
   .cart, .product_meta, .related.products {
     display: none;
   }
+
+  .woocommerce-notices-wrapper .woocommerce-message {
+    background: #fff;
+  }
 }
 
 .single-product {
@@ -279,6 +283,11 @@ body.single-product {
 @include responsive(tablet-portrait) {
   .single-product {
     overflow: visible;
+
+    .woocommerce-notices-wrapper .woocommerce-message {
+      padding: 4vw 15px;
+      flex-direction: row-reverse;
+    }
   }
 
   .product-gallery {
