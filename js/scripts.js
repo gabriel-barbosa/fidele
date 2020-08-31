@@ -105,7 +105,9 @@
 		});
 
 		$('nav').hover(function() {
-			$('.head-title').toggleClass('visible');
+			if ($(window).width() > 768) {
+				$('.head-title').toggleClass('visible');
+			}
 		});
 
 		/* NAV MOBILE - ONCLICK SHOW HIDDEN DIV */
@@ -115,6 +117,7 @@
           return text === "Menu" ? "Close" : "Menu";
       })
 			$('.nav-mobile').toggleClass('visible');
+			$('.head-title').toggleClass('visible');
 		});
 
 
@@ -430,7 +433,9 @@
 
 		$(window).scroll(function(){
 			if(isScrolledIntoView($('#payment'))) {
-				$('.total-order-fixed').addClass('hide');
+				if ($(window).width() > 768) {
+					$('.total-order-fixed').addClass('hide');
+				}
 			}
 			else {
 				$('.total-order-fixed').removeClass('hide');

@@ -71,13 +71,18 @@
   width: 100%;
   height: 100%;
   padding: 0 15px;
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
+  top: 0;
+  padding-top: 35vw;
   z-index: 1000;
   background: #fff;
   transition: all 0.3s ease;
   font-size: var(--font-size1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   &.visible {
     opacity: 1;
@@ -167,7 +172,6 @@
   }
 
   .head-title {
-    pointer-events: none;
     .logo {
       width: 45vw;
     }

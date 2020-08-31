@@ -209,12 +209,85 @@
 
 @include responsive(tablet-portrait) {
   .woocommerce-account {
+    .wrapper {
+      overflow-x: hidden;
+    }
+
     .woocommerce-MyAccount-content, .woocommerce-MyAccount-navigation {
+      width: 100%;
+    }
+
+    .woocommerce-MyAccount-content {
+      .woocommerce-Addresses {
+        margin-top: 6vw;
+      }
+
+      .woocommerce-Addresses .col-1, .woocommerce-Addresses .col-2  {
+        margin-bottom: 8vw;
+      }
+
+      .woocommerce-Addresses address {
+        padding: 3vw;
+        margin-top: 1vw;
+      }
+
+      em {
+        margin-top: 3vw;
+      }
+    }
+
+    button.button {
+      margin-top: 5vw;
+    }
+
+    button.button::after {
+      height: 12.5vw;
+      width: 25vw;
+      margin-left: 4vw;
+    }
+
+    .woocommerce-address-fields__field-wrapper {
+      margin-top: 4vw;
+    }
+
+    .woocommerce form .show-password-input::after {
+      top: -4px;
+      position: relative;
+    }
+
+    .woocommerce-form__label-for-checkbox span {
+      margin-left: 8px;
+    }
+
+    .woocommerce button.button.disabled, .woocommerce button.button:disabled, .woocommerce button.button:disabled[disabled] {
+      padding: 0;
+    }
+
+    .woocommerce form .form-row-first, .woocommerce form .form-row-last {
       width: 100%;
     }
 
     .woocommerce-MyAccount-navigation {
       margin-bottom: 8vw;
+    }
+
+
+    &.woocommerce-orders .woocommerce table.shop_table_responsive {
+      tr {
+        margin-bottom: 8vw;
+      }
+
+      tr td {
+        border-bottom: 1px solid;
+        border-right: 0;
+        padding: 2vw 0 1vw;
+        border-top: 0;
+        background: none;
+
+        &:last-of-type {
+          border-bottom: 0;
+        }
+      }
     }
   }
 
@@ -222,6 +295,24 @@
     &.logged-in {
       .woocommerce {
         flex-direction: column;
+      }
+    }
+
+    .woocommerce .woocommerce-form-login .woocommerce-form-login__submit {
+      color: #fff;
+
+      &::after {
+        width: 50vw;
+        height: 30vw;
+        background: url("img/go.png") center center no-repeat transparent;
+        background-size: contain;
+        top: 4vw;
+        right: -15vw;
+      }
+
+      &:hover::after {
+        background: url(img/go-blue.gif) center center no-repeat transparent;
+        background-size: contain;
       }
     }
   }

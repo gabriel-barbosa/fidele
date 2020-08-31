@@ -19,6 +19,7 @@
 @import "partials/wrapper";
 @import "partials/header";
 @import "partials/nav";
+@import "partials/footer";
 @import "partials/impression-riso";
 @import "partials/simulateur-de-devis";
 @import "partials/guide-d-impression";
@@ -28,7 +29,8 @@
 @import "partials/single-product";
 @import "partials/my-account";
 @import "partials/cart";
-@import "partials/footer";
+@import "partials/checkout";
+@import "partials/order-received";
 @import "partials/print";
 
 * {
@@ -50,6 +52,7 @@ body {
 
 .wrapper {
   padding: 0 20px 20px;
+  overflow-x: hidden;
 
   @include responsive(tablet-portrait) {
     padding: 0 15px 15px;
@@ -126,7 +129,8 @@ p.s3 {
     font-size: 3vw;
   }
   h3 {
-    font-size: 2.5vw;
+    font-size: 6.5vw;
+    font-weight: 400;
   }
 }
 
@@ -264,7 +268,7 @@ button:focus {
   padding: 1vw 0;
   margin: 0;
   color: $fideleblue;
-  font-size: var(--font-size1);;
+  font-size: var(--font-size1);
   margin-left: 50%;
 
   &::before {
@@ -283,6 +287,12 @@ button:focus {
 
 a:hover, a:focus {
   text-decoration: none;
+}
+
+@include responsive(tablet-portrait) {
+  .woocommerce-info, .return-to-shop {
+    margin-left: 0;
+  }
 }
 
 /* CONTACT FORM 7 */
@@ -455,6 +465,35 @@ a:hover, a:focus {
   }
 }
 
+@include responsive(tablet-portrait) {
+  .index_menu {
+    height: 80vh;
+    font-size: 20vw;
+    word-break: break-word;
+
+    .studio {
+      width: 45vw;
+      position: absolute;
+      top: 7.5vw;
+      left: 4vw;
+    }
+
+    .editions {
+      width: 42vw;
+      position: absolute;
+      top: 47vw;
+      right: 0;
+    }
+
+    .workshops {
+      width: 40vw;
+      position: absolute;
+      bottom: 32vw;
+      right: 45vw;
+    }
+  }
+}
+
 /* Page - General */
 .page, .archive {
   .page-title {
@@ -491,341 +530,5 @@ a:hover, a:focus {
         width: 100%;
       }
     }
-  }
-}
-
-
-/* WOOCOMMERCE CHECKOUT - PAGE */
-.checkout {
-  .woocommerce-form-coupon-toggle {
-    display: none;
-  }
-
-  .woocommerce table.shop_table {
-    border-collapse: collapse;
-
-    .product-total {
-      padding-left: 1vw;
-    }
-
-    tr:first-of-type td {
-      border-top: 0;
-    }
-
-    tr th {
-      font-size: var(--font-size3);;
-      font-weight: 400;
-      padding: 0.5vw 0;
-    }
-
-    tr td {
-      padding: 0.5vw 0;
-      line-height: 1.1;
-    }
-
-    tr td[data-title="Shipping"] {
-      max-width: 15vw;
-    }
-
-    .cart-subtotal {
-      display: none;
-    }
-
-    tfoot th, tfoot td {
-      border-top: 1px solid;
-      font-weight: 400;
-    }
-
-    strong {
-      font-weight: 400;
-    }
-
-    tfoot td:first-of-type {
-      border-top: 1px solid;
-      padding-left: 1vw;
-    }
-
-    tfoot th:last-of-type {
-      border-right: 1px solid;
-    }
-  }
-
-  .total-order-fixed {
-    position: fixed;
-    bottom: 60px;
-    right: 20px;
-    width: calc(50% - 20px);
-    height: auto;
-    z-index: 10;
-    display: block;
-    transition: all 0.3s ease;
-    opacity: 1;
-    visibility: visible;
-
-    &.hide {
-      visibility: hidden;
-      opacity: 0;
-    }
-
-    h3 {
-      font-weight: 400;
-    }
-  }
-
-  .woocommerce .col2-set {
-    margin-top: 2vw;
-  }
-
-  .woocommerce .col2-set .col-1 {
-    width: 49%;
-  }
-
-  .woocommerce .col2-set .col-2 {
-    width: 50%;
-  }
-
-  #payment {
-    background: 0;
-    font-size: var(--font-size2);;
-    display: flex;
-
-    ul.payment_methods {
-      padding: 0;
-      flex-grow: 1;
-      border-bottom: 0;
-      margin-right: -6vw;
-    }
-
-    .woocommerce-terms-and-conditions-wrapper {
-      display: none;
-    }
-
-    li {
-      display: flex;
-      align-items: center;
-      border-bottom: 1px solid;
-      padding: 1vw 0;
-
-      &:last-of-type {
-        border-bottom: 0;
-      }
-
-      .payment_box {
-        background: none;
-        width: auto;
-        margin: 0;
-        padding: 0;
-        margin-left: 1vw;
-        color: $fideleblue;
-        font-size: var(--font-size3);;
-        max-width: 70%;
-
-        &::before {
-          content: none;
-        }
-      }
-
-      .about_paypal {
-        display: none;
-      }
-
-      input[type='radio'] {
-        display: none;
-      }
-
-      label:before {
-        content: " ";
-        display: inline-block;
-        position: relative;
-        top: 1px;
-        margin: 0 5px 0 0;
-        width: 20px;
-        height: 20px;
-        border-radius: 11px;
-        border: 1px solid $fideleblue;
-        background-color: transparent;
-      }
-
-      input[type='radio']:checked+label:before {
-        position: relative;
-        border: 1px solid $fideleblue;
-        border-radius: 11px;
-        width: 20px;
-        height: 20px;
-        top: 1px;
-        content: " ";
-        display: inline-block;
-        background-color: blue;
-      }
-    }
-
-    .payment_method_paypal label img {
-      display: none;
-    }
-  }
-
-  #place_order {
-    display: none;
-  }
-}
-
-.woocommerce-billing-fields h3, .woocommerce-additional-fields h3 {
-  font-weight: 400;
-  margin-bottom: 20px;
-}
-
-.woocommerce form .form-row {
-  margin: 0 0 10px;
-
-  input.input-text, textarea {
-      font-size: var(--font-size2);
-      line-height: 1.1;
-      border: 1px solid $fideleblue;
-      border-radius: 0;
-      padding: 9px 8px 4px;
-      width: 100%;
-      color: $fideleblue;
-      font-family: "Unica77 LL", sans-serif;
-      resize: none;
-
-      &:focus {
-        outline: none;
-      }
-
-      &::placeholder {
-        color: $fideleblue;
-      }
-  }
-
-  label {
-    font-size: var(--font-size3);;
-    line-height: 1.5;
-  }
-
-  .required {
-    color: $fideleblue;
-  }
-}
-
-.select2-container--default .select2-selection--single {
-  background-color: #fff;
-  border: 1px solid $fideleblue;
-  border-radius: 0;
-  font-size: var(--font-size2);;
-  padding: 8px;
-  height: auto;
-  margin: inherit;
-
-  &:focus {
-    outline: none;
-  }
-
-  .select2-selection__rendered {
-    color: $fideleblue;
-    line-height: 1;
-    margin-top: 0.2vw;
-    padding: 0;
-  }
-
-  .select2-selection__arrow {
-    background: url("img/select-arrow.svg") center center no-repeat;
-    background-size: contain;
-    height: 35px;
-    position: absolute;
-    top: 4px;
-    right: 10px;
-    width: 35px;
-
-
-    b {
-      display: none;
-    }
-  }
-}
-
-.select2-container--default .select2-results__option--highlighted[aria-selected], .select2-container--default .select2-results__option--highlighted[data-selected] {
-  background: $fideleblue;
-}
-
-.select2-container--default .select2-results__option--highlighted[aria-selected], .select2-container--default .select2-results__option--highlighted[data-selected] {
-  background: $fideleblue;
-
-  &:focus {
-    outline: none;
-  }
-}
-
-.select2-container--open .select2-dropdown--above {
-  border: 1px solid $fideleblue;
-  border-radius: 0;
-}
-
-.select2-container--default .select2-search--dropdown .select2-search__field {
-  border: 1px solid $fideleblue;
-  color: $fideleblue;
-
-  &:focus {
-    outline: none;
-  }
-}
-
-/* ORDER RECEIVED - WOOCOMMERCE */
-.woocommerce-order-received {
-  .page-title h1 {
-    text-transform: capitalize;
-  }
-
-  .woocommerce-thankyou-order-received {
-    font-size: var(--font-size1);;
-    margin-top: 2vw;
-  }
-
-  ul.order_details {
-    display: flex;
-    border-bottom: 1px solid;
-    margin-top: 2vw;
-
-    li {
-      float: none;
-      flex-grow: 1;
-      border-right: 1px solid;
-      font-size: var(--font-size3);;
-      text-transform: none;
-      margin: 0;
-      padding: 0 20px;
-
-      &:first-of-type {
-        padding-left: 0;
-      }
-
-      strong {
-        font-weight: 400;
-        font-size: var(--font-size2);;
-      }
-    }
-  }
-
-  .woocommerce-order-details h2, .woocommerce-customer-details h2 {
-    font-size: var(--font-size1);;
-    font-weight: 400;
-    margin-bottom: 0.5vw;
-  }
-}
-
-.woocommerce .woocommerce-customer-details {
-  .woocommerce-customer-details--phone, .woocommerce-customer-details--email {
-    &::before {
-      content: none;
-    }
-
-    padding-left: 0;
-  }
-
-  address {
-    border: 1px solid $fideleblue;
-    border-radius: 0;
-    font-size: var(--font-size2);;
-    line-height: 1.1;
-    padding: 10px;
   }
 }

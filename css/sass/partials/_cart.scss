@@ -21,7 +21,7 @@
     display: inline-block;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-55%);
     margin: 0 5px 0 0;
     width: 20px;
     height: 20px;
@@ -209,6 +209,15 @@ body.cart, body.checkout {
 }
 
 @include responsive(tablet-portrait) {
+  .cart {
+    .woocommerce {
+      a.remove {
+        text-align: right;
+        font-size: 12vw;
+      }
+    }
+  }
+
   .woocommerce #content table.cart .product-thumbnail, .woocommerce table.cart .product-thumbnail, .woocommerce-page #content table.cart .product-thumbnail, .woocommerce-page table.cart .product-thumbnail {
     display: table;
     width: 100%;
@@ -218,5 +227,18 @@ body.cart, body.checkout {
       height: auto;
       display: block;
     }
+  }
+
+  .woocommerce table.shop_table_responsive tr td::before, .woocommerce-page table.shop_table_responsive tr td::before {
+    content: attr(data-title);
+    float: none;
+  }
+
+  .woocommerce table.shop_table_responsive tr td, .woocommerce-page table.shop_table_responsive tr td {
+    text-align: left !important;
+  }
+
+  .woocommerce-form__label-for-checkbox span {
+    margin-left: 2vw;
   }
 }

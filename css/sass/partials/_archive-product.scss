@@ -305,6 +305,13 @@
 
 
 @include responsive(tablet-portrait) {
+  .post-type-archive-product {
+    .footer {
+      display: grid;
+      margin: 10vw 15px 20vw;
+    }
+  }
+
   .archive {
     .archive-header {
       margin: 0 15px;
@@ -416,6 +423,10 @@
       .product-item {
         height: auto;
         border-right: 0;
+
+        &:last-of-type {
+          border-bottom: 0;
+        }
 
         a {
           max-width: 60%;
