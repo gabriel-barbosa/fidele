@@ -234,6 +234,10 @@
  }
 
  @include responsive(tablet-portrait) {
+   .head-title {
+     height: 20vw;
+   }
+
    .impression-riso {
      .grid.col-2 {
        grid-template-columns: repeat(1, 1fr);

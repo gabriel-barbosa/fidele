@@ -612,9 +612,16 @@ input[type=search] {
 .editions .footer, .post-type-archive-product .footer, .single-product .footer, .simulateur-de-devis .footer, .cart .footer, .my-account .footer, .home .footer {
   display: none;
 }
+.editions nav .footer, .post-type-archive-product nav .footer, .single-product nav .footer, .simulateur-de-devis nav .footer, .cart nav .footer, .my-account nav .footer, .home nav .footer {
+  display: grid;
+}
 
 .workshops .footer {
   margin: 0 20px 50px;
+}
+
+.workshops nav .footer {
+  margin: 30px 0 75px;
 }
 
 .bottom-gradient {
@@ -812,6 +819,10 @@ input[type=search] {
   }
 }
 @media (max-width: 768px) {
+  .head-title {
+    height: 20vw;
+  }
+
   .impression-riso .grid.col-2 {
     grid-template-columns: repeat(1, 1fr);
     column-gap: 15px;
@@ -1355,6 +1366,9 @@ input[type=search] {
 .simulateur-steps .form textarea:focus {
   outline: none;
 }
+.simulateur-steps .form .hidden-inputs {
+  display: none;
+}
 .simulateur-steps .form .submit-wrapper {
   margin-top: -29vw;
   margin-bottom: 5vw;
@@ -1618,8 +1632,9 @@ input[type=search] {
   .simulateur-steps .form .submit-wrapper {
     margin-top: -31vw;
     overflow: hidden;
-    margin-right: -10vw;
+    margin-right: -15vw;
     position: initial;
+    margin-bottom: 4vw;
   }
   .simulateur-steps .form .submit-wrapper .submit-button {
     width: 80vw;

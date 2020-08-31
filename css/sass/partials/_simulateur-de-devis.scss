@@ -3,7 +3,7 @@
   .wrapper {
     overflow-x: hidden;
   }
-  
+
   .append {
     display: none;
   }
@@ -470,6 +470,10 @@
     }
   }
 
+  .hidden-inputs {
+    display: none;
+  }
+
   .submit-wrapper {
     margin-top: -29vw;
     margin-bottom: 5vw;
@@ -697,8 +701,9 @@
     .submit-wrapper {
       margin-top: -31vw;
       overflow: hidden;
-      margin-right: -10vw;
+      margin-right: -15vw;
       position: initial;
+      margin-bottom: 20vw;
 
       .submit-button {
         width: 80vw;

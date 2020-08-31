@@ -104,10 +104,19 @@
   .footer {
     display: none;
   }
+
+  nav .footer {
+    display: grid;
+  }
 }
+
 
 .workshops .footer {
   margin: 0 20px 50px;
+}
+
+.workshops nav .footer {
+  margin: 30px 0 75px;
 }
 
 .bottom-gradient {
