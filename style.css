@@ -2593,10 +2593,10 @@ html {
   align-items: center;
   cursor: pointer;
   background: #FFFFFF;
-  background: linear-gradient(to top, #FFFFFF 40%, transparent 100%);
-  background: -webkit-linear-gradient(bottom, #FFFFFF 40%, transparent 100%);
-  background: -o-linear-gradient(to top, #FFFFFF 40%, transparent 100%);
-  background: -moz-linear-gradient(to top, #FFFFFF 40%, transparent 100%);
+  background: linear-gradient(to top, #FFFFFF 40%, rgba(255, 255, 255, 0) 100%);
+  background: -webkit-linear-gradient(bottom, #FFFFFF 40%, rgba(255, 255, 255, 0) 100%);
+  background: -o-linear-gradient(to top, #FFFFFF 40%, rgba(255, 255, 255, 0) 100%);
+  background: -moz-linear-gradient(to top, #FFFFFF 40%, rgba(255, 255, 255, 0) 100%);
 }
 .archive .product-item .product-info .title-wrapper {
   line-height: 1;
@@ -2680,10 +2680,10 @@ html {
     width: 25%;
     font-size: var(--font-size2);
     background: #FFFFFF;
-    background: linear-gradient(to top, #FFFFFF 40%, transparent 100%);
-    background: -webkit-linear-gradient(bottom, #FFFFFF 40%, transparent 100%);
-    background: -o-linear-gradient(to top, #FFFFFF 40%, transparent 100%);
-    background: -moz-linear-gradient(to top, #FFFFFF 40%, transparent 100%);
+    background: linear-gradient(to top, #FFFFFF 40%, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-linear-gradient(bottom, #FFFFFF 40%, rgba(255, 255, 255, 0) 100%);
+    background: -o-linear-gradient(to top, #FFFFFF 40%, rgba(255, 255, 255, 0) 100%);
+    background: -moz-linear-gradient(to top, #FFFFFF 40%, rgba(255, 255, 255, 0) 100%);
     padding: 5vw 20px 0.2vw;
   }
   .archive ul.products .product-item .product-info.stop {
@@ -2808,10 +2808,10 @@ html {
     left: 0;
     font-size: var(--font-size1);
     background: #FFFFFF;
-    background: linear-gradient(to top, #FFFFFF 80%, transparent 100%);
-    background: -webkit-linear-gradient(bottom, #FFFFFF 80%, transparent 100%);
-    background: -o-linear-gradient(to top, #FFFFFF 80%, transparent 100%);
-    background: -moz-linear-gradient(to top, #FFFFFF 80%, transparent 100%);
+    background: linear-gradient(to top, #FFFFFF 80%, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-linear-gradient(bottom, #FFFFFF 80%, rgba(255, 255, 255, 0) 100%);
+    background: -o-linear-gradient(to top, #FFFFFF 80%, rgba(255, 255, 255, 0) 100%);
+    background: -moz-linear-gradient(to top, #FFFFFF 80%, rgba(255, 255, 255, 0) 100%);
     padding: 4vw 15px 2vw;
     border-right: 0;
   }

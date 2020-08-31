@@ -184,7 +184,7 @@
        align-items: flex-end;
        align-items: center;
        cursor: pointer;
-       @include linear-gradient(to top, #FFFFFF 40%, transparent 100%);
+       @include linear-gradient(to top, #FFFFFF 40%, rgba(255, 255, 255, 0) 100%);
 
        .title-wrapper {
          line-height: 1;
@@ -290,7 +290,7 @@
          .product-info {
            width: 25%;
            font-size: var(--font-size2);
-           @include linear-gradient(to top, #FFFFFF 40%, transparent 100%);
+           @include linear-gradient(to top, #FFFFFF 40%, rgba(255, 255, 255, 0) 100%);
           padding: 5vw 20px 0.2vw;
 
            &.stop {
@@ -441,7 +441,7 @@
           width: 100%;
           left: 0;
           font-size: var(--font-size1);
-          @include linear-gradient(to top, #FFFFFF 80%, transparent 100%);
+          @include linear-gradient(to top, #FFFFFF 80%, rgba(255, 255, 255, 0) 100%);
           padding: 4vw 15px 2vw;
           border-right: 0;
 
