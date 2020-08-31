@@ -223,7 +223,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 			<?php do_action( 'woocommerce_cart_contents' ); ?>
 
 			<tr class="promotional-code">
-				<td colspan="2">
+				<td class="promo-title" colspan="2">
 					Promotional code
 				</td>
 				<td colspan="2" class="actions">
@@ -237,21 +237,21 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 					<?php wp_nonce_field( 'woocommerce-cart', 'woocommerce-cart-nonce' ); ?>
 				</td>
-				<td colspan="2">
+				<td class="promo-button" colspan="2">
 					<button type="submit" class="button" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>"><?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?></button>
 				</td>
 			</tr>
 
 			<tr class="cart-subtotal">
 				<td colspan="4"></td>
-				<td><?php esc_html_e( 'Subtotal', 'woocommerce' ); ?></td>
+				<td class="hidden-mobile"><?php esc_html_e( 'Subtotal', 'woocommerce' ); ?></td>
 				<td data-title="<?php esc_attr_e( 'Subtotal', 'woocommerce' ); ?>"><?php wc_cart_totals_subtotal_html(); ?></td>
 			</tr>
 
 			<?php foreach ( WC()->cart->get_coupons() as $code => $coupon ) : ?>
 				<tr class="cart-discount coupon-<?php echo esc_attr( sanitize_title( $code ) ); ?>">
 					<td colspan="4"></td>
-					<td><?php wc_cart_totals_coupon_label( $coupon ); ?></th>
+					<td class="hidden-mobile"><?php wc_cart_totals_coupon_label( $coupon ); ?></th>
 					<td data-title="<?php echo esc_attr( wc_cart_totals_coupon_label( $coupon, false ) ); ?>"><?php wc_cart_totals_coupon_html( $coupon ); ?></td>
 				</tr>
 			<?php endforeach; ?>
@@ -318,7 +318,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 			<tr class="order-total">
 				<td colspan="4"></td>
-				<td><?php esc_html_e( 'Total', 'woocommerce' ); ?></th>
+				<td class="hidden-mobile"><?php esc_html_e( 'Total', 'woocommerce' ); ?></th>
 				<td data-title="<?php esc_attr_e( 'Total', 'woocommerce' ); ?>"><?php wc_cart_totals_order_total_html(); ?></td>
 			</tr>
 

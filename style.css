@@ -3460,6 +3460,7 @@ body.single-product .woocommerce-notices-wrapper .woocommerce-message {
   background: none;
   color: #fff;
   justify-content: flex-end;
+  flex-direction: row-reverse;
 }
 .cart .woocommerce-notices-wrapper .woocommerce-message a {
   color: #fff;
@@ -3553,11 +3554,10 @@ body.cart, body.checkout {
 }
 .woocommerce table.shop_table .product-quantity .quantity .qty {
   color: #215BDF;
-  font-size: var(--font-size2);
+  font-size: var(--font-size1);
   border: 0;
   padding: 0;
   width: 10vw;
-  font-size: 10vw;
   text-align: left;
 }
 .woocommerce table.shop_table .product-quantity .quantity .qty:focus {
@@ -3605,17 +3605,36 @@ body.cart, body.checkout {
   .cart .woocommerce-cart-form__cart-item.mobile {
     display: table-row;
   }
+  .cart button.button {
+    background: none;
+    color: #215BDF;
+    padding: 0;
+    margin: 2vw 0;
+    font-size: var(--font-size2);
+    font-weight: 400;
+  }
+  .cart .gif-item {
+    position: relative;
+    display: block;
+    width: 75vw;
+    height: auto;
+    right: -13vw;
+    top: -4vw;
+    float: right;
+    margin-bottom: 15vw;
+  }
   .cart .woocommerce a.remove {
     text-align: right;
     font-size: 12vw;
   }
   .cart .woocommerce table.shop_table tr td {
     border: 0;
-    font-size: 30px;
+    font-size: var(--font-size2);
     text-align: left !important;
     background: none !important;
     display: inline-block;
     padding: 2vw 0;
+    width: 100%;
   }
   .cart .woocommerce table.shop_table tr td a {
     text-align: left !important;
@@ -3629,7 +3648,7 @@ body.cart, body.checkout {
   .cart .woocommerce table.shop_table td.product-remove {
     border-bottom: 1px solid;
     width: 100%;
-    font-size: 6vw;
+    font-size: var(--font-size2);
     padding-bottom: 0;
   }
   .cart .woocommerce table.shop_table td.product-remove span {
@@ -3637,7 +3656,7 @@ body.cart, body.checkout {
   }
   .cart .woocommerce table.shop_table td.product-remove a {
     display: inline-block;
-    font-size: 10vw;
+    font-size: 8vw;
     float: right;
     width: auto;
     height: auto;
@@ -3646,7 +3665,7 @@ body.cart, body.checkout {
     display: flex;
     width: calc(100% + 30px);
     padding: 4vw 0;
-    margin: 2vw -15px 0;
+    margin: 4vw -15px 4vw;
     border-top: 1px solid;
     border-bottom: 1px solid;
     justify-content: center;
@@ -3662,7 +3681,9 @@ body.cart, body.checkout {
   }
   .cart .woocommerce table.shop_table td.product-name a {
     max-width: 100%;
-    font-size: 10vw;
+    font-size: var(--font-size1);
+    padding: 0;
+    line-height: 1.5em;
   }
   .cart .woocommerce table.shop_table td.product-price-qty {
     display: flex;
@@ -3676,22 +3697,42 @@ body.cart, body.checkout {
   }
   .cart .woocommerce table.shop_table td.product-price-qty .label {
     width: 100%;
-    font-size: 6vw;
+    font-size: var(--font-size2);
     padding: 0;
-    margin-bottom: 3vw;
+    margin-bottom: 2vw;
     border-bottom: 1px solid;
     line-height: 1;
     padding-bottom: 1vw;
   }
   .cart .woocommerce table.shop_table td.product-price-qty .amount, .cart .woocommerce table.shop_table td.product-price-qty .quantity {
-    font-size: 10vw;
+    font-size: var(--font-size1);
   }
-  .cart .woocommerce .cart_totals {
-    font-size: 6vw;
-    width: 80%;
-    text-align: center;
-    left: 50%;
-    transform: translateX(-50%);
+  .cart .woocommerce table.shop_table .promo-title {
+    font-size: var(--font-size2);
+    padding: 0;
+    margin-top: 4vw;
+    line-height: 1;
+  }
+  .cart .woocommerce table.shop_table td.actions .coupon {
+    padding: 0;
+  }
+  .cart .woocommerce table.shop_table td.actions .coupon input.input-text {
+    border: 1px solid;
+    padding: 3vw 2vw 2vw;
+  }
+  .cart .woocommerce table.shop_table .promo-button {
+    padding: 0;
+  }
+  .cart .woocommerce table.shop_table tr.cart-subtotal, .cart .woocommerce table.shop_table tr.order-total {
+    border-bottom: 1px solid;
+    vertical-align: middle;
+  }
+  .cart .woocommerce table.shop_table tr.cart-subtotal td, .cart .woocommerce table.shop_table tr.order-total td {
+    display: flex;
+    justify-content: space-around;
+  }
+  .cart .woocommerce table.shop_table .hidden-mobile {
+    display: none !important;
   }
 
   .woocommerce #content table.cart .product-thumbnail, .woocommerce table.cart .product-thumbnail, .woocommerce-page #content table.cart .product-thumbnail, .woocommerce-page table.cart .product-thumbnail {
@@ -4236,18 +4277,6 @@ p.s3 {
 @media (max-width: 768px) {
   p {
     line-height: 1.1;
-  }
-
-  p.s1 {
-    font-size: 7vw;
-  }
-
-  p.s2 {
-    font-size: 5vw;
-  }
-
-  p.s3 {
-    font-size: 5vw;
   }
 
   h1 {

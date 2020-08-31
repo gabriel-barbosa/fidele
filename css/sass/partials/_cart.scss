@@ -41,6 +41,7 @@
       background: none;
       color: #fff;
       justify-content: flex-end;
+      flex-direction: row-reverse;
 
       a {
         color: #fff;
@@ -160,11 +161,10 @@ body.cart, body.checkout {
   .product-quantity {
       .quantity .qty {
         color: $fideleblue;
-        font-size: var(--font-size2);;
+        font-size: var(--font-size1);
         border: 0;
         padding: 0;
         width: 10vw;
-        font-size: 10vw;
         text-align: left;
 
         &:focus {
@@ -223,6 +223,26 @@ body.cart, body.checkout {
       display: table-row;
     }
 
+    button.button {
+      background: none;
+      color: $fideleblue;
+      padding: 0;
+      margin: 2vw 0;
+      font-size: var(--font-size2);
+      font-weight: 400;
+    }
+
+    .gif-item {
+      position: relative;
+      display: block;
+      width: 75vw;
+      height: auto;
+      right: -13vw;
+      top: -4vw;
+      float: right;
+      margin-bottom: 15vw;
+    }
+
     .woocommerce {
       a.remove {
         text-align: right;
@@ -232,11 +252,12 @@ body.cart, body.checkout {
       table.shop_table {
   			tr td {
   				border: 0;
-  				font-size: 30px;
+  				font-size: var(--font-size2);
   				text-align: left !important;
   				background: none !important;
   				display: inline-block;
           padding: 2vw 0;
+          width: 100%;
   			}
 
   			tr td a {
@@ -253,7 +274,7 @@ body.cart, body.checkout {
   			td.product-remove {
   				border-bottom: 1px solid;
   				width: 100%;
-  				font-size: 6vw;
+  				font-size: var(--font-size2);
   				padding-bottom: 0;
 
   				span {
@@ -262,7 +283,7 @@ body.cart, body.checkout {
 
   				a {
   					display: inline-block;
-  					font-size: 10vw;
+  					font-size: 8vw;
   					float: right;
   					width: auto;
   					height: auto;
@@ -273,7 +294,7 @@ body.cart, body.checkout {
           display: flex;
           width: calc(100% + 30px);
           padding: 4vw 0;
-          margin: 2vw -15px 0;
+          margin: 4vw -15px 4vw;
           border-top: 1px solid;
           border-bottom: 1px solid;
           justify-content: center;
@@ -294,7 +315,9 @@ body.cart, body.checkout {
   			td.product-name {
   				a {
   					max-width: 100%;
-  					font-size: 10vw;
+  					font-size: var(--font-size1);
+            padding: 0;
+            line-height: 1.5em;
   				}
   			}
 
@@ -312,26 +335,52 @@ body.cart, body.checkout {
 
   				.label {
   					width: 100%;
-  					font-size: 6vw;
+  					font-size: var(--font-size2);
   					padding: 0;
-  					margin-bottom: 3vw;
+  					margin-bottom: 2vw;
   					border-bottom: 1px solid;
             line-height: 1;
             padding-bottom: 1vw;
   				}
 
   				.amount, .quantity {
-  					font-size: 10vw;
+  					font-size: var(--font-size1);
   				}
   			}
-  		}
 
-  		.cart_totals {
-  			font-size: 6vw;
-  			width: 80%;
-  			text-align: center;
-  			left: 50%;
-  			transform: translateX(-50%);
+        .promo-title {
+          font-size: var(--font-size2);
+          padding: 0;
+          margin-top: 4vw;
+          line-height: 1;
+        }
+
+        td.actions .coupon {
+          padding: 0;
+        }
+
+        td.actions .coupon input.input-text {
+          border: 1px solid;
+          padding: 3vw 2vw 2vw;
+        }
+
+        .promo-button {
+          padding: 0;
+        }
+
+        tr.cart-subtotal, tr.order-total {
+          border-bottom: 1px solid;
+          vertical-align: middle;
+
+          td {
+            display: flex;
+            justify-content: space-around;
+          }
+        }
+
+        .hidden-mobile {
+          display: none !important;
+        }
   		}
     }
   }
