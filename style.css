@@ -515,10 +515,14 @@ input[type=search] {
     height: 35vw;
   }
 
+  .nav-mobile #menu-item-321 {
+    display: none !important;
+  }
+
   .nav .menu-item {
     display: none;
   }
-  .nav #menu-item-258, .nav #menu-item-167 {
+  .nav #menu-item-258, .nav #menu-item-167, .nav #menu-item-321 {
     display: block;
   }
   .nav li:hover {
