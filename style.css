@@ -474,6 +474,7 @@ input[type=search] {
 .head-title.visible, .head-title.scroll.visible {
   opacity: 1;
   visibility: visible;
+  display: flex !important;
 }
 .head-title .logo {
   width: 16vw;
@@ -2845,6 +2846,9 @@ body.single-product .woocommerce-breadcrumb {
 body.single-product .entry-title {
   display: none;
 }
+body.single-product .cart, body.single-product .product_meta, body.single-product .related.products {
+  display: none;
+}
 
 .single-product {
   overflow: hidden;
@@ -3032,6 +3036,7 @@ body.single-product .entry-title {
   align-items: flex-end;
   font-size: 2vw;
   position: fixed;
+  z-index: 1000;
   bottom: 0;
   right: 0;
   background: linear-gradient(0deg, #FFFFFF 50%, rgba(255, 255, 255, 0) 100%);
@@ -3071,13 +3076,18 @@ body.single-product .entry-title {
   .product-gallery {
     width: 100%;
     height: 80vh;
+    position: relative;
+    z-index: 1000;
   }
   .product-gallery .img-wrapper {
     width: 100%;
+    height: calc(100% - 15vw);
   }
   .product-gallery .slick-dots {
     justify-content: flex-end;
-    background: #fff;
+    position: relative;
+    top: -15vw;
+    background: none;
     border-top: 1px solid;
     padding: 6vw 15px 0vw;
   }
@@ -3096,6 +3106,7 @@ body.single-product .entry-title {
   .woocommerce div.product div.summary .product_title h1, .woocommerce div.product div.summary .product_title h3 {
     font-size: var(--font-size1);
     font-weight: 400;
+    letter-spacing: normal;
   }
   .woocommerce div.product div.summary .short-description p {
     font-size: var(--font-size2);

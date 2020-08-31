@@ -130,6 +130,7 @@
   &.visible, &.scroll.visible {
     opacity: 1;
     visibility: visible;
+    display: flex !important;
   }
 
   .logo {
