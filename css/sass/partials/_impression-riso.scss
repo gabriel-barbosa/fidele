@@ -7,9 +7,9 @@
  /* Impression Riso - Page */
  .impression-riso {
    .head-title .category-icon {
-     height: 35vw;
-     margin-top: -2vw;
-     margin-left: 2vw;
+     height: 9vw;
+     margin-top: 0vw;
+     margin-left: 0.75vw;
    }
 
    .bottom-gradient {
@@ -236,6 +236,12 @@
  @include responsive(tablet-portrait) {
    .head-title {
      height: 20vw;
+
+     .category-icon {
+       height: 35vw;
+       margin-top: -2vw;
+       margin-left: 2vw;
+     }
    }
 
    .impression-riso {

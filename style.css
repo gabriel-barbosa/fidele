@@ -645,9 +645,9 @@ input[type=search] {
  */
 /* Impression Riso - Page */
 .impression-riso .head-title .category-icon {
-  height: 35vw;
-  margin-top: -2vw;
-  margin-left: 2vw;
+  height: 9vw;
+  margin-top: 0vw;
+  margin-left: 0.75vw;
 }
 .impression-riso .bottom-gradient {
   display: none;
@@ -826,6 +826,11 @@ input[type=search] {
 @media (max-width: 768px) {
   .head-title {
     height: 20vw;
+  }
+  .head-title .category-icon {
+    height: 35vw;
+    margin-top: -2vw;
+    margin-left: 2vw;
   }
 
   .impression-riso .grid.col-2 {
@@ -2245,27 +2250,16 @@ html {
   max-width: 100%;
 }
 .a-propos .header-text .text span {
-  transition: color 3s;
+  transition: opacity 3s;
   transition-delay: 1s;
+  opacity: 1;
   color: #215BDF;
   padding: 0 !important;
   cursor: pointer;
 }
-.a-propos .header-text .text span.color1:hover {
-  color: #FF48B0;
-  transition: color 0s;
-}
-.a-propos .header-text .text span.color2:hover {
-  color: #82D8D5;
-  transition: color 0s;
-}
-.a-propos .header-text .text span.color3:hover {
-  color: #FFB511;
-  transition: color 0s;
-}
-.a-propos .header-text .text span.color4:hover {
-  color: #9D7AD2;
-  transition: color 0s;
+.a-propos .header-text .text span:hover {
+  opacity: 0;
+  transition: opacity 0s;
 }
 .a-propos section {
   margin: 7vw 0;
@@ -3440,8 +3434,7 @@ body.single-product .woocommerce-notices-wrapper .woocommerce-message {
   content: " ";
   display: inline-block;
   position: absolute;
-  top: 50%;
-  transform: translateY(-55%);
+  top: 0;
   margin: 0 5px 0 0;
   width: 20px;
   height: 20px;

@@ -60,6 +60,14 @@
 		      $(this).find('.product-info').removeClass('stop');
 		    }
 		  });
+
+			var actualBottom = $('.nav').offset().top + $('.nav').outerHeight(true);
+			var catMenu = $('.product-cat-menu').offset().top;
+			console.log(actualBottom);
+			console.log(catMenu);
+			if (actualBottom == catMenu) {
+				$('.product-cat-menu').addClass('fixed');
+			}
 		});
 
 		function isScrolledIntoView(elem){
