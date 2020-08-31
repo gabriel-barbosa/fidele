@@ -234,17 +234,17 @@
  }
 
  @include responsive(tablet-portrait) {
-   .head-title {
-     height: 20vw;
-
-     .category-icon {
-       height: 35vw;
-       margin-top: -2vw;
-       margin-left: 2vw;
-     }
-   }
-
    .impression-riso {
+     .head-title {
+       height: 20vw;
+
+       .category-icon {
+         height: 35vw;
+         margin-top: -2vw;
+         margin-left: 2vw;
+       }
+     }
+
      .grid.col-2 {
        grid-template-columns: repeat(1, 1fr);
        column-gap: 15px;

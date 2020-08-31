@@ -824,15 +824,14 @@ input[type=search] {
   }
 }
 @media (max-width: 768px) {
-  .head-title {
+  .impression-riso .head-title {
     height: 20vw;
   }
-  .head-title .category-icon {
+  .impression-riso .head-title .category-icon {
     height: 35vw;
     margin-top: -2vw;
     margin-left: 2vw;
   }
-
   .impression-riso .grid.col-2 {
     grid-template-columns: repeat(1, 1fr);
     column-gap: 15px;
