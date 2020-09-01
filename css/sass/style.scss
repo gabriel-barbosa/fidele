@@ -488,6 +488,10 @@ a:hover, a:focus {
     display: flex;
     letter-spacing: -0.1em;
 
+    h1 {
+      margin-left: -4.6px;
+    }
+
     & > div {
       width: 50%;
     }
