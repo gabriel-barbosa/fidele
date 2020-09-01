@@ -4415,6 +4415,12 @@ input, textarea {
   font-weight: normal;
 }
 
+input[type=text] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 .grid {
   display: grid;
   grid-template-columns: 1fr;
