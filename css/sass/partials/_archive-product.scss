@@ -39,11 +39,30 @@
      margin: 0 20px;
    }
 
+   .fixed-wrapper {
+     margin: 2vw 20px 3vw;
+   }
+
+   &.cat-fixed {
+     .product-cat-menu {
+       position: fixed;
+       top: 51px;
+       left: 0;
+       margin: 0 20px;
+       z-index: 1000;
+       width: calc(100% - 40px);
+     }
+
+     .head-title {
+       top: 80px;
+     }
+   }
+
    .product-cat-menu {
      display: flex;
      border: 1px solid;
-     margin: 2vw 20px 3vw;
-     font-size: var(--font-size3);;
+     font-size: 18px;
+     width: 100%;
 
      &.mobile {
        display: none;
@@ -51,6 +70,8 @@
 
      .cat-item {
        border-right: 1px solid;
+       background: #fff;
+       font-weight: 500;
 
        a {
          display: block;
@@ -90,13 +111,20 @@
          height: 100%;
          border: 0;
          color: $fideleblue;
-         font-size: var(--font-size3);;
+         font-size: 18px;
          padding: 0vw 0.5vw;
+         font-weight: 500;
+         font-style: normal;
+         font-family: "Unica77 LL", sans-serif;
          background: url(img/select-arrow.svg) right 0.5vw center no-repeat;
          background-size: 2.5vw;
          -moz-appearance:none; /* Firefox */
          -webkit-appearance:none; /* Safari and Chrome */
          appearance:none;
+
+         option {
+           font-weight: 500 !important;
+         }
 
          &:focus {
            border: 0;
@@ -303,6 +331,26 @@
    }
  }
 
+ @include responsive(small-desktop) {
+   .archive .product-cat-menu, .archive .product-cat-menu .cat-item form select {
+     font-size: 16px;
+   }
+
+   .archive.cat-fixed .product-cat-menu {
+     top: 48px;
+   }
+ }
+
+  @include responsive(tablet-landscape) {
+    .archive .product-cat-menu, .archive .product-cat-menu .cat-item form select  {
+      font-size: 14px;
+    }
+
+    .archive.cat-fixed .product-cat-menu {
+      top: 45px;
+    }
+  }
+
 
 @include responsive(tablet-portrait) {
   .post-type-archive-product {
@@ -336,9 +384,18 @@
       display: none;
     }
 
+    .fixed-wrapper {
+      margin: 2vw 15px 6vw;
+    }
+
+    &.cat-fixed .product-cat-menu {
+      top: 46px;
+      margin: 0 15px;
+      width: calc(100% - 30px);
+    }
+
     .product-cat-menu.mobile {
       display: flex;
-      margin: 2vw 15px 6vw;
 
       .orderby-form {
         text-overflow: ellipsis;
@@ -350,7 +407,7 @@
         border: 0;
         color: #215BDF;
         font-size: var(--font-size3);
-        padding: 0vw 11vw 0 2vw;
+        padding: 1vw 11vw 0 2vw;
         background: url(img/select-arrow.svg) right 2vw center no-repeat;
         background-size: 8.5vw;
         -moz-appearance: none;
@@ -368,8 +425,9 @@
         background: none;
         color: $fideleblue;
         font-size: var(--font-size3);
-        padding: 1vw 2vw;
+        padding: 1.5vw 2vw 1vw;
         font-weight: 500;
+        font-family: "Unica77 LL", sans-serif;
       }
 
       /* Dropdown button on hover & focus */

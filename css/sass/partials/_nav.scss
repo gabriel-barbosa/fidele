@@ -169,7 +169,7 @@
 
 @include responsive(tablet-portrait) {
   .header {
-    padding: 15px;
+    padding: 15px 15px 0;
   }
 
   .head-title {
