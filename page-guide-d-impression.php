@@ -12,15 +12,17 @@
 	</div>
 </section>
 
-<div class="submenu"><?php
-	if( have_rows('add_content_row') ):
-		$titlecounter = 0;
-		while ( have_rows('add_content_row') ) : the_row();
-			if (get_sub_field('row_title')) { $titlecounter++; ?>
-				<div class="submenu-item"><span class="counter"><?php echo $titlecounter; ?>.</span> <a href="#<?php the_sub_field('row_title');?>"><?php the_sub_field('row_title');?></a></div><?php
-			}
-		endwhile;
-	endif;?>
+<div class="fixed-wrapper">
+	<div class="submenu"><?php
+		if( have_rows('add_content_row') ):
+			$titlecounter = 0;
+			while ( have_rows('add_content_row') ) : the_row();
+				if (get_sub_field('row_title')) { $titlecounter++; ?>
+					<div class="submenu-item"><span class="counter"><?php echo $titlecounter; ?>.</span> <a href="#<?php the_sub_field('row_title');?>"><?php the_sub_field('row_title');?></a></div><?php
+				}
+			endwhile;
+		endif;?>
+	</div>
 </div>
 
 <?php

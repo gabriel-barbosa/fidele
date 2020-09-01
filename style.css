@@ -368,7 +368,7 @@ input[type=search] {
   width: 100%;
   top: 0;
   left: 0;
-  padding: 20px;
+  padding: 20px 20px 0;
   z-index: 1001;
 }
 
@@ -1643,7 +1643,7 @@ input[type=search] {
     overflow: hidden;
     margin-right: -15vw;
     position: initial;
-    margin-bottom: 4vw;
+    margin-bottom: 20vw;
   }
   .simulateur-steps .form .submit-wrapper .submit-button {
     width: 80vw;
@@ -1658,6 +1658,9 @@ input[type=search] {
 }
 .guide-d-impression .footer {
   margin-bottom: 0;
+}
+.guide-d-impression.cat-fixed .head-title {
+  top: 80px;
 }
 
 html {
@@ -1882,23 +1885,79 @@ html {
   height: 21.65vw;
 }
 
+.fixed-wrapper {
+  margin: 10vw 0 3vw;
+}
+
 .submenu {
   display: flex;
   border: 1px solid;
-  margin: 10vw 0 3vw;
-  font-size: var(--font-size3);
+  font-weight: 500;
+  font-size: 18px;
+  background: #fff;
+}
+
+.cat-fixed .submenu {
+  position: fixed;
+  top: 51px;
+  width: calc(100% - 40px);
+  z-index: 1000;
 }
 
 .submenu-item {
-  border-right: 1px solid;
+  border-right: 1px solid #215BDF;
   padding: 0.3vw 0.6vw 0;
+  background: #fff;
+  transition: all 0.4s ease;
+  color: #215BDF;
+}
+.submenu-item a {
+  transition: all 0.4s ease;
+}
+.submenu-item:hover {
+  background: #215BDF;
+  background: linear-gradient(to right, #215BDF 38.57%, #FFFFFF 100%);
+  background: -webkit-linear-gradient(left, #215BDF 38.57%, #FFFFFF 100%);
+  background: -o-linear-gradient(to right, #215BDF 38.57%, #FFFFFF 100%);
+  background: -moz-linear-gradient(to right, #215BDF 38.57%, #FFFFFF 100%);
+  color: #fff;
+}
+.submenu-item:hover a {
+  color: #fff;
 }
 
 .submenu-item:last-of-type {
   border-right: 0;
 }
 
+@media (min-width: 992px) and (max-width: 1199px) {
+  .submenu {
+    font-size: 16px;
+  }
+
+  .cat-fixed .submenu {
+    top: 48px;
+  }
+}
+@media (min-width: 769px) and (max-width: 991px) {
+  .submenu {
+    font-size: 14px;
+  }
+
+  .cat-fixed .submenu {
+    top: 45px;
+  }
+}
 @media (max-width: 768px) {
+  .fixed-wrapper {
+    margin: 8vw 0 0;
+  }
+
+  .cat-fixed .submenu {
+    position: relative;
+    top: 0;
+  }
+
   .guide-d-impression svg {
     stroke-width: 3 !important;
   }
