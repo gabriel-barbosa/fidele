@@ -245,6 +245,12 @@
        }
      }
 
+     .subtitle {
+       br {
+         display: none;
+       }
+     }
+
      .grid.col-2 {
        grid-template-columns: repeat(1, 1fr);
        column-gap: 15px;

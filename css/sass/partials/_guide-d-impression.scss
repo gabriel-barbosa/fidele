@@ -40,6 +40,12 @@ html {
 	grid-template-columns: repeat(2, 1fr);
 	grid-column-gap: 20px;
 }
+
+.row-content svg {
+	width: 100%;
+	height: auto;
+}
+
 .row-content img {
 	height: auto;
 	margin: 0;
@@ -272,6 +278,10 @@ html {
 		top: 0;
 	}
 
+	.guide-d-impression.cat-fixed .head-title {
+		top: 50px;
+	}
+
 	.guide-d-impression {
 		svg {
 			stroke-width: 3 !important;
@@ -353,7 +363,7 @@ html {
 
 	.guide-row-1 {
 		.column-left {
-			img {
+			img, svg {
 				max-width: 76%;
 			}
 		}

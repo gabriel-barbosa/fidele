@@ -114,9 +114,9 @@ function html5blank_header_scripts() {
                 'html5blankscripts',
                 get_template_directory_uri() . '/js/scripts.js',
                 array(
+                    'jquery',
                     'conditionizr',
                     'modernizr',
-                    'jquery',
                     'slick',
                     'steps',
                     'fittext'
@@ -136,23 +136,12 @@ function html5blank_header_scripts() {
     }
 }
 
-// Load HTML5 Blank conditional scripts
-function html5blank_conditional_scripts() {
-    if ( is_page( 'pagenamehere' ) ) {
-        // Conditional script(s)
-        wp_register_script( 'scriptname', get_template_directory_uri() . '/js/scriptname.js', array( 'jquery' ), '1.0.0' );
-        wp_enqueue_script( 'scriptname' );
-    }
-}
 
 // Load HTML5 Blank styles
 function html5blank_styles() {
     if ( HTML5_DEBUG ) {
-        // normalize-css
-        wp_register_style( 'normalize', get_template_directory_uri() . '/css/lib/normalize.css', array(), '7.0.0' );
-
         // Custom CSS
-        wp_register_style( 'html5blank', get_template_directory_uri() . '/style.css', array( 'normalize' ), '1.0' );
+        wp_register_style( 'html5blank', get_template_directory_uri() . '/style.css', '1.0' );
 
         // Register CSS
         wp_enqueue_style( 'html5blank' );
@@ -419,47 +408,6 @@ add_shortcode( 'html5_shortcode_demo_2', 'html5_shortcode_demo_2' ); // Place [h
 
 // Shortcodes above would be nested like this -
 // [html5_shortcode_demo] [html5_shortcode_demo_2] Here's the page title! [/html5_shortcode_demo_2] [/html5_shortcode_demo]
-
-/*------------------------------------*\
-    Custom Post Types
-\*------------------------------------*/
-
-// Create 1 Custom Post type for a Demo, called HTML5-Blank
-function create_post_type_html5() {
-    register_taxonomy_for_object_type( 'category', 'html5-blank' ); // Register Taxonomies for Category
-    register_taxonomy_for_object_type( 'post_tag', 'html5-blank' );
-    register_post_type( 'html5-blank', // Register Custom Post Type
-        array(
-        'labels'       => array(
-            'name'               => esc_html( 'HTML5 Blank Custom Post', 'html5blank' ), // Rename these to suit
-            'singular_name'      => esc_html( 'HTML5 Blank Custom Post', 'html5blank' ),
-            'add_new'            => esc_html( 'Add New', 'html5blank' ),
-            'add_new_item'       => esc_html( 'Add New HTML5 Blank Custom Post', 'html5blank' ),
-            'edit'               => esc_html( 'Edit', 'html5blank' ),
-            'edit_item'          => esc_html( 'Edit HTML5 Blank Custom Post', 'html5blank' ),
-            'new_item'           => esc_html( 'New HTML5 Blank Custom Post', 'html5blank' ),
-            'view'               => esc_html( 'View HTML5 Blank Custom Post', 'html5blank' ),
-            'view_item'          => esc_html( 'View HTML5 Blank Custom Post', 'html5blank' ),
-            'search_items'       => esc_html( 'Search HTML5 Blank Custom Post', 'html5blank' ),
-            'not_found'          => esc_html( 'No HTML5 Blank Custom Posts found', 'html5blank' ),
-            'not_found_in_trash' => esc_html( 'No HTML5 Blank Custom Posts found in Trash', 'html5blank' ),
-        ),
-        'public'       => true,
-        'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
-        'has_archive'  => true,
-        'supports'     => array(
-            'title',
-            'editor',
-            'excerpt',
-            'thumbnail'
-        ), // Go to Dashboard Custom HTML5 Blank post for supports
-        'can_export'   => true, // Allows export in Tools > Export
-        'taxonomies'   => array(
-            'post_tag',
-            'category'
-        ) // Add Category and Post Tags support
-    ) );
-}
 
 /*------------------------------------*\
     ShortCode Functions

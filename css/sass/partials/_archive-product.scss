@@ -362,6 +362,10 @@
     .nav-mobile .footer {
       margin: 10vw 0 20vw;
     }
+
+    &.cat-fixed .nav-mobile {
+      padding-top: 45vw;
+    }
   }
 
   .archive {

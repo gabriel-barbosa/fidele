@@ -1,65 +1,86 @@
 (function( root, $, undefined ) {
 
 	$(function () {
-		/* HOME - HIDE LANDING ANIMATION */
 		$(document).ready(function() {
-	   var isshow = localStorage.getItem('isshow');
-	   if (isshow== null) {
-      localStorage.setItem('isshow', 1);
+			/* 	CONVERT IMAGES ON INLINE SVG */
+			const convertImages = (query, callback) => {
+		  const images = document.querySelectorAll(query);
+			  images.forEach(image => {
+			    fetch(image.src)
+			    .then(res => res.text())
+			    .then(data => {
+			      const parser = new DOMParser();
+			      const svg = parser.parseFromString(data, 'image/svg+xml').querySelector('svg');
 
-      // Show popup here
-      $('.gradient-intro').show();
-	    }
-		});
+			      if (image.id) svg.id = image.id;
+			      if (image.className) svg.classList = image.classList;
 
-		$('.gradient-intro').click(function() {
-			$(this).hide(300);
-		});
+			      image.parentNode.replaceChild(svg, image);
+			    })
+			    .then(callback)
+			    .catch(error => console.error(error))
+			  });
+			}
 
-		/* A PROPOS PAGE - LETTERS COLOR ON HOVER */
-		$(".a-propos .header-text .text").each(function (index) {
-			var characters = $(this).text().split("");
+			convertImages('.style-svg');
+			convertImages('.gallery img');
 
-			$this = $(this);
-			$this.empty();
-			var n = 0;
-			$.each(characters, function (i, el) {
-					i++;
-					n++;
-					$this.append("<span class='char" + i + " color" + n + "'>" + el + "</span");
-					if(n >= 4) {
-						n = 0;
-					}
+			/* HOME - HIDE LANDING ANIMATION */
+			var isshow = localStorage.getItem('isshow');
+			if (isshow== null) {
+			localStorage.setItem('isshow', 1);
+
+			// Show gradient on first access
+			$('.gradient-intro').show();
+			}
+
+			$('.gradient-intro').click(function() {
+				$(this).hide(300);
+			});
+
+			/* A PROPOS PAGE - LETTERS COLOR ON HOVER */
+			$(".a-propos .header-text .text").each(function (index) {
+				var characters = $(this).text().split("");
+
+				$this = $(this);
+				$this.empty();
+				var n = 0;
+				$.each(characters, function (i, el) {
+						i++;
+						n++;
+						$this.append("<span class='char" + i + " color" + n + "'>" + el + "</span");
+						if(n >= 4) {
+							n = 0;
+						}
+				});
 			});
 		});
+		/* END DOCUMENT READY */
 
-		/* SHOP PAGE - PRODUCTS LOOP */
-		$('.dropbtn').click(function() {
-		  document.getElementById("myDropdown").classList.toggle("show");
-		});
+		/* FUNCTION SCROLLED INTO VIEW */
+		function isScrolledIntoView(elem){
+				var $elem = $(elem);
+				var $window = $(window);
+				const windowH = window.innerHeight;
 
-		window.onclick = function(event) {
-		  if (!event.target.matches('.dropbtn')) {
-		    var dropdowns = document.getElementsByClassName("dropdown-content");
-		    var i;
-		    for (i = 0; i < dropdowns.length; i++) {
-		      var openDropdown = dropdowns[i];
-		      if (openDropdown.classList.contains('show')) {
-		        openDropdown.classList.remove('show');
-		      }
-		    }
-		  }
+				var docViewTop = $window.scrollTop();
+				var docViewBottom = docViewTop + windowH;
+
+				var elemTop = $elem.offset().top;
+				var elemBottom = elemTop + $elem.height();
+
+				return ((elemBottom <= docViewBottom));
 		}
 
 		$(window).scroll(function(){
-		  $('.product-item').each(function(){
-		    if(isScrolledIntoView($(this))){
-		      $(this).find('.product-info').addClass('stop');
-		    }
-		    else{
-		      $(this).find('.product-info').removeClass('stop');
-		    }
-		  });
+			$('.product-item').each(function(){
+				if(isScrolledIntoView($(this))){
+					$(this).find('.product-info').addClass('stop');
+				}
+				else{
+					$(this).find('.product-info').removeClass('stop');
+				}
+			});
 
 			var catMenuBottom = $('.nav').offset().top + $('.nav').outerHeight(true);
 			var catMenu = $('.fixed-wrapper').offset().top;
@@ -92,20 +113,23 @@
 			}
 		});
 
-		function isScrolledIntoView(elem){
-		    var $elem = $(elem);
-		    var $window = $(window);
-				const windowH = window.innerHeight;
+		/* SHOP PAGE - PRODUCTS LOOP */
+		$('.dropbtn').click(function() {
+		  document.getElementById("myDropdown").classList.toggle("show");
+		});
 
-		    var docViewTop = $window.scrollTop();
-		    var docViewBottom = docViewTop + windowH;
-
-		    var elemTop = $elem.offset().top;
-		    var elemBottom = elemTop + $elem.height();
-
-		    return ((elemBottom <= docViewBottom));
+		window.onclick = function(event) {
+		  if (!event.target.matches('.dropbtn')) {
+		    var dropdowns = document.getElementsByClassName("dropdown-content");
+		    var i;
+		    for (i = 0; i < dropdowns.length; i++) {
+		      var openDropdown = dropdowns[i];
+		      if (openDropdown.classList.contains('show')) {
+		        openDropdown.classList.remove('show');
+		      }
+		    }
+		  }
 		}
-
 
 		/* SINGLE PRODUCT - GALLERY */
 		$(".product-gallery").slick({
@@ -124,7 +148,7 @@
 
 
 		/* NAV - HIDE/SHOW FIDELE LOGO ON SCROLL AND ON NAV HOVER */
-		$(document).scroll(function() {
+		$(window).scroll(function() {
 			if ($(this).scrollTop() > 10) {
 				$('.head-title').addClass('scroll');
 			}
@@ -472,7 +496,7 @@
 			}
 		});
 
-		$('.woocommerce-order-details, .woocommerce-customer-details').wrapAll("<div class='grid col-2' />")
+		$('.woocommerce-order-details, .woocommerce-customer-details').wrapAll("<div class='grid col-2' />");
 	});
 
 
