@@ -160,21 +160,21 @@ html {
 .guide-row-5 .column-right {
 	padding-top: 4.55vw;
 }
-.guide-row-5 .column-left img {
+.guide-row-5 .column-left svg {
     width: 40.4vw;
 }
-.guide-row-5 .column-right img, .guide-row-7 .column-right img {
+.guide-row-5 .column-right svg, .guide-row-7 .column-right svg {
 	max-width: calc(100% + 5vw);
     width: calc(100% + 5vw);
 }
-.guide-row-7 .column-right img {
+.guide-row-7 .column-right svg {
 	width: 43.85vw;
 }
-.guide-row-8 img, .guide-row-9 img {
+.guide-row-8 svg, .guide-row-9 svg {
 	margin-bottom: 20px;
 	width: 100%;
 }
-.guide-row-9 .column-left img {
+.guide-row-9 .column-left svg {
 	margin-bottom: 18px;
 }
 .guide-row-8 p, .guide-row-9 p {
@@ -188,7 +188,7 @@ html {
 	padding-right: 0;
 	margin-bottom: 1.35vw;
 }
-.guide-row-11 img {
+.guide-row-11 svg {
 	width: 100%;
 }
 .guide-row-12 .column-right {
@@ -199,12 +199,17 @@ html {
 	padding-right: 2.6vw;
 	padding-bottom: 0.5vw;
 }
-.guide-row-12 .column-right img {
+.guide-row-12 .column-right svg {
 	position: absolute;
     right: 0;
     bottom: 0;
     width: 23vw;
 }
+
+.guide-row-14 p:last-child {
+	margin-top: auto;
+}
+
 .guide-row-13 h3 {
     margin-bottom: 10px;
 }
