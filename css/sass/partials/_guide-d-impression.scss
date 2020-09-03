@@ -15,6 +15,11 @@
 	&.cat-fixed .head-title {
 		top: 80px;
 	}
+
+	svg * {
+		stroke-width: 1px !important;
+		vector-effect: non-scaling-stroke;
+	}
 }
 
 html {
@@ -125,6 +130,14 @@ html {
 	max-width: calc(100% + 5vw);
     width: calc(100% + 5vw);
 }
+
+.guide-row-1 .column-left svg {
+	width: 28vw;
+}
+.guide-row-1 .column-right svg .st0 {
+	fill: transparent;
+}
+
 .table {
 	border: solid 1px #215BDF;
 	margin-bottom: 20px;
@@ -282,12 +295,6 @@ html {
 		top: 50px;
 	}
 
-	.guide-d-impression {
-		svg {
-			stroke-width: 3 !important;
-		}
-	}
-
 	.submenu {
 		font-size: var(--font-size1);
 	}
@@ -369,7 +376,7 @@ html {
 		}
 
 		.column-right {
-			img {
+			img, svg {
 				width: 100%;
 			}
 		}

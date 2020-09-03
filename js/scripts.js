@@ -22,8 +22,7 @@
 			  });
 			}
 
-			convertImages('.style-svg');
-			convertImages('.gallery img');
+			convertImages('.guide-d-impression img');
 
 			/* HOME - HIDE LANDING ANIMATION */
 			var isshow = localStorage.getItem('isshow');
