@@ -936,6 +936,9 @@ input[type=search] {
 .steps-wrapper .steps ul li.disabled a {
   cursor: inherit;
 }
+.steps-wrapper .steps ul li.disable {
+  pointer-events: none;
+}
 .steps-wrapper .steps ul li a:focus {
   text-decoration: none;
   border: none;
@@ -959,6 +962,11 @@ input[type=search] {
   opacity: 0;
 }
 
+.simulateur-steps .step-subtitle {
+  margin: 0 5px;
+  max-width: 25%;
+  line-height: 1.1;
+}
 .simulateur-steps.step-1 {
   position: relative;
   height: 38vw;
@@ -1481,12 +1489,18 @@ input[type=search] {
 }
 
 @media (max-width: 768px) {
+  .simulateur-de-devis .category-icon {
+    display: none;
+  }
   .simulateur-de-devis .simulateur-header h1 {
     max-width: 100%;
   }
+  .simulateur-de-devis .footer {
+    display: grid;
+  }
 
   .steps-wrapper .steps {
-    top: 20vw;
+    top: 18vw;
     right: 15px;
     font-size: var(--font-size1);
   }
@@ -1498,6 +1512,11 @@ input[type=search] {
     display: none;
   }
 
+  .simulateur-steps .step-subtitle {
+    max-width: 100%;
+    font-size: var(--font-size1);
+    margin: 20px -7px 5px;
+  }
   .simulateur-steps.step-1 {
     height: auto;
     padding: 0 15px;
@@ -1553,6 +1572,9 @@ input[type=search] {
     margin: 8vw 0 1.5vw;
   }
 
+  .calconic-calculator {
+    margin-bottom: 40px;
+  }
   .calconic-calculator #lumi-calculator-5e99c26393d11a001e5e0fb2,
 .calconic-calculator #lumi-calculator-5ea1bde1a4ca0d00290b1848,
 .calconic-calculator #lumi-calculator-5f2c6f18a2d88c002959c5f1,
@@ -1570,7 +1592,7 @@ input[type=search] {
 .calconic-calculator #lumi-calculator-5ea1b573a4ca0d00290b1835 .calconic-element,
 .calconic-calculator #lumi-calculator-5ea1c010a4ca0d00290b1850 .calconic-element {
     padding: 10px;
-    margin: 1vw 0;
+    margin: 10px 0;
     background-color: inherit !important;
     height: auto;
   }
@@ -1580,16 +1602,6 @@ input[type=search] {
 .calconic-calculator #lumi-calculator-5e9dbdaaa4ca0d00290b12c8 .calconic-element-label label,
 .calconic-calculator #lumi-calculator-5ea1b573a4ca0d00290b1835 .calconic-element-label label,
 .calconic-calculator #lumi-calculator-5ea1c010a4ca0d00290b1850 .calconic-element-label label {
-    font-size: var(--font-size2) !important;
-    font-family: "Unica77 LL", sans-serif !important;
-  }
-  .calconic-calculator #lumi-calculator-5e99c26393d11a001e5e0fb2 .calconic-element.calconic-title-wrapper h2,
-.calconic-calculator #lumi-calculator-5ea1bde1a4ca0d00290b1848 .calconic-element.calconic-title-wrapper h2,
-.calconic-calculator #lumi-calculator-5f2c6f18a2d88c002959c5f1 .calconic-element.calconic-title-wrapper h2,
-.calconic-calculator #lumi-calculator-5e9dbdaaa4ca0d00290b12c8 .calconic-element.calconic-title-wrapper h2,
-.calconic-calculator #lumi-calculator-5ea1b573a4ca0d00290b1835 .calconic-element.calconic-title-wrapper h2,
-.calconic-calculator #lumi-calculator-5ea1c010a4ca0d00290b1850 .calconic-element.calconic-title-wrapper h2 {
-    font-weight: 500 !important;
     font-size: var(--font-size2) !important;
     font-family: "Unica77 LL", sans-serif !important;
   }
@@ -1613,7 +1625,7 @@ input[type=search] {
 .calconic-calculator #lumi-calculator-5e9dbdaaa4ca0d00290b12c8 .calconic-element.calconic-title-wrapper h2,
 .calconic-calculator #lumi-calculator-5ea1b573a4ca0d00290b1835 .calconic-element.calconic-title-wrapper h2,
 .calconic-calculator #lumi-calculator-5ea1c010a4ca0d00290b1850 .calconic-element.calconic-title-wrapper h2 {
-    font-weight: 500 !important;
+    font-weight: 400 !important;
     font-size: var(--font-size1) !important;
     font-family: "Unica77 LL", sans-serif !important;
   }
@@ -1633,6 +1645,7 @@ input[type=search] {
 .calconic-calculator #lumi-calculator-5ea1c010a4ca0d00290b1850 .calconic-element.calconic-divider-wrapper {
     padding: 0 !important;
     margin: 0 0 0 -10px !important;
+    display: none;
   }
   .calconic-calculator #lumi-calculator-5e99c26393d11a001e5e0fb2 .calconic-element.calconic-divider-wrapper .calconic-divider,
 .calconic-calculator #lumi-calculator-5ea1bde1a4ca0d00290b1848 .calconic-element.calconic-divider-wrapper .calconic-divider,
@@ -1653,7 +1666,7 @@ input[type=search] {
     border-right: 0;
     border-bottom: 1px solid;
     height: auto !important;
-    margin-top: 0;
+    margin-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 4vw;
@@ -1667,6 +1680,22 @@ input[type=search] {
 .calconic-calculator #lumi-calculator-5ea1c010a4ca0d00290b1850 .calconic-element.calconic-formula .calconic-element-label {
     margin: 0;
     margin-right: 5px;
+  }
+  .calconic-calculator #lumi-calculator-5e99c26393d11a001e5e0fb2 .calconic-element.calconic-formula:nth-last-of-type(),
+.calconic-calculator #lumi-calculator-5ea1bde1a4ca0d00290b1848 .calconic-element.calconic-formula:nth-last-of-type(),
+.calconic-calculator #lumi-calculator-5f2c6f18a2d88c002959c5f1 .calconic-element.calconic-formula:nth-last-of-type(),
+.calconic-calculator #lumi-calculator-5e9dbdaaa4ca0d00290b12c8 .calconic-element.calconic-formula:nth-last-of-type(),
+.calconic-calculator #lumi-calculator-5ea1b573a4ca0d00290b1835 .calconic-element.calconic-formula:nth-last-of-type(),
+.calconic-calculator #lumi-calculator-5ea1c010a4ca0d00290b1850 .calconic-element.calconic-formula:nth-last-of-type() {
+    border-bottom: 0;
+  }
+  .calconic-calculator #lumi-calculator-5e99c26393d11a001e5e0fb2 .calconic-element.calconic-info-wrapper,
+.calconic-calculator #lumi-calculator-5ea1bde1a4ca0d00290b1848 .calconic-element.calconic-info-wrapper,
+.calconic-calculator #lumi-calculator-5f2c6f18a2d88c002959c5f1 .calconic-element.calconic-info-wrapper,
+.calconic-calculator #lumi-calculator-5e9dbdaaa4ca0d00290b12c8 .calconic-element.calconic-info-wrapper,
+.calconic-calculator #lumi-calculator-5ea1b573a4ca0d00290b1835 .calconic-element.calconic-info-wrapper,
+.calconic-calculator #lumi-calculator-5ea1c010a4ca0d00290b1850 .calconic-element.calconic-info-wrapper {
+    margin: 20px 10px 30px;
   }
   .calconic-calculator #lumi-calculator-5e99c26393d11a001e5e0fb2 #ref-r17.calconic-element.calconic-formula,
 .calconic-calculator #lumi-calculator-5ea1bde1a4ca0d00290b1848 #ref-r17.calconic-element.calconic-formula,
@@ -2325,7 +2354,7 @@ html {
     padding-right: 15px;
   }
   .workshops .featured-image {
-    height: 500px;
+    height: 600px;
     margin: 6vw 0 8vw;
   }
   .workshops .page-title {
@@ -2531,6 +2560,9 @@ html {
 .a-propos .map .map-description .text .map-infos p {
   margin-bottom: 0;
 }
+.a-propos .map .map-description .text .map-infos .mobile-br {
+  display: none;
+}
 .a-propos .map .map-description .image img {
   width: 100%;
   height: 100%;
@@ -2584,6 +2616,12 @@ html {
   }
   .a-propos .map .map-description .text {
     border-right: 0;
+  }
+  .a-propos .map .map-description .text p {
+    margin-bottom: 15px;
+  }
+  .a-propos .map .map-description .text .map-infos .mobile-br {
+    display: block;
   }
   .a-propos .map .map-description .image {
     border-top: 1px solid;

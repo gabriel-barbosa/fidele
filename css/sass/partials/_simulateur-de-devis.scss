@@ -79,6 +79,10 @@
           cursor: inherit;
         }
 
+        &.disable {
+          pointer-events: none;
+        }
+
         a:focus {
           text-decoration: none;
           border: none;
@@ -111,6 +115,12 @@
 }
 
 .simulateur-steps {
+  .step-subtitle {
+    margin: 0 5px;
+    max-width: 25%;
+    line-height: 1.1;
+  }
+
   &.step-1 {
     position: relative;
     height: 38vw;
@@ -544,16 +554,24 @@
 
 @include responsive(tablet-portrait) {
   .simulateur-de-devis {
+    .category-icon {
+      display: none;
+    }
+
     .simulateur-header {
       h1 {
         max-width: 100%;
       }
     }
+
+    .footer {
+      display: grid;
+    }
   }
 
   .steps-wrapper {
     .steps {
-      top: 20vw;
+      top: 18vw;
       right: 15px;
       font-size: var(--font-size1);
 
@@ -569,6 +587,12 @@
   }
 
   .simulateur-steps {
+    .step-subtitle {
+      max-width: 100%;
+      font-size: var(--font-size1);
+      margin: 20px -7px 5px;
+    }
+
     &.step-1 {
       height: auto;
       padding: 0 15px;
@@ -642,6 +666,8 @@
   }
 
   .calconic-calculator  {
+    margin-bottom: 40px;
+
     #lumi-calculator-5e99c26393d11a001e5e0fb2,
     #lumi-calculator-5ea1bde1a4ca0d00290b1848,
     #lumi-calculator-5f2c6f18a2d88c002959c5f1,
@@ -654,18 +680,12 @@
 
       .calconic-element {
         padding: 10px;
-        margin: 1vw 0;
+        margin: 10px 0;
         background-color: inherit !important;
         height: auto;
       }
 
       .calconic-element-label label {
-        font-size: var(--font-size2) !important;
-        font-family: "Unica77 LL", sans-serif !important;
-      }
-
-      .calconic-element.calconic-title-wrapper h2 {
-        font-weight: 500 !important;
         font-size: var(--font-size2) !important;
         font-family: "Unica77 LL", sans-serif !important;
       }
@@ -676,7 +696,7 @@
       }
 
       .calconic-element.calconic-title-wrapper h2 {
-        font-weight: 500 !important;
+        font-weight: 400 !important;
         font-size: var(--font-size1) !important;
         font-family: "Unica77 LL", sans-serif !important;
       }
@@ -688,6 +708,7 @@
       .calconic-element.calconic-divider-wrapper {
         padding: 0 !important;
         margin: 0 0 0 -10px !important;
+        display: none;
 
         .calconic-divider {
           width: 100vw;
@@ -700,7 +721,7 @@
         border-right: 0;
         border-bottom: 1px solid;
         height: auto !important;
-        margin-top: 0;
+        margin-top: 10px;
         padding-left: 10px;
         padding-right: 10px;
         padding-bottom: 4vw;
@@ -710,6 +731,14 @@
           margin: 0;
           margin-right: 5px;
         }
+
+        &:nth-last-of-type() {
+          border-bottom: 0;
+        }
+      }
+
+      .calconic-element.calconic-info-wrapper {
+        margin: 20px 10px 30px;
       }
 
       #ref-r17.calconic-element.calconic-formula {

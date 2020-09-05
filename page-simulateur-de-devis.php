@@ -17,6 +17,10 @@
 <div class="steps-wrapper">
 	<div class="step-title">Simulateur de Devis</div>
 	<section class="simulateur-steps step-1">
+		<div class="step-subtitle">
+			Estimez votre projet, choisissez une catégorie:
+		</div>
+
 		<!-- AFFICHES -->
 		<div id="affiches" class="gif-item" data-title="Simulateur Affiches">
 			<?php if(qtranxf_getLanguage() == "fr"): ?>

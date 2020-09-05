@@ -200,7 +200,7 @@
 	    bodyTag: ".simulateur-steps",
 	    transitionEffect: "fade",
 			autoFocus: false,
-			onStepChanged: function(event, currentIndex) {
+			onStepChanged: function(event, currentIndex, priorIndex) {
 				/* GETS THE STEP TITLE FROM CURRENT STEP AND PASSES IT TO H1 HEADER */
 				var title = $('.step-title.current').html();
 				console.log(title);
@@ -219,11 +219,20 @@
 
 				/* PREVENT FROM SENDING WRONG INPUT VALUES FROM STEP 2 TO STEP 3 */
 				if(currentIndex == 0) {
+					$('.steps li:nth-child(2)').addClass('disable');
 					$('.arrow').removeClass('affiches');
 					$('.arrow').removeClass('dos-colles');
 					$('.arrow').removeClass('brochures');
 					$('.arrow').removeClass('fanzines');
 					$('.arrow').removeClass('spirale');
+				}
+
+				if(priorIndex == 0) {
+					$('.steps li:nth-child(2)').removeClass('disable');
+				}
+
+				if(priorIndex == 1) {
+					$('.form').removeClass('visible');
 				}
 			},
 	    titleTemplate: '<span class="number step-#index#" data-title="#title#">#index#</span>',
