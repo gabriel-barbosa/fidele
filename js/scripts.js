@@ -2,59 +2,60 @@
 
 	$(function () {
 		$(document).ready(function() {
-			/* 	CONVERT IMAGES ON INLINE SVG */
-			const convertImages = (query, callback) => {
-		  const images = document.querySelectorAll(query);
-			  images.forEach(image => {
-			    fetch(image.src)
-			    .then(res => res.text())
-			    .then(data => {
-			      const parser = new DOMParser();
-			      const svg = parser.parseFromString(data, 'image/svg+xml').querySelector('svg');
-
-			      if (image.id) svg.id = image.id;
-			      if (image.className) svg.classList = image.classList;
-
-			      image.parentNode.replaceChild(svg, image);
-			    })
-			    .then(callback)
-			    .catch(error => console.error(error))
-			  });
-			}
-
-			convertImages('.guide-d-impression img');
-
-			/* HOME - HIDE LANDING ANIMATION */
-			var isshow = localStorage.getItem('isshow');
-			if (isshow== null) {
-			localStorage.setItem('isshow', 1);
-
-			// Show gradient on first access
-			$('.gradient-intro').show();
-			}
-
-			$('.gradient-intro').click(function() {
-				$(this).hide(300);
-			});
-
-			/* A PROPOS PAGE - LETTERS COLOR ON HOVER */
-			$(".a-propos .header-text .text").each(function (index) {
-				var characters = $(this).text().split("");
-
-				$this = $(this);
-				$this.empty();
-				var n = 0;
-				$.each(characters, function (i, el) {
-						i++;
-						n++;
-						$this.append("<span class='char" + i + " color" + n + "'>" + el + "</span");
-						if(n >= 4) {
-							n = 0;
-						}
-				});
-			});
 		});
 		/* END DOCUMENT READY */
+
+		/* 	CONVERT IMAGES ON INLINE SVG */
+		const convertImages = (query, callback) => {
+		const images = document.querySelectorAll(query);
+			images.forEach(image => {
+				fetch(image.src)
+				.then(res => res.text())
+				.then(data => {
+					const parser = new DOMParser();
+					const svg = parser.parseFromString(data, 'image/svg+xml').querySelector('svg');
+
+					if (image.id) svg.id = image.id;
+					if (image.className) svg.classList = image.classList;
+
+					image.parentNode.replaceChild(svg, image);
+				})
+				.then(callback)
+				.catch(error => console.error(error))
+			});
+		}
+
+		convertImages('.guide-d-impression img');
+
+		/* HOME - HIDE LANDING ANIMATION */
+		var isshow = localStorage.getItem('isshow');
+		if (isshow== null) {
+		localStorage.setItem('isshow', 1);
+
+		// Show gradient on first access
+		$('.gradient-intro').show();
+		}
+
+		$('.gradient-intro').click(function() {
+			$(this).hide(300);
+		});
+
+		/* A PROPOS PAGE - LETTERS COLOR ON HOVER */
+		$(".a-propos .header-text .text").each(function (index) {
+			var characters = $(this).text().split("");
+
+			$this = $(this);
+			$this.empty();
+			var n = 0;
+			$.each(characters, function (i, el) {
+					i++;
+					n++;
+					$this.append("<span class='char" + i + " color" + n + "'>" + el + "</span");
+					if(n >= 4) {
+						n = 0;
+					}
+			});
+		});
 
 		/* FUNCTION SCROLLED INTO VIEW */
 		function isScrolledIntoView(elem){
@@ -147,7 +148,7 @@
 
 
 		/* NAV - HIDE/SHOW FIDELE LOGO ON SCROLL AND ON NAV HOVER */
-		$(window).scroll(function() {
+		$(document).scroll(function() {
 			if ($(this).scrollTop() > 10) {
 				$('.head-title').addClass('scroll');
 			}
@@ -394,6 +395,10 @@
 		});
 
 		/* AFFICHES FORM - STEP 2 TO STEP 3 */
+		$(document).on("click", ".calconic-element.calconic-info-wrapper", function() {
+			$('.arrow').click();
+		});
+
 		$(document).on("click", ".arrow.affiches", function() {
 			/* NUMBER OF COPIES */
   		$('.affiches-form input.copies').val($('#affiches-calculator #ref-r2').find('.calconic--controled_input input').val());

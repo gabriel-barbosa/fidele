@@ -21,12 +21,17 @@
 		</div>
 
 		<div class="simulateur-de-devis">
-			<div class="gif-item">
-				<a href="<?php bloginfo('url'); ?>/impression-riso/simulateur-de-devis">
-					<img class="static" src="<?php bloginfo('template_url'); ?>/img/simulateur.png" alt="">
-					<img class="hover" src="<?php bloginfo('template_url'); ?>/img/simulateur-blue.gif" alt="">
-				</a>
-			</div>
+				<div class="gif-item">
+					<a href="<?php bloginfo('url'); ?>/impression-riso/simulateur-de-devis">
+						<?php if(qtranxf_getLanguage() == "fr"): ?>
+							<img class="static" src="<?php bloginfo('template_url'); ?>/img/simulateur.png" alt="">
+							<img class="hover" src="<?php bloginfo('template_url'); ?>/img/simulateur-blue.gif" alt="">
+						<?php else: ?>
+							<img class="static" src="<?php bloginfo('template_url'); ?>/img/simulateur-english.png" alt="">
+							<img class="hover" src="<?php bloginfo('template_url'); ?>/img/simulateur-english-blue.gif" alt="">
+						<?php endif; ?>
+					</a>
+				</div>
 		</div>
 
 		<div class="guide-d-impression">

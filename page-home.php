@@ -24,10 +24,17 @@
 		</a>
 	</div>
 
-	<div class="gif-item editions">
+	<div class="gif-item editions desktop">
 		<a href="<?php bloginfo('url'); ?>/editions/">
 			<img class="static" src="<?php bloginfo('template_url'); ?>/img/editions.png" alt="">
 			<img class="hover" src="<?php bloginfo('template_url'); ?>/img/editions-blue.gif" alt="">
+		</a>
+	</div>
+
+	<div class="gif-item editions mobile">
+		<a href="<?php bloginfo('url'); ?>/editions/">
+			<img class="static" src="<?php bloginfo('template_url'); ?>/img/editions-mobile.png" alt="">
+			<img class="hover" src="<?php bloginfo('template_url'); ?>/img/editions-mobile.png" alt="">
 		</a>
 	</div>
 </section>

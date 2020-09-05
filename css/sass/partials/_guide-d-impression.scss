@@ -136,7 +136,7 @@ html {
 .table p:last-child {
 	border-bottom: none;
 }
-.guide-row-1 .column-right img {
+.guide-row-1 .column-right svg {
 	width: 33.7vw;
 }
 .guide-row-1 .column-left svg {
@@ -227,7 +227,7 @@ html {
 .submenu {
 	display: flex;
 	border: 1px solid;
-	font-weight: 500;
+	font-weight: 400;
 	font-size: 18px;
 	background: #fff;
 }
@@ -261,6 +261,7 @@ html {
 }
 .submenu-item:last-of-type {
 	border-right: 0;
+	flex-grow: 1;
 }
 
 @include responsive(small-desktop) {

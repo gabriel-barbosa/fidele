@@ -19,28 +19,53 @@
 	<section class="simulateur-steps step-1">
 		<!-- AFFICHES -->
 		<div id="affiches" class="gif-item" data-title="Simulateur Affiches">
-			<img class="static" src="<?php bloginfo('template_url'); ?>/img/affiches.png" alt="">
-			<img class="hover" src="<?php bloginfo('template_url'); ?>/img/affiches-blue.gif" alt="">
+			<?php if(qtranxf_getLanguage() == "fr"): ?>
+				<img class="static" src="<?php bloginfo('template_url'); ?>/img/affiches.png" alt="">
+				<img class="hover" src="<?php bloginfo('template_url'); ?>/img/affiches-blue.gif" alt="">
+			<?php else: ?>
+				<img class="static" src="<?php bloginfo('template_url'); ?>/img/affiches-english.png" alt="">
+				<img class="hover" src="<?php bloginfo('template_url'); ?>/img/affiches-english-blue.gif" alt="">
+			<?php endif; ?>
 		</div>
 
 		<div id="brochures" class="gif-item" data-title="Simulateur Brochures">
-			<img class="static" src="<?php bloginfo('template_url'); ?>/img/brochures.png" alt="">
-			<img class="hover" src="<?php bloginfo('template_url'); ?>/img/brochures-blue.gif" alt="">
+			<?php if(qtranxf_getLanguage() == "fr"): ?>
+				<img class="static" src="<?php bloginfo('template_url'); ?>/img/brochures.png" alt="">
+				<img class="hover" src="<?php bloginfo('template_url'); ?>/img/brochures-blue.gif" alt="">
+			<?php else: ?>
+				<img class="static" src="<?php bloginfo('template_url'); ?>/img/brochures-english.png" alt="">
+				<img class="hover" src="<?php bloginfo('template_url'); ?>/img/brochures-english-blue.gif" alt="">
+			<?php endif; ?>
 		</div>
 
 		<div id="fanzines" class="gif-item" data-title="Simulateur Fanzines">
-			<img class="static" src="<?php bloginfo('template_url'); ?>/img/fanzines.png" alt="">
-			<img class="hover" src="<?php bloginfo('template_url'); ?>/img/fanzines-blue.gif" alt="">
+			<?php if(qtranxf_getLanguage() == "fr"): ?>
+				<img class="static" src="<?php bloginfo('template_url'); ?>/img/fanzines.png" alt="">
+				<img class="hover" src="<?php bloginfo('template_url'); ?>/img/fanzines-blue.gif" alt="">
+			<?php else: ?>
+				<img class="static" src="<?php bloginfo('template_url'); ?>/img/fanzines-english.png" alt="">
+				<img class="hover" src="<?php bloginfo('template_url'); ?>/img/fanzines-english-blue.gif" alt="">
+			<?php endif; ?>
 		</div>
 
 		<div id="dos-colles" class="gif-item" data-title="Simulateur Dos Collés">
-			<img class="static" src="<?php bloginfo('template_url'); ?>/img/dos-colles.png" alt="">
-			<img class="hover" src="<?php bloginfo('template_url'); ?>/img/dos-colles-blue.gif" alt="">
+			<?php if(qtranxf_getLanguage() == "fr"): ?>
+				<img class="static" src="<?php bloginfo('template_url'); ?>/img/dos-colles.png" alt="">
+				<img class="hover" src="<?php bloginfo('template_url'); ?>/img/dos-colles-blue.gif" alt="">
+			<?php else: ?>
+				<img class="static" src="<?php bloginfo('template_url'); ?>/img/livres-english.png" alt="">
+				<img class="hover" src="<?php bloginfo('template_url'); ?>/img/livres-english-blue.gif" alt="">
+			<?php endif; ?>
 		</div>
 
 		<div id="spirale" class="gif-item" data-title="Simulateur Spirale">
-			<img class="static" src="<?php bloginfo('template_url'); ?>/img/spirale.png" alt="">
-			<img class="hover" src="<?php bloginfo('template_url'); ?>/img/spirale-blue.gif" alt="">
+			<?php if(qtranxf_getLanguage() == "fr"): ?>
+				<img class="static" src="<?php bloginfo('template_url'); ?>/img/spirale.png" alt="">
+				<img class="hover" src="<?php bloginfo('template_url'); ?>/img/spirale-blue.gif" alt="">
+			<?php else: ?>
+				<img class="static" src="<?php bloginfo('template_url'); ?>/img/spirale-english.png" alt="">
+				<img class="hover" src="<?php bloginfo('template_url'); ?>/img/spirale-english-blue.gif" alt="">
+			<?php endif; ?>
 		</div>
 	</section>
 
@@ -97,13 +122,14 @@
 		</section>
 
 		<script>
-			(function() { var qs,j,q,s,d=document, gi=d.getElementById,
+			$(".step-1 .gif-item").click(function() {
+			var qs,j,q,s,d=document, gi=d.getElementById,
 			ce=d.createElement, gt=d.getElementsByTagName,
 			id="calconic_", b="https://cdn.calconic.com/static/js/";
 			if(!gi.call(d,id)) { j=ce.call(d,"script"); j.id=id; j.type="text/javascript"; j.async=true;
 			j.dataset.calconic=true;
 			j.src=b+"calconic.min.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(j,q) }
-		})();
+			});
 		</script>
 	</section>
 

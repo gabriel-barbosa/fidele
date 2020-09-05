@@ -359,6 +359,10 @@ a:hover, a:focus {
   }
 
   .gif-item {
+    &.mobile {
+      display: none;
+    }
+
     img {
       width: 100%;
       height: auto;
@@ -464,6 +468,14 @@ a:hover, a:focus {
     height: 80vh;
     font-size: 20vw;
     word-break: break-word;
+
+    .gif-item.desktop {
+      display: none;
+    }
+
+    .gif-item.mobile {
+      display: block;
+    }
 
     .studio {
       width: 45vw;
