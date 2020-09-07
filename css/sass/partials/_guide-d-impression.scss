@@ -392,8 +392,8 @@ html {
 
 	.guide-row-1 {
 		.column-left {
-			img, svg {
-				max-width: 76%;
+			svg {
+				width: 76%;
 			}
 		}
 
@@ -410,6 +410,10 @@ html {
 
 	.guide-row-2 .column-right h3 {
 		margin-bottom: 3vw;
+	}
+
+	.guide-row-4 .row-content .gallery {
+		margin-bottom: 0;
 	}
 
 	.guide-row-4 .column-right img, .guide-row-5 .column-right svg, .guide-row-7 .column-right svg {
@@ -481,6 +485,13 @@ html {
 			position: relative;
 			width: 100%;
 			margin-bottom: 3vw;
+		}
+	}
+
+	.guid-row-13 {
+		.column-left, .column-right {
+			display: flex;
+			flex-direction: column;
 		}
 	}
 
