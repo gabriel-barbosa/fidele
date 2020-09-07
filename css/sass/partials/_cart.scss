@@ -3,7 +3,7 @@
   margin-bottom: 20px;
 }
 
-.woocommerce-form__label-for-checkbox {
+.woocommerce-form__label-for-checkbox, .woocommerce-shipping-methods {
   position: relative;
 
   span {
@@ -215,7 +215,7 @@ body.cart, body.checkout {
 }
 
 @include responsive(tablet-portrait) {
-  .woocommerce-form__label-for-checkbox {
+  .woocommerce-form__label-for-checkbox, .woocommerce-shipping-methods {
     input:before {
       top: 0;
       transform: none;

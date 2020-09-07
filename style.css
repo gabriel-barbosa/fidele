@@ -3696,18 +3696,18 @@ body.single-product .woocommerce-notices-wrapper .woocommerce-message {
   margin-bottom: 20px;
 }
 
-.woocommerce-form__label-for-checkbox {
+.woocommerce-form__label-for-checkbox, .woocommerce-shipping-methods {
   position: relative;
 }
-.woocommerce-form__label-for-checkbox span {
+.woocommerce-form__label-for-checkbox span, .woocommerce-shipping-methods span {
   font-weight: 400;
 }
-.woocommerce-form__label-for-checkbox input {
+.woocommerce-form__label-for-checkbox input, .woocommerce-shipping-methods input {
   width: auto;
   height: 0;
   margin-right: 0.5vw;
 }
-.woocommerce-form__label-for-checkbox input:before {
+.woocommerce-form__label-for-checkbox input:before, .woocommerce-shipping-methods input:before {
   content: " ";
   display: inline-block;
   position: absolute;
@@ -3721,7 +3721,7 @@ body.single-product .woocommerce-notices-wrapper .woocommerce-message {
   border: 1px solid #215BDF;
   background-color: #fff;
 }
-.woocommerce-form__label-for-checkbox input:checked:before {
+.woocommerce-form__label-for-checkbox input:checked:before, .woocommerce-shipping-methods input:checked:before {
   background-color: blue;
 }
 
@@ -3871,7 +3871,7 @@ body.cart, body.checkout {
 }
 
 @media (max-width: 768px) {
-  .woocommerce-form__label-for-checkbox input:before {
+  .woocommerce-form__label-for-checkbox input:before, .woocommerce-shipping-methods input:before {
     top: 0;
     transform: none;
   }
