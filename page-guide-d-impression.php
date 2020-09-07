@@ -4,9 +4,14 @@
 <section>
 	<div class="page-title">
 		<div class="download-row">
+			<?php
+			$file = get_field('download_button');
+			if( $file ):
+			$url = wp_get_attachment_url( $file ); ?>
 			<div class="download-button">
-				Click Here To Download Our Guide & Templates
+		    <a href="<?php echo esc_html($url); ?>" >Click Here To Download Our Guide & Templates</a>
 			</div>
+			<?php endif; ?>
 		</div>
 		<div>
 			<h1>

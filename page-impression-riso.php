@@ -50,9 +50,14 @@
 		<section>
 			<div class="page-title">
 				<div class="download-row">
+					<?php
+					$file = get_field('download_couleurs');
+					if( $file ):
+					$url = wp_get_attachment_url( $file ); ?>
 					<div class="download-button">
-						<a href="#">Click Here To Download Our Color Palette</a>
+				    <a href="<?php echo esc_html($url); ?>">Click Here To Download Our Color Palette</a>
 					</div>
+					<?php endif; ?>
 				</div>
 				<div><h1><?php the_sub_field('coleurs_title'); ?></h1></div>
 			</div>
@@ -110,11 +115,14 @@
 				<?php endwhile; endif; ?>
 			</div>
 
+			<?php if( $file ):
+			$url = wp_get_attachment_url( $file ); ?>
 			<div class="download-button-mobile">
-				<a href="#">
+				<a href="<?php echo esc_html($url); ?>">
 					<img src="<?php bloginfo('template_url'); ?>/img/download-button.svg" alt="">
 				</a>
 			</div>
+			<?php endif; ?>
 		</section>
 
 		<?php if( have_rows('exemples') ): ?>

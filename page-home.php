@@ -8,7 +8,7 @@
 </section>
 
 <section class="index_menu">
-	<div class="text">Une Maison D'édition Et Un Atelier D'impression  Riso À Paris</div>
+	<div class="text <?php if(qtranxf_getLanguage() == "fr"): ?>french<?php else: ?>english<?php endif; ?>"><?php if(get_field('landing_text')): the_field('landing_text'); else: ?>Une Maison D'édition Et Un Atelier D'impression  Riso À Paris<?php endif; ?></div>
 
 	<div class="gif-item studio">
 		<a href="<?php bloginfo('url'); ?>/impression-riso/">

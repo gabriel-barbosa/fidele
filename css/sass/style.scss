@@ -342,10 +342,20 @@ a:hover, a:focus {
   }
 }
 
+.home {
+  .wrapper {
+    overflow-y: hidden;
+  }
+
+  .head-title {
+    display: none;
+  }
+}
+
 .index_menu {
   width: 100%;
   height: auto;
-  font-size: 10.4vw;
+  font-size: 10.5vw;
   font-weight: 500;
   text-align: center;
   line-height: 105%;
@@ -356,6 +366,10 @@ a:hover, a:focus {
 
   .text {
     max-width: 100%;
+
+    &.english {
+      font-size: 12vw;
+    }
   }
 
   .gif-item {
@@ -412,7 +426,7 @@ a:hover, a:focus {
     width: 15vw;
     position: absolute;
     bottom: 5vw;
-    right: 23vw;
+    right: 15vw;
 
     svg {
       width: 100%;
@@ -438,7 +452,7 @@ a:hover, a:focus {
   .editions {
     width: 19vw;
     position: absolute;
-    top: 3vw;
+    top: 0;
     right: 1vw;
 
     svg {
@@ -554,7 +568,7 @@ a:hover, a:focus {
   }
 
   .content {
-    font-size: var(--font-size2);;
+    font-size: var(--font-size2);
   }
 
   .woocommerce-breadcrumb {
