@@ -215,6 +215,14 @@ body.cart, body.checkout {
 }
 
 @include responsive(tablet-portrait) {
+  .woocommerce-form__label-for-checkbox {
+    input:before {
+      top: 0;
+      transform: none;
+    }
+
+  }
+
   .cart {
     .woocommerce-cart-form__cart-item.desktop {
       display: none;

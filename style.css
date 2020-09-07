@@ -3871,6 +3871,11 @@ body.cart, body.checkout {
 }
 
 @media (max-width: 768px) {
+  .woocommerce-form__label-for-checkbox input:before {
+    top: 0;
+    transform: none;
+  }
+
   .cart .woocommerce-cart-form__cart-item.desktop {
     display: none;
   }
