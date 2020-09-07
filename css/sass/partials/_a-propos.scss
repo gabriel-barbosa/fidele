@@ -44,22 +44,18 @@
       cursor: pointer;
 
       &.color1:hover {
-        color: $fluorescentpink;
         transition: color 0s;
       }
 
       &.color2:hover {
-        color: $mint;
         transition: color 0s;
       }
 
       &.color3:hover {
-        color: $sunflower;
         transition: color 0s;
       }
 
       &.color4:hover {
-        color: $violet;
         transition: color 0s;
       }
     }

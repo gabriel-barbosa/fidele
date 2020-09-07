@@ -1,5 +1,26 @@
 <?php get_header(); ?>
 
+<?php $couleurs = get_field('text_couleurs');
+if(get_field('text_couleurs')): ?>
+<style text="css">
+		.a-propos .header-text .text span.color1:hover {
+			color: <?php echo $couleurs['couleur_1']; ?>;
+		}
+
+		.a-propos .header-text .text span.color2:hover {
+			color: <?php echo $couleurs['couleur_2']; ?>;
+		}
+
+		.a-propos .header-text .text span.color3:hover {
+			color: <?php echo $couleurs['couleur_3']; ?>;
+		}
+
+		.a-propos .header-text .text span.color4:hover {
+			color: <?php echo $couleurs['couleur_4']; ?>;
+		}
+</style>
+<?php endif; ?>
+
 <?php if ( have_posts()) : while ( have_posts() ) : the_post(); ?>
 	<section class="header-text">
 		<div class="text">Une Maison D'édition Et Un Atelier D'impression  Riso À Paris</div>

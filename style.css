@@ -2456,19 +2456,15 @@ html {
   cursor: pointer;
 }
 .a-propos .header-text .text span.color1:hover {
-  color: #FF48B0;
   transition: color 0s;
 }
 .a-propos .header-text .text span.color2:hover {
-  color: #82D8D5;
   transition: color 0s;
 }
 .a-propos .header-text .text span.color3:hover {
-  color: #FFB511;
   transition: color 0s;
 }
 .a-propos .header-text .text span.color4:hover {
-  color: #9D7AD2;
   transition: color 0s;
 }
 .a-propos section {
@@ -4768,7 +4764,7 @@ a:hover, a:focus {
   overflow-y: hidden;
 }
 .home .head-title {
-  display: none;
+  visibility: hidden;
 }
 
 .index_menu {
