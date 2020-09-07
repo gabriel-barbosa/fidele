@@ -3,8 +3,20 @@
 <?php if ( have_posts()) : while ( have_posts() ) : the_post(); ?>
 <section>
 	<div class="page-title">
-		<div></div>
-		<div><h1><?php the_title(); ?></h1></div>
+		<div class="download-row">
+			<div class="download-button">
+				Click Here To Download Our Guide & Templates
+			</div>
+		</div>
+		<div>
+			<h1>
+				<?php if(get_field('page_title')): ?>
+					<?php the_field('page_title'); ?>
+				<?php else: ?>
+					<?php the_title(); ?>
+				<?php endif; ?>
+			</h1>
+		</div>
 	</div>
 
 	<div class="subtitle">

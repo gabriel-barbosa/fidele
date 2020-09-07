@@ -4882,6 +4882,32 @@ a:hover, a:focus {
 .page .page-title > div, .archive .page-title > div {
   width: 50%;
 }
+.page .download-row, .archive .download-row {
+  display: flex;
+}
+.page .download-button, .archive .download-button {
+  width: 100%;
+  border: 1px solid;
+  margin-top: auto;
+  text-align: center;
+  max-width: 40vw;
+  font-size: var(--font-size2);
+  padding-top: 4px;
+  line-height: 1;
+  margin-bottom: 1.3vw;
+  letter-spacing: -0.04em;
+}
+.page .download-button a, .archive .download-button a {
+  display: block;
+}
+.page .download-button-mobile, .archive .download-button-mobile {
+  display: none;
+  text-align: center;
+  margin-top: 20px;
+}
+.page .download-button-mobile a, .archive .download-button-mobile a {
+  display: block;
+}
 .page .subtitle, .archive .subtitle {
   font-size: var(--font-size1);
   line-height: 105%;
@@ -4897,6 +4923,9 @@ a:hover, a:focus {
 @media (max-width: 768px) {
   .page .page-title > div:first-child, .archive .page-title > div:first-child {
     display: none;
+  }
+  .page .download-button-mobile, .archive .download-button-mobile {
+    display: block;
   }
   .page .page-title > div, .archive .page-title > div {
     width: 100%;

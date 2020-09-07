@@ -49,7 +49,11 @@
   <?php while( have_rows('liste_des_coleurs') ): the_row(); ?>
 		<section>
 			<div class="page-title">
-				<div></div>
+				<div class="download-row">
+					<div class="download-button">
+						<a href="#">Click Here To Download Our Color Palette</a>
+					</div>
+				</div>
 				<div><h1><?php the_sub_field('coleurs_title'); ?></h1></div>
 			</div>
 
@@ -104,6 +108,12 @@
 						</div>
 					</colour>
 				<?php endwhile; endif; ?>
+			</div>
+
+			<div class="download-button-mobile">
+				<a href="#">
+					<img src="<?php bloginfo('template_url'); ?>/img/download-button.svg" alt="">
+				</a>
 			</div>
 		</section>
 
