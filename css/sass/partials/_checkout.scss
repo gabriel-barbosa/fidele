@@ -313,6 +313,10 @@
           padding-left: 3vw;
         }
 
+        tr td[data-title=Expédition] {
+          width: 60%;
+        }
+
         tr td[data-title=Shipping] {
           max-width: 30vw;
         }
@@ -344,7 +348,7 @@
       width: 60vw;
       height: auto;
       right: -15vw;
-      top: -16vw;
+      top: -8vw;
     }
 
     .total-order-fixed {

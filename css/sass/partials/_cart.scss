@@ -3,7 +3,7 @@
   margin-bottom: 20px;
 }
 
-.woocommerce-form__label-for-checkbox, .woocommerce-shipping-methods {
+.woocommerce-form__label-for-checkbox {
   position: relative;
 
   span {
@@ -25,7 +25,40 @@
     width: 20px;
     height: 20px;
     top: 50%;
-    transform: translateY(-70%);
+    transform: translateY(-65%);
+    border-radius: 11px;
+    border: 1px solid $fideleblue;
+    background-color: #fff;
+  }
+
+  input:checked:before {
+    background-color: blue;
+  }
+}
+
+.woocommerce ul#shipping_method {
+  position: relative;
+
+  span {
+    font-weight: 400;
+  }
+
+  li input {
+    width: auto;
+    height: 0;
+    position: relative;
+    margin-right: 10px;
+  }
+
+  li input:before {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    margin: 0 5px 0 0;
+    width: 20px;
+    height: 20px;
+    top: 0.3vw;
     border-radius: 11px;
     border: 1px solid $fideleblue;
     background-color: #fff;
@@ -215,12 +248,17 @@ body.cart, body.checkout {
 }
 
 @include responsive(tablet-portrait) {
-  .woocommerce-form__label-for-checkbox, .woocommerce-shipping-methods {
+  .woocommerce-form__label-for-checkbox {
     input:before {
       top: 0;
       transform: none;
     }
+  }
 
+  .woocommerce ul#shipping_method {
+    li input:before {
+      top: 0;
+    }
   }
 
   .cart {

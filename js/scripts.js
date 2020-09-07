@@ -498,7 +498,7 @@
 			$('.woocommerce-checkout').submit();
 		});
 
-		$(window).scroll(function(){
+		$(document).scroll(function(){
 			if(isScrolledIntoView($('#payment'))) {
 				if ($(window).width() > 768) {
 					$('.total-order-fixed').addClass('hide');

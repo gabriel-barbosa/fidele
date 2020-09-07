@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * styles.scss
  * ---
@@ -3696,18 +3697,18 @@ body.single-product .woocommerce-notices-wrapper .woocommerce-message {
   margin-bottom: 20px;
 }
 
-.woocommerce-form__label-for-checkbox, .woocommerce-shipping-methods {
+.woocommerce-form__label-for-checkbox {
   position: relative;
 }
-.woocommerce-form__label-for-checkbox span, .woocommerce-shipping-methods span {
+.woocommerce-form__label-for-checkbox span {
   font-weight: 400;
 }
-.woocommerce-form__label-for-checkbox input, .woocommerce-shipping-methods input {
+.woocommerce-form__label-for-checkbox input {
   width: auto;
   height: 0;
   margin-right: 0.5vw;
 }
-.woocommerce-form__label-for-checkbox input:before, .woocommerce-shipping-methods input:before {
+.woocommerce-form__label-for-checkbox input:before {
   content: " ";
   display: inline-block;
   position: absolute;
@@ -3716,12 +3717,41 @@ body.single-product .woocommerce-notices-wrapper .woocommerce-message {
   width: 20px;
   height: 20px;
   top: 50%;
-  transform: translateY(-70%);
+  transform: translateY(-65%);
   border-radius: 11px;
   border: 1px solid #215BDF;
   background-color: #fff;
 }
-.woocommerce-form__label-for-checkbox input:checked:before, .woocommerce-shipping-methods input:checked:before {
+.woocommerce-form__label-for-checkbox input:checked:before {
+  background-color: blue;
+}
+
+.woocommerce ul#shipping_method {
+  position: relative;
+}
+.woocommerce ul#shipping_method span {
+  font-weight: 400;
+}
+.woocommerce ul#shipping_method li input {
+  width: auto;
+  height: 0;
+  position: relative;
+  margin-right: 10px;
+}
+.woocommerce ul#shipping_method li input:before {
+  content: " ";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  margin: 0 5px 0 0;
+  width: 20px;
+  height: 20px;
+  top: 0.3vw;
+  border-radius: 11px;
+  border: 1px solid #215BDF;
+  background-color: #fff;
+}
+.woocommerce ul#shipping_method input:checked:before {
   background-color: blue;
 }
 
@@ -3871,9 +3901,13 @@ body.cart, body.checkout {
 }
 
 @media (max-width: 768px) {
-  .woocommerce-form__label-for-checkbox input:before, .woocommerce-shipping-methods input:before {
+  .woocommerce-form__label-for-checkbox input:before {
     top: 0;
     transform: none;
+  }
+
+  .woocommerce ul#shipping_method li input:before {
+    top: 0;
   }
 
   .cart .woocommerce-cart-form__cart-item.desktop {
@@ -4298,6 +4332,9 @@ body.cart, body.checkout {
   .checkout .woocommerce table.shop_table tr:first-of-type td:last-of-type, .checkout .woocommerce table.shop_table tfoot td:first-of-type, .checkout .woocommerce table.shop_table .product-total {
     padding-left: 3vw;
   }
+  .checkout .woocommerce table.shop_table tr td[data-title=Expédition] {
+    width: 60%;
+  }
   .checkout .woocommerce table.shop_table tr td[data-title=Shipping] {
     max-width: 30vw;
   }
@@ -4321,7 +4358,7 @@ body.cart, body.checkout {
     width: 60vw;
     height: auto;
     right: -15vw;
-    top: -16vw;
+    top: -8vw;
   }
   .checkout .total-order-fixed {
     position: relative;
