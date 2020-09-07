@@ -127,10 +127,11 @@ input, textarea {
   font-weight: normal;
 }
 
-input[type=text] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+input[type=text], input[type=tel], input[type=email] {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  box-shadow: none !important;
 }
 
 .grid {
@@ -346,10 +347,6 @@ a:hover, a:focus {
   .wrapper {
     overflow-y: hidden;
   }
-
-  .head-title {
-    visibility: hidden;
-  }
 }
 
 .index_menu {
@@ -373,7 +370,7 @@ a:hover, a:focus {
   }
 
   .gif-item {
-    &.mobile {
+    &.mobile, &.big-desktop {
       display: none;
     }
 
@@ -477,13 +474,29 @@ a:hover, a:focus {
   }
 }
 
+@include responsive(big-desktop) {
+  .index_menu {
+    .gif-item.desktop, .gif-item.mobile {
+      display: none;
+    }
+
+    .gif-item.big-desktop {
+      display: block;
+
+      &.workshops {
+        right: 25vw;
+      }
+    }
+  }
+}
+
 @include responsive(tablet-portrait) {
   .index_menu {
     height: 80vh;
     font-size: 20vw;
     word-break: break-word;
 
-    .gif-item.desktop {
+    .gif-item.desktop, .gif-item.big-desktop {
       display: none;
     }
 

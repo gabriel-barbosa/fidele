@@ -3715,9 +3715,11 @@ body.single-product .woocommerce-notices-wrapper .woocommerce-message {
   margin: 0 5px 0 0;
   width: 20px;
   height: 20px;
+  top: 50%;
+  transform: translateY(-70%);
   border-radius: 11px;
   border: 1px solid #215BDF;
-  background-color: transparent;
+  background-color: #fff;
 }
 .woocommerce-form__label-for-checkbox input:checked:before {
   background-color: blue;
@@ -4568,10 +4570,11 @@ input, textarea {
   font-weight: normal;
 }
 
-input[type=text] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+input[type=text], input[type=tel], input[type=email] {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  box-shadow: none !important;
 }
 
 .grid {
@@ -4763,9 +4766,6 @@ a:hover, a:focus {
 .home .wrapper {
   overflow-y: hidden;
 }
-.home .head-title {
-  visibility: hidden;
-}
 
 .index_menu {
   width: 100%;
@@ -4785,7 +4785,7 @@ a:hover, a:focus {
 .index_menu .text.english {
   font-size: 12vw;
 }
-.index_menu .gif-item.mobile {
+.index_menu .gif-item.mobile, .index_menu .gif-item.big-desktop {
   display: none;
 }
 .index_menu .gif-item img {
@@ -4861,13 +4861,24 @@ a:hover, a:focus {
   stroke: #FFFFFF;
 }
 
+@media (min-width: 1680px) {
+  .index_menu .gif-item.desktop, .index_menu .gif-item.mobile {
+    display: none;
+  }
+  .index_menu .gif-item.big-desktop {
+    display: block;
+  }
+  .index_menu .gif-item.big-desktop.workshops {
+    right: 25vw;
+  }
+}
 @media (max-width: 768px) {
   .index_menu {
     height: 80vh;
     font-size: 20vw;
     word-break: break-word;
   }
-  .index_menu .gif-item.desktop {
+  .index_menu .gif-item.desktop, .index_menu .gif-item.big-desktop {
     display: none;
   }
   .index_menu .gif-item.mobile {
