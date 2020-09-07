@@ -311,6 +311,7 @@ html {
 	.cat-fixed .submenu {
 		position: relative;
 		top: 0;
+		width: 100%;
 	}
 
 	.guide-d-impression.cat-fixed .head-title {
@@ -422,9 +423,8 @@ html {
 	}
 
 	.guide-row-5 .column-left svg {
-    width: calc(100% + 25vw);
-    max-width: calc(100% + 25vw);
-    margin-left: -7.5vw;
+	  width: 100%;
+		height: auto;
 	}
 
 	.row-content .gallery.gallery-columns-4 {
@@ -488,7 +488,7 @@ html {
 		}
 	}
 
-	.guid-row-13 {
+	.guide-row-13 {
 		.column-left, .column-right {
 			display: flex;
 			flex-direction: column;

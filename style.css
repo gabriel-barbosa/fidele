@@ -2093,6 +2093,7 @@ html {
   .cat-fixed .submenu {
     position: relative;
     top: 0;
+    width: 100%;
   }
 
   .guide-d-impression.cat-fixed .head-title {
@@ -2194,9 +2195,8 @@ html {
   }
 
   .guide-row-5 .column-left svg {
-    width: calc(100% + 25vw);
-    max-width: calc(100% + 25vw);
-    margin-left: -7.5vw;
+    width: 100%;
+    height: auto;
   }
 
   .row-content .gallery.gallery-columns-4 {
@@ -2258,7 +2258,7 @@ html {
     margin-bottom: 3vw;
   }
 
-  .guid-row-13 .column-left, .guid-row-13 .column-right {
+  .guide-row-13 .column-left, .guide-row-13 .column-right {
     display: flex;
     flex-direction: column;
   }
