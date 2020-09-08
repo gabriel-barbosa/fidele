@@ -2509,6 +2509,10 @@ html {
   grid-row-gap: 40px;
   font-size: var(--font-size2);
 }
+.a-propos .team .team-members .member {
+  display: flex;
+  flex-direction: column;
+}
 .a-propos .team .team-members .member h2 {
   margin: 1.5vw 0 1vw;
 }
@@ -2520,7 +2524,7 @@ html {
   text-align: center;
   line-height: 1;
   padding: 0.7vw 0 0.5vw;
-  margin-top: 1vw;
+  margin-top: auto;
 }
 .a-propos .contact .form {
   position: relative;

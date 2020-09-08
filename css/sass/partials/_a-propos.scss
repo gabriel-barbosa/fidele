@@ -78,12 +78,15 @@
       font-size: var(--font-size2);;
 
       .member {
+        display: flex;
+        flex-direction: column;
+
         h2 {
           margin: 1.5vw 0 1vw;
         }
 
         p {
-          font-size: var(--font-size2);;
+          font-size: var(--font-size2);
         }
 
         .email {
@@ -91,7 +94,7 @@
           text-align: center;
           line-height: 1;
           padding: 0.7vw 0 0.5vw;
-          margin-top: 1vw;
+          margin-top: auto;
         }
       }
     }
