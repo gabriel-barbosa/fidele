@@ -197,6 +197,10 @@ html {
 	padding-right: 0;
 	margin-bottom: 1.35vw;
 }
+.guide-row-11.guide-row-no_title {
+	margin-top: -14.25vw;
+}
+
 .guide-row-11 svg {
 	width: 100%;
 }
@@ -213,6 +217,13 @@ html {
     right: 0;
     bottom: 0;
     width: 23vw;
+}
+
+.guide-row-13 {
+	.column-left, .column-right {
+		display: flex;
+		flex-direction: column;
+	}
 }
 
 .guide-row-13 p:last-child {
@@ -501,13 +512,6 @@ html {
 			position: relative;
 			width: 100%;
 			margin-bottom: 3vw;
-		}
-	}
-
-	.guide-row-13 {
-		.column-left, .column-right {
-			display: flex;
-			flex-direction: column;
 		}
 	}
 
