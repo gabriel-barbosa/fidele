@@ -20,6 +20,14 @@
 		stroke-width: 1px !important;
 		vector-effect: non-scaling-stroke;
 	}
+
+	.svg-desktop {
+		display: block;
+	}
+
+	.svg-mobile {
+		display: none;
+	}
 }
 
 html {
@@ -301,6 +309,14 @@ html {
 					font-size: 10vw;
 				}
 			}
+		}
+
+		.svg-desktop {
+			display: none;
+		}
+
+		.svg-mobile {
+			display: block;
 		}
 	}
 

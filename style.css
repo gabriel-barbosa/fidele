@@ -1767,6 +1767,12 @@ input[type=search] {
   stroke-width: 1px !important;
   vector-effect: non-scaling-stroke;
 }
+.guide-d-impression .svg-desktop {
+  display: block;
+}
+.guide-d-impression .svg-mobile {
+  display: none;
+}
 
 html {
   scroll-behavior: smooth !important;
@@ -2084,6 +2090,12 @@ html {
     border: 0;
     text-align: left;
     font-size: 10vw;
+  }
+  .guide-d-impression .svg-desktop {
+    display: none;
+  }
+  .guide-d-impression .svg-mobile {
+    display: block;
   }
 
   .fixed-wrapper {
