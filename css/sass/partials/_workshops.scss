@@ -76,28 +76,30 @@
     .description {
       border-bottom: 1px solid;
       border-right: 1px solid;
-      padding-top: 1.8vw;
+      padding-top: 1.2vw;
 
-      &.head {
+      &:first-of-type {
+        padding-top: 0;
+      }
+
+      .head {
         border-bottom: 0;
         align-self: end;
-        padding-top: 10px;
+        padding-top: 5px;
+        margin-bottom: 1.5vw;
       }
     }
 
     .other-infos {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
 
-      &.head {
-        div {
-          border-bottom: 0;
-          align-self: end;
-          padding-top: 10px;
+      .head {
+        border-bottom: 0;
+        align-self: end;
+        padding-top: 5px;
 
-          &:last-of-type {
-            border-right: 0;
-          }
+        &.last {
+          border-right: 0;
         }
       }
 

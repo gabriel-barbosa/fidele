@@ -90,26 +90,24 @@
 			</div>
 		</section>
 
-	<?php endwhile; else: ?>
+	<?php endwhile; else: $counter = 1; ?>
 		<section class="workshop-table">
-			<div class="description head">
-				<div>Description</div>
-			</div>
-
-			<div class="other-infos head">
-				<div>Date</div>
-				<div>Duration</div>
-				<div>Spots</div>
-				<div>Price</div>
-			</div>
-
 			<?php while(have_rows('workshop_table')): the_row(); ?>
 			<div class="description">
+				<?php if($counter == 1): ?>
+				<div class="head">Description</div>
+				<?php endif; ?>
 				<div><?php the_sub_field('title'); ?></div>
 				<p><?php the_sub_field('description'); ?></p>
 			</div>
 
 			<div class="other-infos">
+				<?php if($counter == 1): ?>
+				<div class="head">Date</div>
+				<div class="head">Duration</div>
+				<div class="head">Spots</div>
+				<div class="head last">Price</div>
+				<?php endif; ?>
 				<div class="date"><?php the_sub_field('date'); ?></div>
 				<div class="duration"><?php the_sub_field('duration'); ?></div>
 				<div class="spots"><?php the_sub_field('spots_available'); ?></div>
@@ -118,7 +116,7 @@
 					<a href="<?php the_sub_field('subscribe'); ?>" target="_blank">Subscribe</a>
 				</div>
 			</div>
-			<?php endwhile; ?>
+			<?php $counter++; endwhile; ?>
 		</section>
 	<?php endif; ?>
 <?php endif; ?>

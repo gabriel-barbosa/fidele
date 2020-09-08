@@ -1958,7 +1958,7 @@ html {
 }
 
 .guide-row-9 .column-left svg {
-  margin-bottom: 18px;
+  margin-bottom: 0.485vw;
 }
 
 .guide-row-8 p, .guide-row-9 p {
@@ -2346,23 +2346,26 @@ html {
 .workshops .workshop-table .description {
   border-bottom: 1px solid;
   border-right: 1px solid;
-  padding-top: 1.8vw;
+  padding-top: 1.2vw;
 }
-.workshops .workshop-table .description.head {
+.workshops .workshop-table .description:first-of-type {
+  padding-top: 0;
+}
+.workshops .workshop-table .description .head {
   border-bottom: 0;
   align-self: end;
-  padding-top: 10px;
+  padding-top: 5px;
+  margin-bottom: 1.5vw;
 }
 .workshops .workshop-table .other-infos {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
 }
-.workshops .workshop-table .other-infos.head div {
+.workshops .workshop-table .other-infos .head {
   border-bottom: 0;
   align-self: end;
-  padding-top: 10px;
+  padding-top: 5px;
 }
-.workshops .workshop-table .other-infos.head div:last-of-type {
+.workshops .workshop-table .other-infos .head.last {
   border-right: 0;
 }
 .workshops .workshop-table .other-infos div {
