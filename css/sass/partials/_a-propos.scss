@@ -87,6 +87,7 @@
 
         p {
           font-size: var(--font-size2);
+          margin-bottom: 1vw;
         }
 
         .email {
@@ -253,6 +254,10 @@
             font-size: var(--font-size1);
             font-weight: 400;
             margin: 6vw 0 2vw;
+          }
+
+          p {
+            margin-bottom: 0;
           }
 
           .email {

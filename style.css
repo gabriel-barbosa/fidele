@@ -2518,6 +2518,7 @@ html {
 }
 .a-propos .team .team-members .member p {
   font-size: var(--font-size2);
+  margin-bottom: 1vw;
 }
 .a-propos .team .team-members .member .email {
   border: 1px solid;
@@ -2648,6 +2649,9 @@ html {
     font-size: var(--font-size1);
     font-weight: 400;
     margin: 6vw 0 2vw;
+  }
+  .a-propos .team .team-members .member p {
+    margin-bottom: 0;
   }
   .a-propos .team .team-members .member .email {
     font-size: var(--font-size1);
