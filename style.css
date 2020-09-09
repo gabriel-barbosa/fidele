@@ -1048,6 +1048,111 @@ input[type=search] {
   padding: 0 10px;
   overflow: hidden;
 }
+.simulateur-steps.step-2 .dropdown .dropdown-item .couleurs-hover {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  z-index: 4;
+  background: #fff;
+  visibility: hidden;
+  opacity: 0;
+}
+.simulateur-steps.step-2 .dropdown .dropdown-item .couleurs-hover .row {
+  border-bottom: 1px solid;
+}
+.simulateur-steps.step-2 .dropdown .dropdown-item .couleurs-hover .row:last-of-type {
+  border-bottom: 0;
+}
+.simulateur-steps.step-2 .dropdown .dropdown-item .couleurs-hover .single-colour {
+  border: 1px solid;
+}
+.simulateur-steps.step-2 .dropdown .dropdown-item .couleurs-hover .colour-title p {
+  padding: 0.5vw 0.4vw 0.2vw;
+  line-height: 1;
+}
+.simulateur-steps.step-2 .dropdown .dropdown-item .couleurs-hover .form-opacity {
+  display: flex;
+}
+.simulateur-steps.step-2 .dropdown .dropdown-item .couleurs-hover .form-opacity svg {
+  width: 25%;
+  height: auto;
+  padding: 10px;
+  padding: 0.8vw;
+  border-right: 1px solid;
+}
+.simulateur-steps.step-2 .dropdown .dropdown-item .couleurs-hover .form-opacity .colour-opacity {
+  width: 75%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+.simulateur-steps.step-2 .dropdown .dropdown-item .couleurs-hover .form-opacity .colour-opacity .gradient {
+  grid-column: span 10;
+  grid-row: span 2;
+  border-bottom: 1px solid;
+}
+.simulateur-steps.step-2 .dropdown .dropdown-item .couleurs-hover .form-opacity .colour-opacity .opacity-module {
+  background-color: #215BDF;
+}
+.simulateur-steps.step-2 .dropdown .dropdown-item .couleurs-hover .form-opacity .colour-opacity .opacity-module.opacity-10 {
+  opacity: 0.1;
+}
+.simulateur-steps.step-2 .dropdown .dropdown-item .couleurs-hover .form-opacity .colour-opacity .opacity-module.opacity-20 {
+  opacity: 0.2;
+}
+.simulateur-steps.step-2 .dropdown .dropdown-item .couleurs-hover .form-opacity .colour-opacity .opacity-module.opacity-30 {
+  opacity: 0.3;
+}
+.simulateur-steps.step-2 .dropdown .dropdown-item .couleurs-hover .form-opacity .colour-opacity .opacity-module.opacity-40 {
+  opacity: 0.4;
+}
+.simulateur-steps.step-2 .dropdown .dropdown-item .couleurs-hover .form-opacity .colour-opacity .opacity-module.opacity-50 {
+  opacity: 0.5;
+}
+.simulateur-steps.step-2 .dropdown .dropdown-item .couleurs-hover .form-opacity .colour-opacity .opacity-module.opacity-60 {
+  opacity: 0.6;
+}
+.simulateur-steps.step-2 .dropdown .dropdown-item .couleurs-hover .form-opacity .colour-opacity .opacity-module.opacity-70 {
+  opacity: 0.7;
+}
+.simulateur-steps.step-2 .dropdown .dropdown-item .couleurs-hover .form-opacity .colour-opacity .opacity-module.opacity-80 {
+  opacity: 0.8;
+}
+.simulateur-steps.step-2 .dropdown .dropdown-item .couleurs-hover .form-opacity .colour-opacity .opacity-module.opacity-90 {
+  opacity: 0.9;
+}
+.simulateur-steps.step-2 .dropdown .dropdown-item .couleurs-hover .form-opacity .colour-opacity .opacity-module.opacity-100 {
+  opacity: 1;
+}
+.simulateur-steps.step-2 .dropdown .dropdown-item .couleurs-hover .colour-hex {
+  display: flex;
+  font-size: 0.7vw;
+  line-height: 0;
+}
+.simulateur-steps.step-2 .dropdown .dropdown-item .couleurs-hover .colour-hex .hex-code {
+  width: 25%;
+  height: auto;
+  text-transform: uppercase;
+  padding: 0.3vw 0.4vw 0.2vw;
+  border-right: 1px solid;
+}
+.simulateur-steps.step-2 .dropdown .dropdown-item .couleurs-hover .colour-hex .percent-opacity {
+  width: 75%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+}
+.simulateur-steps.step-2 .dropdown .dropdown-item .couleurs-hover .colour-hex .percent-opacity .percent-module {
+  display: flex;
+  align-items: center;
+  border-right: 1px solid;
+  padding: 0.3vw 0 0.2vw 0.4vw;
+}
+.simulateur-steps.step-2 .dropdown .dropdown-item .couleurs-hover .colour-hex .percent-opacity .percent-module:last-of-type {
+  border-right: 0;
+}
 .simulateur-steps.step-2 .dropdown .dropdown-item.couleurs .dropdown-content {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -1058,6 +1163,11 @@ input[type=search] {
 .simulateur-steps.step-2 .dropdown .dropdown-item.couleurs .dropdown-content .couleur {
   width: 100%;
   height: 8vw;
+  position: relative;
+}
+.simulateur-steps.step-2 .dropdown .dropdown-item.couleurs .dropdown-content .couleur:hover .couleurs-hover {
+  visibility: visible;
+  opacity: 1;
 }
 .simulateur-steps.step-2 .dropdown .dropdown-item .dropdown-button {
   width: 100%;

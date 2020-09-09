@@ -219,6 +219,7 @@
 
 				/* PREVENT FROM SENDING WRONG INPUT VALUES FROM STEP 2 TO STEP 3 */
 				if(currentIndex == 0) {
+					$('.form').removeClass('visible');
 					$('.steps li:nth-child(2)').addClass('disable');
 					$('.arrow').removeClass('affiches');
 					$('.arrow').removeClass('dos-colles');
@@ -229,10 +230,6 @@
 
 				if(priorIndex == 0) {
 					$('.steps li:nth-child(2)').removeClass('disable');
-				}
-
-				if(priorIndex == 1) {
-					$('.form').removeClass('visible');
 				}
 			},
 	    titleTemplate: '<span class="number step-#index#" data-title="#title#">#index#</span>',
