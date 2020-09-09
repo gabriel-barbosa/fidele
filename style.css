@@ -1056,6 +1056,7 @@ input[type=search] {
   background: #fff;
   visibility: hidden;
   opacity: 0;
+  width: 24.3vw;
 }
 .simulateur-steps.step-2 .dropdown .dropdown-item .couleurs-hover .row {
   border-bottom: 1px solid;
@@ -1069,19 +1070,20 @@ input[type=search] {
 .simulateur-steps.step-2 .dropdown .dropdown-item .couleurs-hover .colour-title p {
   padding: 0.5vw 0.4vw 0.2vw;
   line-height: 1;
+  font-size: 1.5vw;
 }
 .simulateur-steps.step-2 .dropdown .dropdown-item .couleurs-hover .form-opacity {
   display: flex;
 }
 .simulateur-steps.step-2 .dropdown .dropdown-item .couleurs-hover .form-opacity svg {
-  width: 25%;
+  width: 21%;
   height: auto;
   padding: 10px;
-  padding: 0.8vw;
+  padding: 0.5vw;
   border-right: 1px solid;
 }
 .simulateur-steps.step-2 .dropdown .dropdown-item .couleurs-hover .form-opacity .colour-opacity {
-  width: 75%;
+  width: 79%;
   height: auto;
   display: grid;
   grid-template-columns: repeat(10, 1fr);
@@ -1127,18 +1129,18 @@ input[type=search] {
 }
 .simulateur-steps.step-2 .dropdown .dropdown-item .couleurs-hover .colour-hex {
   display: flex;
-  font-size: 0.7vw;
+  font-size: 0.65vw;
   line-height: 0;
 }
 .simulateur-steps.step-2 .dropdown .dropdown-item .couleurs-hover .colour-hex .hex-code {
-  width: 25%;
+  width: 21%;
   height: auto;
   text-transform: uppercase;
-  padding: 0.3vw 0.4vw 0.2vw;
+  padding: 0.3vw 0.1vw 0.1vw 0.3vw;
   border-right: 1px solid;
 }
 .simulateur-steps.step-2 .dropdown .dropdown-item .couleurs-hover .colour-hex .percent-opacity {
-  width: 75%;
+  width: 79%;
   height: auto;
   display: grid;
   grid-template-columns: repeat(10, 1fr);
@@ -1148,7 +1150,7 @@ input[type=search] {
   display: flex;
   align-items: center;
   border-right: 1px solid;
-  padding: 0.3vw 0 0.2vw 0.4vw;
+  padding: 0.4vw 0vw 0.2vw 0.2vw;
 }
 .simulateur-steps.step-2 .dropdown .dropdown-item .couleurs-hover .colour-hex .percent-opacity .percent-module:last-of-type {
   border-right: 0;
@@ -1168,6 +1170,14 @@ input[type=search] {
 .simulateur-steps.step-2 .dropdown .dropdown-item.couleurs .dropdown-content .couleur:hover .couleurs-hover {
   visibility: visible;
   opacity: 1;
+}
+.simulateur-steps.step-2 .dropdown .dropdown-item.couleurs .dropdown-content .couleur:nth-child(10n) .couleurs-hover, .simulateur-steps.step-2 .dropdown .dropdown-item.couleurs .dropdown-content .couleur:nth-child(11n) .couleurs-hover, .simulateur-steps.step-2 .dropdown .dropdown-item.couleurs .dropdown-content .couleur:nth-child(11n+1) .couleurs-hover, .simulateur-steps.step-2 .dropdown .dropdown-item.couleurs .dropdown-content .couleur:nth-child(12n) .couleurs-hover {
+  left: initial;
+  right: 100%;
+}
+.simulateur-steps.step-2 .dropdown .dropdown-item.couleurs .dropdown-content .couleur:nth-child(1) .couleurs-hover {
+  left: 100%;
+  right: initial;
 }
 .simulateur-steps.step-2 .dropdown .dropdown-item .dropdown-button {
   width: 100%;

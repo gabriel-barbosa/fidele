@@ -221,6 +221,7 @@
           background: #fff;
           visibility: hidden;
           opacity: 0;
+          width: 24.3vw;
 
           .row {
             border-bottom: 1px solid;
@@ -238,6 +239,7 @@
             p {
               padding: 0.5vw 0.4vw 0.2vw;
               line-height: 1;
+              font-size: 1.5vw;
             }
           }
 
@@ -245,15 +247,15 @@
             display: flex;
 
             svg {
-              width: 25%;
+              width: 21%;
               height: auto;
               padding: 10px;
-              padding: 0.8vw;
+              padding: 0.5vw;
               border-right: 1px solid;
             }
 
             .colour-opacity {
-              width: 75%;
+              width: 79%;
               height: auto;
               display: grid;
               grid-template-columns: repeat(10, 1fr);
@@ -313,19 +315,19 @@
 
           .colour-hex {
             display: flex;
-            font-size: 0.7vw;
+            font-size: 0.65vw;
             line-height: 0;
 
             .hex-code {
-              width: 25%;
+              width: 21%;
               height: auto;
               text-transform: uppercase;
-              padding: 0.3vw 0.4vw 0.2vw;
+              padding: 0.3vw 0.1vw 0.1vw 0.3vw;
               border-right: 1px solid;
             }
 
             .percent-opacity {
-              width: 75%;
+              width: 79%;
               height: auto;
               display: grid;
               grid-template-columns: repeat(10, 1fr);
@@ -335,7 +337,7 @@
                 display: flex;
                 align-items: center;
                 border-right: 1px solid;
-                padding: 0.3vw 0 0.2vw 0.4vw;
+                padding: 0.4vw 0vw 0.2vw 0.2vw;
 
                 &:last-of-type {
                   border-right: 0;
@@ -361,6 +363,19 @@
               &:hover .couleurs-hover {
                 visibility: visible;
                 opacity: 1;
+              }
+
+
+              &:nth-child(10n), &:nth-child(11n), &:nth-child(11n + 1),  &:nth-child(12n)  {
+                .couleurs-hover {
+                  left: initial;
+                  right: 100%;
+                }
+              }
+
+              &:nth-child(1) .couleurs-hover {
+                left: 100%;
+                right: initial;
               }
             }
           }
