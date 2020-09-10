@@ -52,6 +52,7 @@
 		</a>
 	</div>
 
+	<?php if(qtranxf_getLanguage() == "fr"): ?>
 	<div class="gif-item editions big-desktop">
 		<a href="<?php bloginfo('url'); ?>/editions/">
 			<img class="static" src="<?php bloginfo('template_url'); ?>/img/editions-big-desktop.png" alt="">
@@ -72,6 +73,28 @@
 			<img class="hover" src="<?php bloginfo('template_url'); ?>/img/editions-mobile.png" alt="">
 		</a>
 	</div>
+	<?php else: ?>
+	<div class="gif-item editions big-desktop">
+		<a href="<?php bloginfo('url'); ?>/editions/">
+			<img class="static" src="<?php bloginfo('template_url'); ?>/img/editions-big-desktop-english.png" alt="">
+			<img class="hover" src="<?php bloginfo('template_url'); ?>/img/editions-big-desktop-english-blue.gif" alt="">
+		</a>
+	</div>
+
+	<div class="gif-item editions desktop">
+		<a href="<?php bloginfo('url'); ?>/editions/">
+			<img class="static" src="<?php bloginfo('template_url'); ?>/img/editions.png" alt="">
+			<img class="hover" src="<?php bloginfo('template_url'); ?>/img/editions-blue.gif" alt="">
+		</a>
+	</div>
+
+	<div class="gif-item editions mobile">
+		<a href="<?php bloginfo('url'); ?>/editions/">
+			<img class="static" src="<?php bloginfo('template_url'); ?>/img/editions-mobile.png" alt="">
+			<img class="hover" src="<?php bloginfo('template_url'); ?>/img/editions-mobile.png" alt="">
+		</a>
+	</div>
+	<?php endif; ?>
 </section>
 
 
