@@ -30,7 +30,7 @@ global $post;
 </div>
 
 <div class="woocommerce-product-details__short-description short-description">
-	<p><?php the_excerpt(); ?></p>
+	<?php if ( !empty( get_the_content() ) ): the_content(); else: the_excerpt(); endif; ?>
 </div>
 
 <?php if(get_field('details')): ?>
