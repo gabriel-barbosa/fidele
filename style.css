@@ -1057,6 +1057,7 @@ input[type=search] {
   visibility: hidden;
   opacity: 0;
   width: 24.3vw;
+  pointer-events: none;
 }
 .simulateur-steps.step-2 .dropdown .dropdown-item .couleurs-hover .row {
   border-bottom: 1px solid;
@@ -2874,7 +2875,7 @@ html {
   height: 100%;
   background: #fff;
   transition: all 0.3s ease;
-  padding: 0.3vw 0.6vw 0;
+  padding: 3px 9px 0;
 }
 .archive .product-cat-menu .cat-item a:hover {
   background: linear-gradient(90deg, #215BDF 38.57%, #FFFFFF 100%);
@@ -2890,12 +2891,17 @@ html {
 .archive .product-cat-menu .cat-item:nth-last-of-type(2) {
   flex-grow: 1;
 }
+.archive .product-cat-menu .orderby-form {
+  width: calc(33.34vw - 21px);
+}
 .archive .product-cat-menu .cat-item form {
   margin: 0;
   height: 100%;
+  width: 100%;
 }
 .archive .product-cat-menu .cat-item form select {
   height: 100%;
+  width: 100%;
   border: 0;
   color: #215BDF;
   font-size: 18px;
@@ -2904,7 +2910,7 @@ html {
   font-style: normal;
   font-family: "Unica77 LL", sans-serif;
   background: url(img/select-arrow.svg) right 0.5vw center no-repeat;
-  background-size: 2.5vw;
+  background-size: 2.2vw;
   -moz-appearance: none;
   /* Firefox */
   -webkit-appearance: none;
@@ -3057,6 +3063,12 @@ html {
 }
 
 @media (min-width: 1680px) {
+  .archive .product-cat-menu .cat-item form select {
+    background-size: 1.5vw;
+  }
+  .archive .product-cat-menu .orderby-form {
+    width: calc(25vw - 21px);
+  }
   .archive ul.products.columns-3 {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -3159,6 +3171,7 @@ html {
   .archive .product-cat-menu.mobile .orderby-form {
     text-overflow: ellipsis;
     max-width: 49%;
+    width: auto;
   }
   .archive .product-cat-menu.mobile .cat-item form select {
     height: 100%;

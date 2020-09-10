@@ -25,7 +25,6 @@ if ( ! function_exists( 'wc_get_gallery_image_html' ) ) {
 global $product; ?>
 
 <div class="product-gallery">
-		<div class="img-wrapper"><img class="gallery-img" src="<?php echo get_the_post_thumbnail_url($product->ID); ?>" /></div>
 		<?php $attachment_ids = $product->get_gallery_attachment_ids(); if($attachment_ids):
 		foreach( $attachment_ids as $attachment_id ) : ?>
 		 <div class="img-wrapper"><img class="gallery-img" src="<?php echo wp_get_attachment_image_src( $attachment_id, 'full' )[0]; ?>" alt=""></div>

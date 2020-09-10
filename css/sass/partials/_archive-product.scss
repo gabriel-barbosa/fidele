@@ -79,7 +79,7 @@
          height: 100%;
          background: #fff;
          transition: all 0.3s ease;
-         padding: 0.3vw 0.6vw 0;
+         padding: 3px 9px 0;
 
          &:hover {
            background: linear-gradient(90deg, $fideleblue 38.57%, $white 100%);
@@ -103,12 +103,18 @@
        flex-grow: 1;
      }
 
+     .orderby-form {
+       width: calc(33.34vw - 21px);
+     }
+
      .cat-item form {
        margin: 0;
        height: 100%;
+       width: 100%;
 
        select {
          height: 100%;
+         width: 100%;
          border: 0;
          color: $fideleblue;
          font-size: 18px;
@@ -117,7 +123,7 @@
          font-style: normal;
          font-family: "Unica77 LL", sans-serif;
          background: url(img/select-arrow.svg) right 0.5vw center no-repeat;
-         background-size: 2.5vw;
+         background-size: 2.2vw;
          -moz-appearance:none; /* Firefox */
          -webkit-appearance:none; /* Safari and Chrome */
          appearance:none;
@@ -295,6 +301,16 @@
 
  @include responsive(big-desktop) {
    .archive {
+     .product-cat-menu {
+       .cat-item form select {
+         background-size: 1.5vw;
+       }
+
+       .orderby-form {
+         width: calc(25vw - 21px);
+       }
+     }
+
      ul.products {
        &.columns-3 {
          grid-template-columns: repeat(4, 1fr);
@@ -414,6 +430,7 @@
       .orderby-form {
         text-overflow: ellipsis;
         max-width: 49%;
+        width: auto;
       }
 
       .cat-item form select {
