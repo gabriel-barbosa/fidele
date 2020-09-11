@@ -103,17 +103,24 @@
 
 			<div class="other-infos">
 				<?php if($counter == 1): ?>
-				<div class="head">Date</div>
-				<div class="head">Duration</div>
-				<div class="head">Spots</div>
-				<div class="head last">Price</div>
+				<?php if(qtranxf_getLanguage() == "fr"): ?>
+					<div class="head">Date</div>
+					<div class="head">Duration</div>
+					<div class="head">Places</div>
+					<div class="head last">Prix</div>
+				<?php else: ?>
+					<div class="head">Date</div>
+					<div class="head">Duration</div>
+					<div class="head">Spots</div>
+					<div class="head last">Price</div>
+				<?php endif;?>
 				<?php endif; ?>
 				<div class="date"><?php the_sub_field('date'); ?></div>
 				<div class="duration"><?php the_sub_field('duration'); ?></div>
 				<div class="spots"><?php the_sub_field('spots_available'); ?></div>
 				<div class="price"><?php the_sub_field('price'); ?></div>
 				<div class="subscribe" style="border-right: 0;">
-					<a href="<?php the_sub_field('subscribe'); ?>" target="_blank">Subscribe</a>
+					<a href="<?php the_sub_field('subscribe'); ?>" target="_blank"><?php if(qtranxf_getLanguage() == "fr"): ?>Souscrire<?php else: ?>Subscribe<?php endif; ?></a>
 				</div>
 			</div>
 			<?php $counter++; endwhile; ?>

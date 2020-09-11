@@ -18,20 +18,27 @@
 defined( 'ABSPATH' ) || exit;
 
 global $product;
-global $productcounter;
-global $totalproducts;
 // Ensure visibility.
 if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
-$productcounter++;
+
+// current page number - paged is 0 on the home page, we use 1 instead
+$_current_page = is_paged() ?  get_query_var( 'paged', 1 ) : 1;
+// posts per page
+$_ppp = get_query_var( 'posts_per_page', get_option( 'posts_per_page' ) );
+// current post index on the current page
+$_current_post = $wp_query->current_post;
+// total number of found posts
+$_total_posts = $wp_query->found_posts;
+
 ?>
 
-<div class="product-item nth-<?php echo $productcounter; ?>" style="z-index: <?php echo $totalproducts; ?>;">
+<div class="product-item" style="z-index: <?php echo $counter = $_total_posts - ( $_current_page - 1 ) * $_ppp - $_current_post; ?>;">
 	<div class="background-gradient" style="background: linear-gradient(180deg, <?php the_field('background_color'); ?> 10%, #fff 80%); background: -moz-linear-gradient(180deg, <?php the_field('background_color'); ?> 10%, #fff 80%); background: -webkit-linear-gradient(270deg, <?php the_field('background_color'); ?> 10%, #fff 80%); background: -o-linear-gradient(180deg, <?php the_field('background_color'); ?> 10%, #fff 80%);"></div>
 	<a href="<?php the_permalink(); ?>"><img src="<?php the_post_thumbnail_url('large'); ?>" alt=""></a>
 
-	<div class="product-info" style="z-index: <?php echo $totalproducts; ?>;">
+	<div class="product-info">
 		<div class="title-wrapper">
 			<span class="title"><?php the_title(); ?></span>
 		</div>
@@ -40,7 +47,7 @@ $productcounter++;
 			<span class="price"><?php echo $product->get_price_html(); ?></span>
 		</div>
 
-		<div class="more-info-wrapper" style="z-index: <?php echo $totalproducts; ?>;">
+		<div class="more-info-wrapper">
 			<div class="row grid col-4">
 				<div class="title">
 					<?php the_title(); ?>, <?php the_field('author'); ?>
