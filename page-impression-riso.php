@@ -20,7 +20,21 @@
 			<p class="s2"><?php the_field('guide_dimpression'); ?></p>
 		</div>
 
-		<div class="simulateur-de-devis">
+		<div class="simulateur-de-devis big-desktop">
+				<div class="gif-item">
+					<a href="<?php bloginfo('url'); ?>/impression-riso/simulateur-de-devis">
+						<?php if(qtranxf_getLanguage() == "fr"): ?>
+							<img class="static" src="<?php bloginfo('template_url'); ?>/img/simulateur-big-desktop.png" alt="">
+							<img class="hover" src="<?php bloginfo('template_url'); ?>/img/simulateur-big-desktop.gif" alt="">
+						<?php else: ?>
+							<img class="static" src="<?php bloginfo('template_url'); ?>/img/simulateur-big-desktop-english.png" alt="">
+							<img class="hover" src="<?php bloginfo('template_url'); ?>/img/simulateur-big-desktop-english.gif" alt="">
+						<?php endif; ?>
+					</a>
+				</div>
+		</div>
+
+		<div class="simulateur-de-devis desktop">
 				<div class="gif-item">
 					<a href="<?php bloginfo('url'); ?>/impression-riso/simulateur-de-devis">
 						<?php if(qtranxf_getLanguage() == "fr"): ?>
@@ -34,11 +48,58 @@
 				</div>
 		</div>
 
-		<div class="guide-d-impression">
+		<div class="simulateur-de-devis mobile">
+				<div class="gif-item">
+					<a href="<?php bloginfo('url'); ?>/impression-riso/simulateur-de-devis">
+						<?php if(qtranxf_getLanguage() == "fr"): ?>
+							<img class="static" src="<?php bloginfo('template_url'); ?>/img/simulateur.png" alt="">
+							<img class="hover" src="<?php bloginfo('template_url'); ?>/img/simulateur-blue.gif" alt="">
+						<?php else: ?>
+							<img class="static" src="<?php bloginfo('template_url'); ?>/img/simulateur-english.png" alt="">
+							<img class="hover" src="<?php bloginfo('template_url'); ?>/img/simulateur-english-blue.gif" alt="">
+						<?php endif; ?>
+					</a>
+				</div>
+		</div>
+
+		<div class="guide-d-impression big-desktop">
 			<div class="gif-item">
 				<a href="<?php bloginfo('url'); ?>/impression-riso/guide-d-impression">
-					<img class="static" src="<?php bloginfo('template_url'); ?>/img/guide.png" alt="">
-					<img class="hover" src="<?php bloginfo('template_url'); ?>/img/guide-blue.gif" alt="">
+					<?php if(qtranxf_getLanguage() == "fr"): ?>
+						<img class="static" src="<?php bloginfo('template_url'); ?>/img/guide-big-desktop.png" alt="">
+						<img class="hover" src="<?php bloginfo('template_url'); ?>/img/guide-big-desktop.gif" alt="">
+					<?php else: ?>
+						<img class="static" src="<?php bloginfo('template_url'); ?>/img/guide-big-desktop-english.png" alt="">
+						<img class="hover" src="<?php bloginfo('template_url'); ?>/img/guide-big-desktop-english.gif" alt="">
+					<?php endif; ?>
+				</a>
+			</div>
+		</div>
+
+		<div class="guide-d-impression desktop">
+			<div class="gif-item">
+				<a href="<?php bloginfo('url'); ?>/impression-riso/guide-d-impression">
+					<?php if(qtranxf_getLanguage() == "fr"): ?>
+						<img class="static" src="<?php bloginfo('template_url'); ?>/img/guide.png" alt="">
+						<img class="hover" src="<?php bloginfo('template_url'); ?>/img/guide-blue.gif" alt="">
+					<?php else: ?>
+						<img class="static" src="<?php bloginfo('template_url'); ?>/img/guide-big-desktop-english.png" alt="">
+						<img class="hover" src="<?php bloginfo('template_url'); ?>/img/guide-big-desktop-english.gif" alt="">
+					<?php endif; ?>
+				</a>
+			</div>
+		</div>
+
+		<div class="guide-d-impression mobile">
+			<div class="gif-item">
+				<a href="<?php bloginfo('url'); ?>/impression-riso/guide-d-impression">
+					<?php if(qtranxf_getLanguage() == "fr"): ?>
+						<img class="static" src="<?php bloginfo('template_url'); ?>/img/guide.png" alt="">
+						<img class="hover" src="<?php bloginfo('template_url'); ?>/img/guide-blue.gif" alt="">
+					<?php else: ?>
+						<img class="static" src="<?php bloginfo('template_url'); ?>/img/guide-big-desktop-english.png" alt="">
+						<img class="hover" src="<?php bloginfo('template_url'); ?>/img/guide-big-desktop-english.gif" alt="">
+					<?php endif; ?>
 				</a>
 			</div>
 		</div>

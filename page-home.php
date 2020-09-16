@@ -13,7 +13,7 @@
 	<div class="gif-item studio big-desktop">
 		<a href="<?php bloginfo('url'); ?>/impression-riso/">
 			<img class="static" src="<?php bloginfo('template_url'); ?>/img/studio-big-desktop.png" alt="">
-			<img class="hover" src="<?php bloginfo('template_url'); ?>/img/studio-big-desktop-blue.gif" alt="">
+			<img class="hover" src="<?php bloginfo('template_url'); ?>/img/studio-big-desktop.gif" alt="">
 		</a>
 	</div>
 
@@ -34,7 +34,7 @@
 	<div class="gif-item workshops big-desktop">
 		<a href="<?php bloginfo('url'); ?>/workshops/">
 			<img class="static" src="<?php bloginfo('template_url'); ?>/img/workshops-big-desktop.png" alt="">
-			<img class="hover" src="<?php bloginfo('template_url'); ?>/img/workshops-big-desktop-blue.gif" alt="">
+			<img class="hover" src="<?php bloginfo('template_url'); ?>/img/workshops-big-desktop.gif" alt="">
 		</a>
 	</div>
 
@@ -56,7 +56,7 @@
 	<div class="gif-item editions big-desktop">
 		<a href="<?php bloginfo('url'); ?>/editions/">
 			<img class="static" src="<?php bloginfo('template_url'); ?>/img/editions-big-desktop.png" alt="">
-			<img class="hover" src="<?php bloginfo('template_url'); ?>/img/editions-big-desktop-blue.gif" alt="">
+			<img class="hover" src="<?php bloginfo('template_url'); ?>/img/editions-big-desktop.gif" alt="">
 		</a>
 	</div>
 
@@ -77,7 +77,7 @@
 	<div class="gif-item editions big-desktop">
 		<a href="<?php bloginfo('url'); ?>/editions/">
 			<img class="static" src="<?php bloginfo('template_url'); ?>/img/editions-big-desktop-english.png" alt="">
-			<img class="hover" src="<?php bloginfo('template_url'); ?>/img/editions-big-desktop-english-blue.gif" alt="">
+			<img class="hover" src="<?php bloginfo('template_url'); ?>/img/editions-big-desktop-english.gif" alt="">
 		</a>
 	</div>
 

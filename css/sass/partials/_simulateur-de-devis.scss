@@ -9,6 +9,14 @@
   }
 
   .gif-item {
+    .desktop {
+      display: block;
+    }
+
+    .big-desktop, .mobile {
+      display: none;
+    }
+
     img {
       width: 100%;
       height: auto;
@@ -706,6 +714,20 @@
   padding-top: 0.5vw;
 }
 
+@include responsive(big-desktop) {
+  .simulateur-de-devis {
+    .gif-item {
+      .big-desktop {
+        display: block;
+      }
+
+      .mobile, .desktop {
+        display: none;
+      }
+    }
+  }
+}
+
 @include responsive(tablet-portrait) {
   .simulateur-de-devis {
     .category-icon {
@@ -720,6 +742,16 @@
 
     .footer {
       display: grid;
+    }
+
+    .gif-item {
+      .mobile {
+        display: block;
+      }
+
+      .big-desktop, .desktop {
+        display: none;
+      }
     }
   }
 

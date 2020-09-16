@@ -28,6 +28,14 @@
      flex-direction: column;
      align-items: center;
 
+     &.desktop {
+       display: block;
+     }
+
+     &.big-desktop, &.mobile {
+       display: none;
+     }
+
      .gif-item {
        justify-self: bottom;
        position: relative;
@@ -229,6 +237,16 @@
          padding: 0.1vw 0.1vw 0;
        }
      }
+
+     .simulateur-de-devis, .guide-d-impression {
+       &.big-desktop {
+         display: block;
+       }
+
+       &.mobile, &.desktop {
+         display: none;
+       }
+     }
    }
  }
 
@@ -254,6 +272,16 @@
        grid-template-columns: repeat(1, 1fr);
        column-gap: 15px;
        row-gap: 15px;
+     }
+
+     .simulateur-de-devis, .guide-d-impression {
+       &.mobile {
+         display: block;
+       }
+
+       &.big-desktop, &.desktop {
+         display: none;
+       }
      }
 
      .simulateur-de-devis .gif-item, .guide-d-impression .gif-item {
