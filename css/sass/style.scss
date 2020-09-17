@@ -61,7 +61,7 @@ body {
 
 :root {
   --font-size1: 2.5vw;
-  --font-size2: 1.8vw;
+  --font-size2: 1.7vw;
   --font-size3: 1.3vw;
   --font-size4: 0.8vw;
   @include responsive(tablet-portrait) {
@@ -365,7 +365,7 @@ a:hover, a:focus {
     max-width: 100%;
 
     &.english {
-      font-size: 12vw;
+      max-width: 75%;
     }
   }
 
@@ -556,7 +556,7 @@ a:hover, a:focus {
     padding-top: 4px;
     line-height: 1;
     margin-bottom: 1.3vw;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.02em;
 
     a {
       display: block;

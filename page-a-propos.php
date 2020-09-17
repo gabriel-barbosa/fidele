@@ -69,7 +69,7 @@ if(get_field('text_couleurs')): ?>
 <?php if(have_rows('team_section')): while(have_rows('team_section')): the_row(); ?>
 <section class="team">
 	<div class="page-title">
-		<div><img class="logo" src="<?php bloginfo('template_url'); ?>/img/Logo.svg" /></div>
+		<div></div>
 		<div><h1><?php the_sub_field('team_title'); ?></h1></div>
 	</div>
 

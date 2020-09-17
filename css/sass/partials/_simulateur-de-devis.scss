@@ -390,6 +390,48 @@
           }
         }
 
+        &.papers {
+          .dropdown-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 20px;
+            transition: all 0.3s ease-in-out;
+            opacity: 0;
+            height: 0;
+          }
+
+          .row_title {
+            margin-top: 10px;
+            font-size: var(--font-size1);
+          }
+
+          .single-paper {
+            display: flex;
+            margin-bottom: 20px;
+
+            img {
+              width: 35%;
+              height: auto;
+              margin-right: 20px;
+              border: 1px solid;
+            }
+
+            .paper-description {
+              align-self: flex-end;
+
+              h3 {
+                font-size: var(--font-size2);
+                font-weight: 400;
+                margin-bottom: 0.5vw;
+              }
+
+              p {
+                font-size: var(--font-size3);
+              }
+            }
+          }
+        }
+
         .dropdown-button {
           width: 100%;
           position: relative;

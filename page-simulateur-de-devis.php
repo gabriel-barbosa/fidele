@@ -245,7 +245,75 @@
 			<div class="dropdown-item papers">
 				<div class="dropdown-button">+ Nos Papers</div>
 				<div class="dropdown-content">
+					<?php if(have_rows('papers_type')): while(have_rows('papers_type')): the_row(); ?>
+						<?php if(get_sub_field('paper_type_1')): ?>
+						<div class="row">
+							<div class="row_title"><?php echo get_sub_field('paper_type_title_1'); ?></div>
+							<?php while(have_rows('paper_type_1')): the_row(); ?>
+							<div class="single-paper">
+									<?php $image = get_sub_field('paper_image'); ?>
+									<?php echo wp_get_attachment_image( $image, 'thumbnail' ); ?>
 
+									<div class="paper-description">
+										<h3><?php the_sub_field('paper_title'); ?></h3>
+										<p><?php the_sub_field('paper_description'); ?></p>
+									</div>
+							</div>
+							<?php endwhile; ?>
+						</div>
+						<?php endif; ?>
+
+						<?php if(get_sub_field('paper_type_2')): ?>
+						<div class="row">
+							<div class="row_title"><?php echo get_sub_field('paper_type_title_2'); ?></div>
+							<?php while(have_rows('paper_type_2')): the_row(); ?>
+							<div class="single-paper">
+									<?php $image = get_sub_field('paper_image'); ?>
+									<?php echo wp_get_attachment_image( $image, 'thumbnail' ); ?>
+
+									<div class="paper-description">
+										<h3><?php the_sub_field('paper_title'); ?></h3>
+										<p><?php the_sub_field('paper_description'); ?></p>
+									</div>
+							</div>
+							<?php endwhile; ?>
+						</div>
+						<?php endif; ?>
+
+						<?php if(get_sub_field('paper_type_3')): ?>
+						<div class="row">
+							<div class="row_title"><?php echo get_sub_field('paper_type_title_3'); ?></div>
+							<?php while(have_rows('paper_type_3')): the_row(); ?>
+							<div class="single-paper">
+									<?php $image = get_sub_field('paper_image'); ?>
+									<?php echo wp_get_attachment_image( $image, 'thumbnail' ); ?>
+
+									<div class="paper-description">
+										<h3><?php the_sub_field('paper_title'); ?></h3>
+										<p><?php the_sub_field('paper_description'); ?></p>
+									</div>
+							</div>
+							<?php endwhile; ?>
+						</div>
+						<?php endif; ?>
+
+						<?php if(get_sub_field('paper_type_4')): ?>
+						<div class="row">
+							<div class="row_title"><?php echo get_sub_field('paper_type_title_4'); ?></div>
+							<?php while(have_rows('paper_type_4')): the_row(); ?>
+							<div class="single-paper">
+									<?php $image = get_sub_field('paper_image'); ?>
+									<?php echo wp_get_attachment_image( $image, 'thumbnail' ); ?>
+
+									<div class="paper-description">
+										<h3><?php the_sub_field('paper_title'); ?></h3>
+										<p><?php the_sub_field('paper_description'); ?></p>
+									</div>
+							</div>
+							<?php endwhile; ?>
+						</div>
+						<?php endif; ?>
+					<?php endwhile; endif; ?>
 				</div>
 			</div>
 		</section>
