@@ -10,10 +10,8 @@
     padding: 0;
   }
 
-  .page-title {
-    .title-left {
-      display: none;
-    }
+  .title-left {
+    visibility: hidden;
   }
 
   .subtitle, .row {
@@ -27,6 +25,12 @@
     margin-left: 1vw;
     margin-top: -1vw;
     stroke-width: 1.7;
+  }
+
+  .grid {
+    hr {
+      display: none;
+    }
   }
 
   .featured-image {
@@ -152,15 +156,23 @@
     }
 
     .page-title {
-      margin: 0 15px;
+      padding: 0 15px;
+    }
 
-      .title-left {
-        display: block;
-      }
+    .title-left {
+      visibility: visible;
     }
 
     .grid.col-2 {
       grid-template-columns: repeat(1, 1fr);
+
+      hr {
+        outline: 0;
+        border-bottom: 1px solid $fideleblue;
+        border-top: 0;
+        margin: 9vw -20px 3vw;
+        display: block;
+      }
     }
 
     .flexible-rows .row {

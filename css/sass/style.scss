@@ -513,6 +513,32 @@ a:hover, a:focus {
   }
 }
 
+@media (min-height: 800px) and (max-width: 1440px) {
+  .index_menu {
+    .text {
+    max-width: 85%;
+    line-height: 1.05;
+    }
+
+    .workshops {
+      right: 30vw;
+      width: 16vw;
+    }
+
+    .editions {
+      top: 13vw;
+      right: 6vw;
+    }
+
+    .studio {
+      width: 22vw;
+      position: absolute;
+      top: 17.5vw;
+      left: 11vw;
+    }
+  }
+}
+
 @include responsive(tablet-portrait) {
   .index_menu {
     height: 80vh;

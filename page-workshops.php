@@ -37,17 +37,15 @@
 					</div>
 
         <?php elseif( get_row_layout() == 'two_column_row' ): ?>
-					<div class="page-title">
-						<div><h1 class="title-left"><?php the_sub_field('row_title_left'); ?></h1></div>
-						<div><h1 class="title-right"><?php the_sub_field('row_title_right'); ?></h1></div>
-					</div>
-
 					<div class="row grid col-2">
 						<div class="content left">
+							<h1 class="title-left"><?php the_sub_field('row_title_left'); ?></h1>
 							<?php the_sub_field('left_row_content'); ?>
+							<hr>
 						</div>
 
 						<div class="content right">
+							<h1 class="title-right"><?php the_sub_field('row_title_right'); ?></h1>
 							<?php the_sub_field('right_row_content'); ?>
 						</div>
 					</div>
