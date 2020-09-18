@@ -370,6 +370,11 @@ a:hover, a:focus {
   }
 
   .gif-item {
+    svg * {
+      stroke-width: 1px !important;
+      vector-effect: non-scaling-stroke;
+    }
+
     &.mobile, &.big-desktop {
       display: none;
     }
@@ -496,12 +501,24 @@ a:hover, a:focus {
     font-size: 20vw;
     word-break: break-word;
 
+    .text {
+      &.english {
+        max-width: 100%;
+      }
+    }
+
     .gif-item.desktop, .gif-item.big-desktop {
       display: none;
     }
 
     .gif-item.mobile {
       display: block;
+
+      a:hover {
+        .static {
+          opacity: 1;
+        }
+      }
     }
 
     .studio {

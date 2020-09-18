@@ -67,8 +67,13 @@
 
      svg {
        margin-top: 2vw;
-       width: 75%;
+       width: 100%;
        height: auto;
+     }
+
+     svg * {
+       stroke-width: 1px !important;
+       vector-effect: non-scaling-stroke;
      }
    }
 
@@ -275,6 +280,14 @@
      }
 
      .simulateur-de-devis, .guide-d-impression {
+       .gif-item {
+         a:hover {
+           .static {
+             opacity: 1;
+           }
+         }
+       }
+
        &.mobile {
          display: block;
        }

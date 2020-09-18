@@ -15,14 +15,14 @@
 </div>
 
 <div class="steps-wrapper">
-	<div class="step-title">Simulateur de Devis</div>
+	<div class="step-title"><?php if(qtranxf_getLanguage() == "fr"): ?>Simulateur de Devis<?php else: ?>Quote Simulator<?php endif; ?></div>
 	<section class="simulateur-steps step-1">
 		<div class="step-subtitle">
-			Estimez votre projet, choisissez une catégorie:
+			<?php if(qtranxf_getLanguage() == "fr"): ?>Estimez votre projet, choisissez une catégorie:<?php else: ?>Estimate your project, choose a category:<?php endif; ?>
 		</div>
 
 		<!-- AFFICHES -->
-		<div id="affiches" class="gif-item" data-title="Simulateur Affiches">
+		<div id="affiches" class="gif-item" data-title="<?php if(qtranxf_getLanguage() == "fr"): ?>Simulateur Affiches<?php else: ?>Simulator Posters<?php endif; ?>">
 			<div class="big-desktop">
 				<?php if(qtranxf_getLanguage() == "fr"): ?>
 					<img class="static" src="<?php bloginfo('template_url'); ?>/img/affiches-big-desktop.png" alt="">
@@ -45,16 +45,14 @@
 
 			<div class="mobile">
 				<?php if(qtranxf_getLanguage() == "fr"): ?>
-					<img class="static" src="<?php bloginfo('template_url'); ?>/img/affiches.png" alt="">
-					<img class="hover" src="<?php bloginfo('template_url'); ?>/img/affiches-blue.gif" alt="">
+					<img src="<?php bloginfo('template_url'); ?>/img/affiches.svg" alt="">
 				<?php else: ?>
-					<img class="static" src="<?php bloginfo('template_url'); ?>/img/affiches-english.png" alt="">
-					<img class="hover" src="<?php bloginfo('template_url'); ?>/img/affiches-english-blue.gif" alt="">
+					<img src="<?php bloginfo('template_url'); ?>/img/affiches-english.svg" alt="">
 				<?php endif; ?>
 			</div>
 		</div>
 
-		<div id="brochures" class="gif-item" data-title="Simulateur Brochures">
+		<div id="brochures" class="gif-item" data-title="<?php if(qtranxf_getLanguage() == "fr"): ?>Simulateur Brochures<?php else: ?>Simulator Fold<?php endif; ?>">
 			<div class="big-desktop">
 				<?php if(qtranxf_getLanguage() == "fr"): ?>
 					<img class="static" src="<?php bloginfo('template_url'); ?>/img/brochures-big-desktop.png" alt="">
@@ -77,16 +75,14 @@
 
 			<div class="mobile">
 				<?php if(qtranxf_getLanguage() == "fr"): ?>
-					<img class="static" src="<?php bloginfo('template_url'); ?>/img/brochures.png" alt="">
-					<img class="hover" src="<?php bloginfo('template_url'); ?>/img/brochures-blue.gif" alt="">
+					<img src="<?php bloginfo('template_url'); ?>/img/brochures.svg" alt="">
 				<?php else: ?>
-					<img class="static" src="<?php bloginfo('template_url'); ?>/img/brochures-english.png" alt="">
-					<img class="hover" src="<?php bloginfo('template_url'); ?>/img/brochures-english-blue.gif" alt="">
+					<img src="<?php bloginfo('template_url'); ?>/img/brochures-english.svg" alt="">
 				<?php endif; ?>
 			</div>
 		</div>
 
-		<div id="fanzines" class="gif-item" data-title="Simulateur Fanzines">
+		<div id="fanzines" class="gif-item" data-title="<?php if(qtranxf_getLanguage() == "fr"): ?>Simulateur Fanzines<?php else: ?>Simulator Booklets<?php endif; ?>">
 			<div class="big-desktop">
 				<?php if(qtranxf_getLanguage() == "fr"): ?>
 					<img class="static" src="<?php bloginfo('template_url'); ?>/img/fanzines-big-desktop.png" alt="">
@@ -109,16 +105,14 @@
 
 			<div class="mobile">
 				<?php if(qtranxf_getLanguage() == "fr"): ?>
-					<img class="static" src="<?php bloginfo('template_url'); ?>/img/fanzines.png" alt="">
-					<img class="hover" src="<?php bloginfo('template_url'); ?>/img/fanzines-blue.gif" alt="">
+					<img src="<?php bloginfo('template_url'); ?>/img/fanzines.svg" alt="">
 				<?php else: ?>
-					<img class="static" src="<?php bloginfo('template_url'); ?>/img/fanzines-english.png" alt="">
-					<img class="hover" src="<?php bloginfo('template_url'); ?>/img/fanzines-english-blue.gif" alt="">
+					<img src="<?php bloginfo('template_url'); ?>/img/fanzines-english.svg" alt="">
 				<?php endif; ?>
 			</div>
 		</div>
 
-		<div id="dos-colles" class="gif-item" data-title="Simulateur Dos Collés">
+		<div id="dos-colles" class="gif-item" data-title="<?php if(qtranxf_getLanguage() == "fr"): ?>Simulateur Dos Collés<?php else: ?>Simulator Books<?php endif; ?>">
 			<div class="big-desktop">
 				<?php if(qtranxf_getLanguage() == "fr"): ?>
 					<img class="static" src="<?php bloginfo('template_url'); ?>/img/dos-colles-big-desktop.png" alt="">
@@ -141,16 +135,14 @@
 
 			<div class="mobile">
 				<?php if(qtranxf_getLanguage() == "fr"): ?>
-					<img class="static" src="<?php bloginfo('template_url'); ?>/img/dos-colles.png" alt="">
-					<img class="hover" src="<?php bloginfo('template_url'); ?>/img/dos-colles-blue.gif" alt="">
+					<img src="<?php bloginfo('template_url'); ?>/img/dos-colles.svg" alt="">
 				<?php else: ?>
-					<img class="static" src="<?php bloginfo('template_url'); ?>/img/livres-english.png" alt="">
-					<img class="hover" src="<?php bloginfo('template_url'); ?>/img/livres-english-blue.gif" alt="">
+					<img src="<?php bloginfo('template_url'); ?>/img/dos-colles-english.svg" alt="">
 				<?php endif; ?>
 			</div>
 		</div>
 
-		<div id="spirale" class="gif-item" data-title="Simulateur Spirale">
+		<div id="spirale" class="gif-item" data-title="<?php if(qtranxf_getLanguage() == "fr"): ?>Simulateur Spirale<?php else: ?>Simulator Spiral<?php endif; ?>">
 			<div class="big-desktop">
 				<?php if(qtranxf_getLanguage() == "fr"): ?>
 					<img class="static" src="<?php bloginfo('template_url'); ?>/img/spirale-big-desktop.png" alt="">
@@ -173,22 +165,20 @@
 
 			<div class="mobile">
 				<?php if(qtranxf_getLanguage() == "fr"): ?>
-					<img class="static" src="<?php bloginfo('template_url'); ?>/img/spirale.png" alt="">
-					<img class="hover" src="<?php bloginfo('template_url'); ?>/img/spirale-blue.gif" alt="">
+					<img src="<?php bloginfo('template_url'); ?>/img/spirale.svg" alt="">
 				<?php else: ?>
-					<img class="static" src="<?php bloginfo('template_url'); ?>/img/spirale-english.png" alt="">
-					<img class="hover" src="<?php bloginfo('template_url'); ?>/img/spirale-english-blue.gif" alt="">
+					<img src="<?php bloginfo('template_url'); ?>/img/spirale-english.svg" alt="">
 				<?php endif; ?>
 			</div>
 		</div>
 	</section>
 
-	<div class="step-title">Simulateur de Devis</div>
+	<div class="step-title"><?php if(qtranxf_getLanguage() == "fr"): ?>Simulateur de Devis<?php else: ?>Quote Simulator<?php endif; ?></div>
 
 	<section class="simulateur-steps step-2">
 		<section class="dropdown">
 			<div class="dropdown-item couleurs">
-				<div class="dropdown-button">+ Nos Couleurs</div>
+				<div class="dropdown-button"><?php if(qtranxf_getLanguage() == "fr"): ?>+ Nos Couleurs<?php else: ?>+ Colors<?php endif; ?></div>
 				<div class="dropdown-content">
 					<?php if( have_rows('liste_des_coleurs', 13) ): while( have_rows('liste_des_coleurs', 13) ): the_row(); ?>
 					<?php if(have_rows('couleurs')): while(have_rows('couleurs')): the_row(); ?>
@@ -243,7 +233,7 @@
 			</div>
 
 			<div class="dropdown-item papers">
-				<div class="dropdown-button">+ Nos Papers</div>
+				<div class="dropdown-button"><?php if(qtranxf_getLanguage() == "fr"): ?>+ Nos Papers<?php else: ?>+ Papers<?php endif; ?></div>
 				<div class="dropdown-content">
 					<div class="row">
 						<div class="row_title">$</div>
@@ -278,7 +268,7 @@
 					</div>
 
 					<div class="row">
-						<div class="row_title">$$$</div>
+						<div class="row_title">@@</div>
 						<?php while(have_rows('paper_option')): the_row(); ?>
 							<?php if(get_sub_field('option') == 'option3'): ?>
 							<div class="single-paper">
@@ -313,7 +303,7 @@
 		</section>
 
 		<section class="calculator-title">
-			<h3>Général:</h3>
+			<h3><?php if(qtranxf_getLanguage() == "fr"): ?>Général:<?php else: ?>General:<?php endif; ?></h3>
 		</section>
 
 		<section id="affiches-calculator" class="calculators affiches" data-title="Simulateur Affiches">

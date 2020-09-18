@@ -26,6 +26,7 @@
 		}
 
 		convertImages('.guide-d-impression img');
+		convertImages('.gif-item img');
 
 		/* HOME - HIDE LANDING ANIMATION */
 		var isshow = localStorage.getItem('isshow');
@@ -200,6 +201,9 @@
 	    bodyTag: ".simulateur-steps",
 	    transitionEffect: "fade",
 			autoFocus: false,
+			onInit: function() {
+				convertImages('.gif-item img');
+			},
 			onStepChanged: function(event, currentIndex, priorIndex) {
 				/* GETS THE STEP TITLE FROM CURRENT STEP AND PASSES IT TO H1 HEADER */
 				var title = $('.step-title.current').html();
