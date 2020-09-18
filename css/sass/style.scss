@@ -481,6 +481,11 @@ a:hover, a:focus {
 
 @include responsive(big-desktop) {
   .index_menu {
+    .text {
+    max-width: 85%;
+    line-height: 1;
+    }
+
     .gif-item.desktop, .gif-item.mobile {
       display: none;
     }
@@ -489,8 +494,21 @@ a:hover, a:focus {
       display: block;
 
       &.workshops {
-        right: 25vw;
+        right: 30vw;
+        width: 16vw;
       }
+    }
+
+    .editions {
+      top: 13vw;
+      right: 6vw;
+    }
+
+    .studio {
+      width: 22vw;
+      position: absolute;
+      top: 17.5vw;
+      left: 11vw;
     }
   }
 }

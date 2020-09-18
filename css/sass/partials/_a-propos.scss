@@ -216,6 +216,15 @@
   }
 }
 
+@include responsive(big-desktop) {
+  .a-propos {
+    .header-text .text {
+      max-width: 85%;
+      line-height: 1;
+    }
+  }
+}
+
 @include responsive(tablet-portrait) {
   .a-propos {
     .wrapper {
