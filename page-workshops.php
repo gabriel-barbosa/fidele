@@ -38,8 +38,8 @@
 
         <?php elseif( get_row_layout() == 'two_column_row' ): ?>
 					<div class="page-title">
-						<div></div>
-						<div><h1><?php the_sub_field('row_title'); ?></h1></div>
+						<div><h1 class="title-left"><?php the_sub_field('row_title_left'); ?></h1></div>
+						<div><h1 class="title-right"><?php the_sub_field('row_title_right'); ?></h1></div>
 					</div>
 
 					<div class="row grid col-2">
