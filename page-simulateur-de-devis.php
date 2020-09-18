@@ -236,7 +236,7 @@
 				<div class="dropdown-button"><?php if(qtranxf_getLanguage() == "fr"): ?>+ Nos Papers<?php else: ?>+ Papers<?php endif; ?></div>
 				<div class="dropdown-content">
 					<div class="row">
-						<div class="row_title">$</div>
+						<div class="row_title"><span>$</span></div>
 						<?php while(have_rows('paper_option')): the_row(); ?>
 							<?php if(get_sub_field('option') == 'option1'): ?>
 							<div class="single-paper">
@@ -252,7 +252,7 @@
 					</div>
 
 					<div class="row">
-						<div class="row_title">$$</div>
+						<div class="row_title"><span>$</span><span>$</span></div>
 						<?php while(have_rows('paper_option')): the_row(); ?>
 							<?php if(get_sub_field('option') == 'option2'): ?>
 							<div class="single-paper">
@@ -268,7 +268,7 @@
 					</div>
 
 					<div class="row">
-						<div class="row_title">@@</div>
+						<div class="row_title"><span>$</span><span>$</span><span>$</span></div>
 						<?php while(have_rows('paper_option')): the_row(); ?>
 							<?php if(get_sub_field('option') == 'option3'): ?>
 							<div class="single-paper">
@@ -284,7 +284,7 @@
 					</div>
 
 					<div class="row">
-						<div class="row_title">$$$$</div>
+						<div class="row_title"><span>$</span><span>$</span><span>$</span><span>$</span></div>
 						<?php while(have_rows('paper_option')): the_row(); ?>
 							<?php if(get_sub_field('option') == 'option4'): ?>
 							<div class="single-paper">
