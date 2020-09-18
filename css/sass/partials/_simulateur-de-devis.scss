@@ -424,10 +424,11 @@
               height: auto;
               margin-right: 20px;
               border: 1px solid;
+              align-self: flex-start;
             }
 
             .paper-description {
-              align-self: flex-end;
+              align-self: flex-start;
 
               h3 {
                 font-size: var(--font-size2);

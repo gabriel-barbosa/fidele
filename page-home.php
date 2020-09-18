@@ -19,8 +19,8 @@
 
 	<div class="gif-item studio desktop">
 		<a href="<?php bloginfo('url'); ?>/impression-riso/">
-			<img class="static" src="<?php bloginfo('template_url'); ?>/img/studio.png" alt="">
-			<img class="hover" src="<?php bloginfo('template_url'); ?>/img/studio-blue.gif" alt="">
+			<img class="static" src="<?php bloginfo('template_url'); ?>/img/studio-big-desktop.png" alt="">
+			<img class="hover" src="<?php bloginfo('template_url'); ?>/img/studio-big-desktop.gif" alt="">
 		</a>
 	</div>
 
@@ -39,8 +39,8 @@
 
 	<div class="gif-item workshops desktop">
 		<a href="<?php bloginfo('url'); ?>/workshops/">
-			<img class="static" src="<?php bloginfo('template_url'); ?>/img/workshops.png" alt="">
-			<img class="hover" src="<?php bloginfo('template_url'); ?>/img/workshops-blue.gif" alt="">
+			<img class="static" src="<?php bloginfo('template_url'); ?>/img/workshops-big-desktop.png" alt="">
+			<img class="hover" src="<?php bloginfo('template_url'); ?>/img/workshops-big-desktop.gif" alt="">
 		</a>
 	</div>
 
@@ -60,8 +60,8 @@
 
 	<div class="gif-item editions desktop">
 		<a href="<?php bloginfo('url'); ?>/editions/">
-			<img class="static" src="<?php bloginfo('template_url'); ?>/img/editions.png" alt="">
-			<img class="hover" src="<?php bloginfo('template_url'); ?>/img/editions-blue.gif" alt="">
+			<img class="static" src="<?php bloginfo('template_url'); ?>/img/editions-big-desktop.png" alt="">
+			<img class="hover" src="<?php bloginfo('template_url'); ?>/img/editions-big-desktop.gif" alt="">
 		</a>
 	</div>
 
@@ -80,8 +80,8 @@
 
 	<div class="gif-item editions desktop">
 		<a href="<?php bloginfo('url'); ?>/editions/">
-			<img class="static" src="<?php bloginfo('template_url'); ?>/img/editions.png" alt="">
-			<img class="hover" src="<?php bloginfo('template_url'); ?>/img/editions-blue.gif" alt="">
+			<img class="static" src="<?php bloginfo('template_url'); ?>/img/editions-big-desktop-english.png" alt="">
+			<img class="hover" src="<?php bloginfo('template_url'); ?>/img/editions-big-desktop-english.gif" alt="">
 		</a>
 	</div>
 
