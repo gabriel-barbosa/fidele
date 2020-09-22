@@ -136,7 +136,7 @@
 		$('.twitter-share').on( "click", function(event) {
 			var text = encodeURIComponent($(this).data('text'));
 			var shareUrl = 'https://twitter.com/share?url=' + $(this).data('url') + '&text=' + text;
-			window.open(shareUrl, "TweetPopUp", getWindowOptions());
+			window.open(shareUrl,'twitter-share',"width=626, height=436");
 			return false;
 		});
 
