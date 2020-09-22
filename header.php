@@ -74,7 +74,6 @@
 	</head>
 	<body <?php body_class(); ?>>
 
-
 		<div class="mouse-cursor"></div>
 
 		<!-- wrapper -->
