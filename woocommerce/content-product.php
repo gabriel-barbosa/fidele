@@ -50,15 +50,15 @@ $_total_posts = $wp_query->found_posts;
 		<div class="more-info-wrapper">
 			<div class="row grid col-4">
 				<div class="title">
-					<?php the_title(); ?>, <?php the_field('author'); ?>
+					<a href="<?php the_permalink();?>"><?php the_title(); ?>, <?php the_field('author'); ?></a>
 				</div>
 
 				<div class="description">
-					<?php the_excerpt(); ?>
+					<a href="<?php the_permalink();?>"><?php the_excerpt(); ?></a>
 				</div>
 
 				<div class="details">
-					<?php the_field('details'); ?>
+					<a href="<?php the_permalink();?>"><?php the_field('details'); ?></a>
 				</div>
 			</div>
 

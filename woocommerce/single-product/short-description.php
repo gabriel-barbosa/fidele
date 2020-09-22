@@ -62,11 +62,11 @@ global $post;
 
 	<div class="links">
 		<div class="single-link">
-			<a href="#">FACEBOOK</a>
+			<a href="#" class="fb-share" rel="nofollow" target="_blank" data-url="<?php the_permalink(); ?>">FACEBOOK</a>
 		</div>
 
 		<div class="single-link">
-			<a href="#">TWITTER</a>
+			<a href="#" class="twitter-share" rel="nofollow" target="_blank" data-text="<?php the_title(); ?>" data-url="<?php the_permalink(); ?>">TWITTER</a>
 		</div>
 	</div>
 </div>

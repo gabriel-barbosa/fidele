@@ -27,8 +27,55 @@
 		});
 		</script>
 
+		<script type="text/javascript">
+			jQuery(document).ready(function($){
+				/* Mouse cursor */
+                var $mouseX = 0, $mouseY = 0;
+                var $xp = 0, $yp =0;
+
+                $('body').mousemove(function(e){
+                    $('.mouse-cursor').css({
+                       left:  (e.pageX),//*(-1),
+                       top:   e.pageY
+                    }).css('opacity','1');
+                });
+                $('body').mouseout(function(e){
+                    $('.mouse-cursor').css('opacity','0');
+                });
+            	$('body').on('mousemove', 'a, select, button, input, textarea, .form-row', function() {
+                    $('.mouse-cursor').css('background-image','url(<?php echo esc_url( get_template_directory_uri() ); ?>/img/cursor-pointer.svg)');
+                });
+                $('body').on('mouseout', 'a, select, button, input, textarea, .form-row', function() {
+                    $('.mouse-cursor').css('background-image','url(<?php echo esc_url( get_template_directory_uri() ); ?>/img/cursor-default.svg)');
+                });
+                // $(this).mouseout(function(e){
+                //     $(this).siblings('.project-info').find('.pagingInfo').css('opacity','0');
+                // });
+			});
+		</script>
+
+		<style type="text/css">
+			.mouse-cursor {
+				background-image: url(<?php echo esc_url( get_template_directory_uri() ); ?>/img/cursor-default.svg);
+				background-position: center;
+				background-size: contain;
+				width: 30px;
+				height: 30px;
+				position: absolute;
+				z-index: 99999999999999999999999999999;
+				pointer-events: none;
+				opacity: 0;
+			}
+			*, body, html, body * {
+				cursor: none !important;
+			}
+		</style>
+
 	</head>
 	<body <?php body_class(); ?>>
+
+
+		<div class="mouse-cursor"></div>
 
 		<!-- wrapper -->
 		<div class="wrapper">

@@ -132,6 +132,19 @@
 		  }
 		}
 
+		/* SINGLE PRODUCT - TWITTER FACEBOOK SHARE */
+		$('.twitter-share').on( "click", function(event) {
+			var text = encodeURIComponent($(this).data('text'));
+			var shareUrl = 'https://twitter.com/share?url=' + $(this).data('url') + '&text=' + text;
+			window.open(shareUrl, "TweetPopUp", getWindowOptions());
+			return false;
+		});
+
+		$('.fb-share').on( "click", function(event) {
+			window.open('https://www.facebook.com/sharer/sharer.php?u='+ $(this).data('url'),'facebook-share-dialog',"width=626, height=436");
+			return false;
+		});
+
 		/* SINGLE PRODUCT - GALLERY */
 		$(".product-gallery").slick({
 		autoplay: false,
