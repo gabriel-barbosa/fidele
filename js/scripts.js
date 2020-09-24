@@ -132,6 +132,12 @@
 		  }
 		}
 
+		/* SINGLE PRODUCT - COLOUR PALLETTE */
+		var colourcount = $('.product-colours .colour-pallette').children().length;
+		if(colourcount >= 10) {
+			$('.product-colours .colour-pallette').addClass('break-line');
+		}
+
 		/* SINGLE PRODUCT - TWITTER FACEBOOK SHARE */
 		$('.twitter-share').on( "click", function(event) {
 			var text = encodeURIComponent($(this).data('text'));
