@@ -236,7 +236,7 @@
 				<div class="dropdown-button"><?php if(qtranxf_getLanguage() == "fr"): ?>+ Nos Papiers<?php else: ?>+ Papers<?php endif; ?></div>
 				<div class="dropdown-content">
 					<!-- <div class="row">
-						<div class="row_title"><span>$</span></div>
+						<div class="row_title"><img src="<?php bloginfo('template_url'); ?>/img/paper1.svg" alt=""></div>
 						<?php while(have_rows('paper_option')): the_row(); ?>
 							<?php if(get_sub_field('option') == 'option1'): ?>
 							<div class="single-paper">
@@ -252,7 +252,7 @@
 					</div> -->
 
 					<div class="row">
-						<div class="row_title"><span>$</span><span>$</span></div>
+						<div class="row_title"><img src="<?php bloginfo('template_url'); ?>/img/paper2.svg" alt=""></div>
 						<?php while(have_rows('paper_option')): the_row(); ?>
 							<?php if(get_sub_field('option') == 'option2'): ?>
 							<div class="single-paper">
@@ -268,7 +268,7 @@
 					</div>
 
 					<div class="row">
-						<div class="row_title"><span>$</span><span>$</span><span>$</span></div>
+						<div class="row_title"><img src="<?php bloginfo('template_url'); ?>/img/paper3.svg" alt=""></div>
 						<?php while(have_rows('paper_option')): the_row(); ?>
 							<?php if(get_sub_field('option') == 'option3'): ?>
 							<div class="single-paper">
@@ -284,7 +284,7 @@
 					</div>
 
 					<div class="row">
-						<div class="row_title"><span>$</span><span>$</span><span>$</span><span>$</span></div>
+						<div class="row_title"><img src="<?php bloginfo('template_url'); ?>/img/paper4.svg" alt=""></div>
 						<?php while(have_rows('paper_option')): the_row(); ?>
 							<?php if(get_sub_field('option') == 'option4'): ?>
 							<div class="single-paper">
@@ -344,7 +344,7 @@
 		</script>
 	</section>
 
-	<div class="step-title">Simulateur</div>
+	<div class="step-title"><?php if(qtranxf_getLanguage() == "fr"): ?>Simulateur<?php else: ?>Simulator<?php endif; ?></div>
 	<section class="simulateur-steps step-3">
 		<div class="form affiches-form">
 			<!-- AFFICHES FORM -->

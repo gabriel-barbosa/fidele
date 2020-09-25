@@ -412,7 +412,12 @@
 
           .row_title {
             margin-top: 10px;
-            font-size: var(--font-size1);
+            margin-bottom: 10px;
+
+            img {
+              height: 2vw;
+              width: auto;
+            }
           }
 
           .single-paper {
@@ -721,10 +726,14 @@
     padding: 20px;
     text-align: center;
     cursor: pointer;
-    font-size: var(--font-size2);;
+    font-size: var(--font-size2);
+
+    .wpcf7-form-control-wrap {
+      display: none;
+    }
   }
 
-  #file-upload {
+  .form-file {
     display: none;
   }
 
@@ -941,7 +950,12 @@
 
           .row_title {
             margin-top: 10px;
-            font-size: var(--font-size1);
+            margin-bottom: 10px;
+
+            img {
+              height: 7vw;
+              width: auto;
+            }
           }
 
           .single-paper {

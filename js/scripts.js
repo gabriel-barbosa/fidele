@@ -399,8 +399,10 @@
 
 
 		/* STEPS 3 - CONTACT FORM */
-		$('#file-upload').change(function() {
-			$("#file-name").text(this.files[0].name);
+		$('.form-file').each(function() {
+			$(this).change(function() {
+				$(this).parent().parent().find("#file-name").text(this.files[0].name);
+			});
 		});
 
 		$('.submit-wrapper').each(function() {
