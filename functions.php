@@ -498,3 +498,16 @@ function disable_shipping_calc_on_cart( $show_shipping ) {
     return $show_shipping;
 }
 add_filter( 'woocommerce_cart_ready_to_calc_shipping', 'disable_shipping_calc_on_cart', 99 );
+
+
+
+add_filter( 'woocommerce_product_add_to_cart_text', function( $text ) {
+    if ( 'Lire la suite' == $text ) {
+        $text = __( 'Épuisé', 'woocommerce' );
+    }
+    if ( 'Read more' == $text ) {
+        $text = __( 'Sold out', 'woocommerce' );
+    }
+
+    return $text;
+} );
