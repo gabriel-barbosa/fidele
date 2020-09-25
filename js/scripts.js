@@ -7,26 +7,28 @@
 
 		/* 	CONVERT IMAGES ON INLINE SVG */
 		const convertImages = (query, callback) => {
-		const images = document.querySelectorAll(query);
-			images.forEach(image => {
-				fetch(image.src)
-				.then(res => res.text())
-				.then(data => {
-					const parser = new DOMParser();
-					const svg = parser.parseFromString(data, 'image/svg+xml').querySelector('svg');
+		  const images = document.querySelectorAll(query);
 
-					if (image.id) svg.id = image.id;
-					if (image.className) svg.classList = image.classList;
+		  images.forEach(image => {
+		    fetch(image.src)
+		    .then(res => res.text())
+		    .then(data => {
+		      const parser = new DOMParser();
+		      const svg = parser.parseFromString(data, 'image/svg+xml').querySelector('svg');
 
-					image.parentNode.replaceChild(svg, image);
-				})
-				.then(callback)
-				.catch(error => console.error(error))
-			});
+		      if (image.id) svg.id = image.id;
+		      if (image.className) svg.classList = image.classList;
+
+		      image.parentNode.replaceChild(svg, image);
+		    })
+		    .then(callback)
+		    .catch(error => console.error(error))
+		  });
 		}
 
-		convertImages('.guide-d-impression img');
-		convertImages('.gif-item img');
+		convertImages('body.guide-d-impression img');
+		convertImages('body.impression-riso .mobile img');
+		convertImages('body.simulateur-de-devis .gif-item .mobile img');
 
 		/* HOME - HIDE LANDING ANIMATION */
 		var isshow = localStorage.getItem('isshow');
@@ -60,15 +62,14 @@
 
 		/* FUNCTION SCROLLED INTO VIEW */
 		function isScrolledIntoView(elem){
-				var $elem = $(elem);
 				var $window = $(window);
 				const windowH = window.innerHeight;
 
 				var docViewTop = $window.scrollTop();
 				var docViewBottom = docViewTop + windowH;
 
-				var elemTop = $elem.offset().top;
-				var elemBottom = elemTop + $elem.height();
+				var elemTop = $(elem).offset().top;
+				var elemBottom = elemTop + $(elem).height();
 
 				return ((elemBottom <= docViewBottom));
 		}
@@ -83,33 +84,37 @@
 				}
 			});
 
-			var catMenuBottom = $('.nav').offset().top + $('.nav').outerHeight(true);
-			var catMenu = $('.fixed-wrapper').offset().top;
+			if($('.archive .fixed-wrapper').length > 0) {
+				var catMenuBottom = $('.nav').offset().top + $('.nav').outerHeight(true);
+				var catMenu = $('.fixed-wrapper').offset().top;
 
-			if (catMenuBottom >= catMenu) {
-				if($(window).width() > 768) {
-					$('.fixed-wrapper').height($('.product-cat-menu').height());
+				if (catMenuBottom >= catMenu) {
+					if($(window).width() > 768) {
+						$('.fixed-wrapper').height($('.product-cat-menu').height());
+					}
+					else {
+						$('.fixed-wrapper').height($('.product-cat-menu.mobile').height());
+					}
+
+					$('body').addClass('cat-fixed');
 				}
-				else {
-					$('.fixed-wrapper').height($('.product-cat-menu.mobile').height());
-				}
-
-				$('body').addClass('cat-fixed');
-			}
-			else {
-				$('body').removeClass('cat-fixed');
-			}
-
-			var guideMenuBottom = $('.nav').offset().top + $('.nav').outerHeight(true);
-			var guideMenu = $('.guide-d-impression .fixed-wrapper').offset().top;
-
-			if($(window).width() > 768) {
-				if (guideMenuBottom >= guideMenu) {
-					$('.fixed-wrapper').height($('.submenu').height());
-				}
-
 				else {
 					$('body').removeClass('cat-fixed');
+				}
+			}
+
+			if($('.guide-d-impression .fixed-wrapper').length > 0) {
+				var guideMenuBottom = $('.nav').offset().top + $('.nav').outerHeight(true);
+				var guideMenu = $('.guide-d-impression .fixed-wrapper').offset().top;
+
+				if($(window).width() > 768) {
+					if (guideMenuBottom >= guideMenu) {
+						$('.fixed-wrapper').height($('.submenu').height());
+					}
+
+					else {
+						$('body').removeClass('cat-fixed');
+					}
 				}
 			}
 		});
@@ -521,13 +526,15 @@
 		});
 
 		$(document).scroll(function(){
-			if(isScrolledIntoView($('#payment'))) {
-				if ($(window).width() > 768) {
-					$('.total-order-fixed').addClass('hide');
+			if($('#payment').length > 0) {
+				if(isScrolledIntoView($('#payment'))) {
+					if ($(window).width() > 768) {
+						$('.total-order-fixed').addClass('hide');
+					}
 				}
-			}
-			else {
-				$('.total-order-fixed').removeClass('hide');
+				else {
+					$('.total-order-fixed').removeClass('hide');
+				}
 			}
 		});
 

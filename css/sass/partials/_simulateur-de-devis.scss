@@ -523,8 +523,8 @@
 
 .calconic-calculator  {
   #lumi-calculator-5e99c26393d11a001e5e0fb2,
+  #lumi-calculator-5f6e6ec6c03ba60029f8b351,
   #lumi-calculator-5ea1bde1a4ca0d00290b1848,
-  #lumi-calculator-5f2c6f18a2d88c002959c5f1,
   #lumi-calculator-5e9dbdaaa4ca0d00290b12c8,
   #lumi-calculator-5ea1b573a4ca0d00290b1835,
   #lumi-calculator-5ea1c010a4ca0d00290b1850 {
@@ -548,6 +548,7 @@
       border: 1px solid;
       margin: 10px;
       cursor: pointer;
+      height: auto !important;
 
       .calconic-element-label {
         margin-bottom: 0;

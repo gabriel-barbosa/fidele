@@ -312,7 +312,7 @@
 				<div class="calconic-calculator"  data-calculatorid="5e99c26393d11a001e5e0fb2"></div>
 			<?php else: ?>
 				<!-- AFFICHES CALCULATOR - ENGLISH -->
-				<div class="calconic-calculator"  data-calculatorid="5f2c6f18a2d88c002959c5f1"></div>
+				<div class="calconic-calculator"  data-calculatorid="5f6e6ec6c03ba60029f8b351"></div>
 			<?php endif; ?>
 		</section>
 
