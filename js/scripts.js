@@ -29,6 +29,7 @@
 		convertImages('body.guide-d-impression img');
 		convertImages('body.impression-riso .mobile img');
 		convertImages('body.simulateur-de-devis .gif-item .mobile img');
+		convertImages('body.simulateur-de-devis .folding img');
 
 		/* HOME - HIDE LANDING ANIMATION */
 		var isshow = localStorage.getItem('isshow');
@@ -227,6 +228,7 @@
 			autoFocus: false,
 			onInit: function() {
 				convertImages('.gif-item img');
+				convertImages('body.simulateur-de-devis .folding img');
 			},
 			onStepChanged: function(event, currentIndex, priorIndex) {
 				/* GETS THE STEP TITLE FROM CURRENT STEP AND PASSES IT TO H1 HEADER */
@@ -422,12 +424,25 @@
 		/* STEP 2 DROPDOWN BUTTON */
 		$('.step-2 .dropdown .couleurs .dropdown-button').click(function() {
 			$(this).parent().toggleClass('open');
+			$(this).find('span').text(function(i, text){
+          return text === "–" ? "+" : "–";
+      });
 			$('.step-2 .dropdown .papers').toggleClass('hide');
 		});
 
 		$('.step-2 .dropdown .papers .dropdown-button').click(function() {
 			$(this).parent().toggleClass('open');
+			$(this).find('span').text(function(i, text){
+          return text === "–" ? "+" : "–";
+      });
 			$('.step-2 .dropdown .couleurs').toggleClass('hide');
+		});
+
+		$('.step-2 .dropdown .folding .dropdown-button').click(function() {
+			$(this).parent().toggleClass('open');
+			$(this).find('span').text(function(i, text){
+          return text === "–" ? "+" : "–";
+      });
 		});
 
 		/* AFFICHES FORM - STEP 2 TO STEP 3 */

@@ -178,7 +178,7 @@
 	<section class="simulateur-steps step-2">
 		<section class="dropdown">
 			<div class="dropdown-item couleurs">
-				<div class="dropdown-button"><?php if(qtranxf_getLanguage() == "fr"): ?>+ Nos Couleurs<?php else: ?>+ Colors<?php endif; ?></div>
+				<div class="dropdown-button"><?php if(qtranxf_getLanguage() == "fr"): ?><span>+</span> Nos Couleurs<?php else: ?><span>+</span> Colors<?php endif; ?></div>
 				<div class="dropdown-content">
 					<?php if( have_rows('liste_des_coleurs', 13) ): while( have_rows('liste_des_coleurs', 13) ): the_row(); ?>
 					<?php if(have_rows('couleurs')): while(have_rows('couleurs')): the_row(); ?>
@@ -233,7 +233,7 @@
 			</div>
 
 			<div class="dropdown-item papers">
-				<div class="dropdown-button"><?php if(qtranxf_getLanguage() == "fr"): ?>+ Nos Papiers<?php else: ?>+ Papers<?php endif; ?></div>
+				<div class="dropdown-button"><?php if(qtranxf_getLanguage() == "fr"): ?><span>+</span> Nos Papiers<?php else: ?><span>+</span> Papers<?php endif; ?></div>
 				<div class="dropdown-content">
 					<!-- <div class="row">
 						<div class="row_title"><img src="<?php bloginfo('template_url'); ?>/img/paper1.svg" alt=""></div>
@@ -298,6 +298,21 @@
 							</div>
 						<?php endif; endwhile; ?>
 					</div>
+				</div>
+			</div>
+
+			<div class="break"></div>
+
+			<div class="dropdown-item folding">
+				<div class="dropdown-button"><?php if(qtranxf_getLanguage() == "fr"): ?><span>+</span> Nos Pliant<?php else: ?><span>+</span> Folding type<?php endif; ?></div>
+				<div class="dropdown-content">
+						<?php while(have_rows('folding_option')): the_row(); ?>
+							<div class="row single-folding">
+								<?php $image = get_sub_field('folding_image'); ?>
+								<img src="<?php echo esc_url($image['sizes']['thumbnail']); ?>">
+								<h3><?php the_sub_field('folding_title'); ?></h3>
+							</div>
+						<?php endwhile; ?>
 				</div>
 			</div>
 		</section>
