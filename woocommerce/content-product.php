@@ -36,7 +36,7 @@ $_total_posts = $wp_query->found_posts;
 
 <div class="product-item" style="z-index: <?php echo $counter = $_total_posts - ( $_current_page - 1 ) * $_ppp - $_current_post; ?>;">
 	<div class="background-gradient" style="background: linear-gradient(180deg, <?php the_field('background_color'); ?> 10%, #fff 80%); background: -moz-linear-gradient(180deg, <?php the_field('background_color'); ?> 10%, #fff 80%); background: -webkit-linear-gradient(270deg, <?php the_field('background_color'); ?> 10%, #fff 80%); background: -o-linear-gradient(180deg, <?php the_field('background_color'); ?> 10%, #fff 80%);"></div>
-	<a href="<?php the_permalink(); ?>"><img src="<?php the_post_thumbnail_url('large'); ?>" alt=""></a>
+	<a href="<?php the_permalink(); ?>"><img <?php if(get_field('hide_box_shadow')): ?>style="box-shadow: none; -webkit-box-shadow: none; -moz-box-shadow: none;"<?php endif; ?> src="<?php the_post_thumbnail_url('large'); ?>" alt=""></a>
 
 	<div class="product-info">
 		<div class="title-wrapper">

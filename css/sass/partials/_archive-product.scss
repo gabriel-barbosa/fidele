@@ -339,11 +339,15 @@
            width: 25%;
            font-size: var(--font-size2);
            @include linear-gradient(to top, #FFFFFF 40%, rgba(255, 255, 255, 0) 100%);
-          padding: 5vw 20px 0.2vw;
+           padding: 5vw 20px 0.2vw;
 
            &.stop {
              position: absolute;
              width: 100%;
+           }
+
+           .more-info-wrapper {
+             padding: 4vw 20px .2vw;
            }
          }
        }
