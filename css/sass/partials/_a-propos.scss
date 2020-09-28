@@ -218,7 +218,7 @@
 
 @include responsive(big-desktop) {
   .a-propos {
-    .header-text .text {
+    .index_menu .text {
       max-width: 85%;
       line-height: 1;
     }
@@ -231,11 +231,13 @@
       overflow-x: hidden;
     }
 
-    .header-text {
+    section.index_menu {
       height: 80vh;
       font-size: 20vw;
       hyphens: auto;
       word-break: break-word;
+      margin-top: 2vw;
+      margin-bottom: 30vw;
 
       .vector.vector-1 {
         right: 0;

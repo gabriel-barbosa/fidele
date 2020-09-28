@@ -161,6 +161,14 @@ body.cart, body.checkout {
       -webkit-box-shadow: 6px 6px 10px 0px rgba(0,0,0,0.35);
       -moz-box-shadow: 6px 6px 10px 0px rgba(0,0,0,0.35);
     }
+
+    &.hide-box-shadow {
+      img {
+        box-shadow: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+      }
+    }
   }
 
   tr th {

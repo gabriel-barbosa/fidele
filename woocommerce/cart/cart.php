@@ -62,7 +62,8 @@ do_action( 'woocommerce_before_cart' ); ?>
 							?>
 						</td>
 
-						<td class="product-thumbnail">
+						<?php $productid = $_product->id; ?>
+						<td class="product-thumbnail<?php if(get_field('hide_box_shadow', $productid)): ?> hide-box-shadow<?php endif; ?>">
 						<?php
 						$thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
 
