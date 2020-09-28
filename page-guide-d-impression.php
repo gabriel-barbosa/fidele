@@ -1,5 +1,11 @@
 <?php get_header(); ?>
 
+<style type="text/css">
+	.guide-row-2 .column-right .wp-image-274 {
+		max-width: 25vw;
+	}
+</style>
+
 <?php if ( have_posts()) : while ( have_posts() ) : the_post(); ?>
 <section>
 	<div class="page-title">
@@ -9,7 +15,7 @@
 			if( $file ):
 			$url = wp_get_attachment_url( $file ); ?>
 			<div class="download-button">
-		    <a href="<?php echo esc_html($url); ?>" >Click Here To Download Our Guide & Templates</a>
+		    <a href="<?php echo $file['url']; ?>" target="_blank">Click Here To Download Our Guide & Templates</a>
 			</div>
 			<?php endif; ?>
 		</div>

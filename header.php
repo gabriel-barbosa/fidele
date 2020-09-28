@@ -33,17 +33,27 @@
                 var $mouseX = 0, $mouseY = 0;
                 var $xp = 0, $yp =0;
 
-                $('body').mousemove(function(e){
-                    $('.mouse-cursor').css({
-                       left:  (e.pageX),//*(-1),
-                       top:   e.pageY
-                    }).css('opacity','1');
+                $(window).scroll(function(e){
+                	var scroll = $(window).scrollTop();
+                	//console.log(scroll);
+                	$('.mouse-cursor').css('opacity','1');
+
+	                $('body').mousemove(function(e){
+	                    $('.mouse-cursor').css({
+	                       left:  (e.pageX),//*(-1),
+	                       top:   e.pageY - scroll
+	                    }).css('opacity','1');
+	                });
+
+	                $('body').mouseout(function(e){
+	                    $('.mouse-cursor').css('opacity','0');
+	                });
+
                 });
-                $('body').mouseout(function(e){
-                    $('.mouse-cursor').css('opacity','0');
-                });
+                $(function(){ $(window).scroll() });
+                
             	$('body').on('mousemove', 'a, select, button, input, textarea, .form-row', function() {
-                    $('.mouse-cursor').css('background-image','url(<?php echo esc_url( get_template_directory_uri() ); ?>/img/cursor-pointer.svg)');
+                    $('.mouse-cursor').css('background-image','url()');
                 });
                 $('body').on('mouseout', 'a, select, button, input, textarea, .form-row', function() {
                     $('.mouse-cursor').css('background-image','url(<?php echo esc_url( get_template_directory_uri() ); ?>/img/cursor-default.svg)');
@@ -59,9 +69,9 @@
 				background-image: url(<?php echo esc_url( get_template_directory_uri() ); ?>/img/cursor-default.svg);
 				background-position: center;
 				background-size: contain;
-				width: 30px;
-				height: 30px;
-				position: absolute;
+				width: 15px;
+				height: 15px;
+				position: fixed;
 				z-index: 99999999999999999999999999999;
 				pointer-events: none;
 				opacity: 0;
@@ -69,6 +79,23 @@
 			*, body, html, body * {
 				cursor: none !important;
 			}
+
+			a, .button, input[type="submit"], button, .logo, .gif-item, .hover, select {
+				cursor: pointer !important;
+			}
+
+			@media(min-width: 1680px){
+				.archive .product-item a img {
+				    max-height: 24vw;
+				}
+			}
+
+			@media(max-width: 1024px){
+				.mouse-cursor {
+				    display: none !important;
+				}
+			}
+
 		</style>
 
 	</head>
