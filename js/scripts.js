@@ -504,7 +504,7 @@
 		/* FANZINES FORM - STEP 2 TO STEP 3 */
 		$(document).on("click", ".arrow.fanzines", function() {
 			$('.fanzines-form input.copies').val($('#fanzines-calculator #ref-r2').find('.calconic--controled_input input').val());
-			$('.fanzines-form input.pages').val($('#fanzines-calculator #ref-r46').find('.calconic--controled_input input').val());
+			$('.fanzines-form input.pages').val($('#fanzines-calculator #ref-r46').find('.rc-select-selection-selected-value').html());
 			$('.fanzines-form input.format').val($('#fanzines-calculator #ref-r24').find('.rc-select-selection-selected-value').html());
 			$('.fanzines-form input.couverture-paper-type').val($('#fanzines-calculator #ref-r1').find('.rc-select-selection-selected-value').html());
 			$('.fanzines-form input.couverture-front-colors').val($('#fanzines-calculator #ref-r3').find('.rc-slider-handle').attr('aria-valuenow'));
