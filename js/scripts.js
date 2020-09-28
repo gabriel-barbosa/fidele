@@ -44,7 +44,7 @@
 		});
 
 		/* A PROPOS PAGE - LETTERS COLOR ON HOVER */
-		$(".a-propos .header-text .text").each(function (index) {
+		$(".a-propos .index_menu .text").each(function (index) {
 			var characters = $(this).text().split("");
 
 			$this = $(this);
