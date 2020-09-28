@@ -23,7 +23,7 @@ if(get_field('text_couleurs')): ?>
 
 <?php if ( have_posts()) : while ( have_posts() ) : the_post(); ?>
 	<section class="header-text">
-		<div class="text">Une Maison D'édition Et Un Atelier D'impression  Riso À Paris</div>
+		<div class="text"><?php the_field('header_text'); ?></div>
 	</section>
 
 <?php if(have_rows('map_section')): while(have_rows('map_section')): the_row(); ?>
