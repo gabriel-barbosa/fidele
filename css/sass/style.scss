@@ -546,6 +546,8 @@ a:hover, a:focus {
     word-break: break-word;
 
     .text {
+      max-width: 100%;
+
       &.english {
         max-width: 100%;
       }
