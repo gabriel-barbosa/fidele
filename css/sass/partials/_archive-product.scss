@@ -54,7 +54,7 @@
      }
 
      .head-title {
-       top: 80px;
+       top: 85px;
      }
    }
 
@@ -194,7 +194,7 @@
 
      a {
        z-index: 1;
-       max-width: 65%;
+       max-width: 75%;
        height: auto;
 
        img {
@@ -388,7 +388,7 @@
     }
 
     &.cat-fixed .nav-mobile {
-      padding-top: 45vw;
+      padding-top: 50vw;
     }
   }
 
@@ -527,8 +527,12 @@
         }
 
         a {
-          max-width: 60%;
+          max-width: 65%;
           padding: 20vw 0;
+
+          img {
+            max-height: 100%;
+          }
         }
 
         .background-gradient {
