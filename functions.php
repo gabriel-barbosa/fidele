@@ -271,12 +271,6 @@ function html5wp_excerpt( $length_callback = '', $more_callback = '' ) {
     echo esc_html( $output );
 }
 
-// Custom View Article link to Post
-function html5_blank_view_article( $more ) {
-    global $post;
-    return '... <a class="view-article" href="' . get_permalink( $post->ID ) . '">' . esc_html_e( 'View Article', 'html5blank' ) . '</a>';
-}
-
 // Remove Admin bar
 function remove_admin_bar() {
     return false;
