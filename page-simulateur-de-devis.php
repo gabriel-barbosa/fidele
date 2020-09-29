@@ -304,7 +304,7 @@
 			<div class="break"></div>
 
 			<div class="dropdown-item folding">
-				<div class="dropdown-button"><?php if(qtranxf_getLanguage() == "fr"): ?><span>+</span> Nos Pliant<?php else: ?><span>+</span> Folding type<?php endif; ?></div>
+				<div class="dropdown-button"><?php if(qtranxf_getLanguage() == "fr"): ?><span>+</span> Nos plis<?php else: ?><span>+</span> Folding type<?php endif; ?></div>
 				<div class="dropdown-content">
 						<?php while(have_rows('folding_option')): the_row(); ?>
 							<div class="row single-folding">

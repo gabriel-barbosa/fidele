@@ -27,7 +27,7 @@
 		});
 		</script>
 
-		<script type="text/javascript">
+		<!-- <script type="text/javascript">
 			jQuery(document).ready(function($){
 				/* Mouse cursor */
                 var $mouseX = 0, $mouseY = 0;
@@ -52,20 +52,20 @@
                 });
                 $(function(){ $(window).scroll() });
                 
-            	$('body').on('mousemove', 'a, select, button, input, textarea, .form-row', function() {
+            	$('body').on('mousemove', 'a, button, input[type="submit"], .button, a img', function() {
                     $('.mouse-cursor').css('background-image','url()');
                 });
-                $('body').on('mouseout', 'a, select, button, input, textarea, .form-row', function() {
+                $('body').on('mouseout', 'a, button, input[type="submit"], .button, a img', function() {
                     $('.mouse-cursor').css('background-image','url(<?php echo esc_url( get_template_directory_uri() ); ?>/img/cursor-default.svg)');
                 });
                 // $(this).mouseout(function(e){
                 //     $(this).siblings('.project-info').find('.pagingInfo').css('opacity','0');
                 // });
 			});
-		</script>
+		</script> -->
 
 		<style type="text/css">
-			.mouse-cursor {
+			/*.mouse-cursor {
 				background-image: url(<?php echo esc_url( get_template_directory_uri() ); ?>/img/cursor-default.svg);
 				background-position: center;
 				background-size: contain;
@@ -80,9 +80,9 @@
 				cursor: none !important;
 			}
 
-			a, .button, input[type="submit"], button, .logo, .gif-item, .hover, select {
+			a, button, input[type="submit"], .button, a img {
 				cursor: pointer !important;
-			}
+			}*/
 
 			@media(min-width: 1680px){
 				.archive .product-item a img {
@@ -101,7 +101,7 @@
 	</head>
 	<body <?php body_class(); ?>>
 
-		<div class="mouse-cursor"></div>
+		<!-- <div class="mouse-cursor"></div> -->
 
 		<!-- wrapper -->
 		<div class="wrapper">
