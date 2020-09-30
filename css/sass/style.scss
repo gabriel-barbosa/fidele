@@ -539,6 +539,13 @@ a:hover, a:focus {
   }
 }
 
+
+@media screen and (min-width: 1979px) {
+.index_menu .text {
+    max-width: 97%;
+  }
+}
+
 @include responsive(tablet-portrait) {
   .index_menu {
     height: 80vh;
