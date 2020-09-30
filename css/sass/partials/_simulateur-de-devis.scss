@@ -453,6 +453,10 @@
         &.folding {
           margin-top: 1vw;
 
+          &.hidden {
+            display: none;
+          }
+
           .dropdown-content {
             display: grid;
             grid-template-columns: repeat(6, 1fr);

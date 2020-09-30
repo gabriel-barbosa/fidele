@@ -111,6 +111,7 @@
 				if($(window).width() > 768) {
 					if (guideMenuBottom >= guideMenu) {
 						$('.fixed-wrapper').height($('.submenu').height());
+						$('body').addClass('cat-fixed');
 					}
 
 					else {
@@ -256,6 +257,7 @@
 					$('.arrow').removeClass('brochures');
 					$('.arrow').removeClass('fanzines');
 					$('.arrow').removeClass('spirale');
+					$('.dropdown-item.folding').addClass('hidden');
 				}
 
 				if(priorIndex == 0) {
@@ -303,6 +305,7 @@
 		$('#brochures').click(function() {
 			/* PROCEEDS TO NEXT STEP */
 			$(".steps-wrapper").steps('next');
+			$('.dropdown-item.folding').removeClass('hidden');
 
 			/* ADD CURRENT TITLE TO THE HIDDEN STEP TITLE */
 			var currenttitle = $(this).data("title");
