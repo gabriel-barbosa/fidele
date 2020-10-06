@@ -98,5 +98,26 @@ if(get_field('text_couleurs')): ?>
 	<!-- /article -->
 <?php endif; ?>
 
+<style type="text/css">
+	.design-code {
+		margin-bottom: -1.1vw;
+	}
+	.design-code, .design-code a {
+		font-size: 1.7vw;
+	}
+
+	@media only screen and (max-width: 768px) {
+		.design-code {
+			margin-bottom: -3vw;
+		}
+		.design-code, .design-code a {
+			font-size: 5vw;
+			line-height: 5.8vw;
+		}
+	}
+</style>
+
+<div class="design-code">Design by <a href="https://sometimes-always.com/" target="_blank">Sometimes Always</a>. Programming by <a href="https://fluxo.design/" target="_blank">Fluxo</a>.</div>
+
 
 <?php get_footer(); ?>
