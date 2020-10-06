@@ -24,11 +24,11 @@
 				<div class="gif-item">
 					<a href="<?php bloginfo('url'); ?>/impression-riso/simulateur-de-devis">
 						<?php if(qtranxf_getLanguage() == "fr"): ?>
-							<img class="static" src="<?php bloginfo('template_url'); ?>/img/simulateur-big-desktop.png" alt="">
-							<img class="hover" src="<?php bloginfo('template_url'); ?>/img/simulateur-big-desktop.gif" alt="">
+							<img class="static" src="<?php bloginfo('template_url'); ?>/img/simulateur.png" alt="">
+							<img class="hover" src="<?php bloginfo('template_url'); ?>/img/simulateur.gif" alt="">
 						<?php else: ?>
-							<img class="static" src="<?php bloginfo('template_url'); ?>/img/simulateur-big-desktop-english.png" alt="">
-							<img class="hover" src="<?php bloginfo('template_url'); ?>/img/simulateur-big-desktop-english.gif" alt="">
+							<img class="static" src="<?php bloginfo('template_url'); ?>/img/simulateur-english.png" alt="">
+							<img class="hover" src="<?php bloginfo('template_url'); ?>/img/simulateur-english.gif" alt="">
 						<?php endif; ?>
 					</a>
 				</div>
@@ -39,10 +39,10 @@
 					<a href="<?php bloginfo('url'); ?>/impression-riso/simulateur-de-devis">
 						<?php if(qtranxf_getLanguage() == "fr"): ?>
 							<img class="static" src="<?php bloginfo('template_url'); ?>/img/simulateur.png" alt="">
-							<img class="hover" src="<?php bloginfo('template_url'); ?>/img/simulateur-blue.gif" alt="">
+							<img class="hover" src="<?php bloginfo('template_url'); ?>/img/simulateur.gif" alt="">
 						<?php else: ?>
 							<img class="static" src="<?php bloginfo('template_url'); ?>/img/simulateur-english.png" alt="">
-							<img class="hover" src="<?php bloginfo('template_url'); ?>/img/simulateur-english-blue.gif" alt="">
+							<img class="hover" src="<?php bloginfo('template_url'); ?>/img/simulateur-english.gif" alt="">
 						<?php endif; ?>
 					</a>
 				</div>
@@ -64,11 +64,11 @@
 			<div class="gif-item">
 				<a href="<?php bloginfo('url'); ?>/impression-riso/guide-d-impression">
 					<?php if(qtranxf_getLanguage() == "fr"): ?>
-						<img class="static" src="<?php bloginfo('template_url'); ?>/img/guide-big-desktop.png" alt="">
-						<img class="hover" src="<?php bloginfo('template_url'); ?>/img/guide-big-desktop.gif" alt="">
+						<img class="static" src="<?php bloginfo('template_url'); ?>/img/guide.png" alt="">
+						<img class="hover" src="<?php bloginfo('template_url'); ?>/img/guide.gif" alt="">
 					<?php else: ?>
-						<img class="static" src="<?php bloginfo('template_url'); ?>/img/guide-big-desktop-english.png" alt="">
-						<img class="hover" src="<?php bloginfo('template_url'); ?>/img/guide-big-desktop-english.gif" alt="">
+						<img class="static" src="<?php bloginfo('template_url'); ?>/img/guide-english.png" alt="">
+						<img class="hover" src="<?php bloginfo('template_url'); ?>/img/guide-english.gif" alt="">
 					<?php endif; ?>
 				</a>
 			</div>
@@ -79,10 +79,10 @@
 				<a href="<?php bloginfo('url'); ?>/impression-riso/guide-d-impression">
 					<?php if(qtranxf_getLanguage() == "fr"): ?>
 						<img class="static" src="<?php bloginfo('template_url'); ?>/img/guide.png" alt="">
-						<img class="hover" src="<?php bloginfo('template_url'); ?>/img/guide-blue.gif" alt="">
+						<img class="hover" src="<?php bloginfo('template_url'); ?>/img/guide.gif" alt="">
 					<?php else: ?>
-						<img class="static" src="<?php bloginfo('template_url'); ?>/img/guide-big-desktop-english.png" alt="">
-						<img class="hover" src="<?php bloginfo('template_url'); ?>/img/guide-big-desktop-english.gif" alt="">
+						<img class="static" src="<?php bloginfo('template_url'); ?>/img/guide-english.png" alt="">
+						<img class="hover" src="<?php bloginfo('template_url'); ?>/img/guide-english.gif" alt="">
 					<?php endif; ?>
 				</a>
 			</div>

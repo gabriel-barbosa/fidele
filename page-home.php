@@ -12,15 +12,15 @@
 
 	<div class="gif-item studio big-desktop">
 		<a href="<?php bloginfo('url'); ?>/impression-riso/">
-			<img class="static" src="<?php bloginfo('template_url'); ?>/img/studio-big-desktop.png" alt="">
-			<img class="hover" src="<?php bloginfo('template_url'); ?>/img/studio-big-desktop.gif" alt="">
+			<img class="static" src="<?php bloginfo('template_url'); ?>/img/studio.png" alt="">
+			<img class="hover" src="<?php bloginfo('template_url'); ?>/img/studio.gif" alt="">
 		</a>
 	</div>
 
 	<div class="gif-item studio desktop">
 		<a href="<?php bloginfo('url'); ?>/impression-riso/">
-			<img class="static" src="<?php bloginfo('template_url'); ?>/img/studio-big-desktop.png" alt="">
-			<img class="hover" src="<?php bloginfo('template_url'); ?>/img/studio-big-desktop.gif" alt="">
+			<img class="static" src="<?php bloginfo('template_url'); ?>/img/studio.png" alt="">
+			<img class="hover" src="<?php bloginfo('template_url'); ?>/img/studio.gif" alt="">
 		</a>
 	</div>
 
@@ -32,15 +32,15 @@
 
 	<div class="gif-item workshops big-desktop">
 		<a href="<?php bloginfo('url'); ?>/workshops/">
-			<img class="static" src="<?php bloginfo('template_url'); ?>/img/workshops-big-desktop.png" alt="">
-			<img class="hover" src="<?php bloginfo('template_url'); ?>/img/workshops-big-desktop.gif" alt="">
+			<img class="static" src="<?php bloginfo('template_url'); ?>/img/workshops.png" alt="">
+			<img class="hover" src="<?php bloginfo('template_url'); ?>/img/workshops.gif" alt="">
 		</a>
 	</div>
 
 	<div class="gif-item workshops desktop">
 		<a href="<?php bloginfo('url'); ?>/workshops/">
-			<img class="static" src="<?php bloginfo('template_url'); ?>/img/workshops-big-desktop.png" alt="">
-			<img class="hover" src="<?php bloginfo('template_url'); ?>/img/workshops-big-desktop.gif" alt="">
+			<img class="static" src="<?php bloginfo('template_url'); ?>/img/workshops.png" alt="">
+			<img class="hover" src="<?php bloginfo('template_url'); ?>/img/workshops.gif" alt="">
 		</a>
 	</div>
 
@@ -53,15 +53,15 @@
 	<?php if(qtranxf_getLanguage() == "fr"): ?>
 	<div class="gif-item editions big-desktop">
 		<a href="<?php bloginfo('url'); ?>/editions/">
-			<img class="static" src="<?php bloginfo('template_url'); ?>/img/editions-big-desktop.png" alt="">
-			<img class="hover" src="<?php bloginfo('template_url'); ?>/img/editions-big-desktop.gif" alt="">
+			<img class="static" src="<?php bloginfo('template_url'); ?>/img/editions.png" alt="">
+			<img class="hover" src="<?php bloginfo('template_url'); ?>/img/editions.gif" alt="">
 		</a>
 	</div>
 
 	<div class="gif-item editions desktop">
 		<a href="<?php bloginfo('url'); ?>/editions/">
-			<img class="static" src="<?php bloginfo('template_url'); ?>/img/editions-big-desktop.png" alt="">
-			<img class="hover" src="<?php bloginfo('template_url'); ?>/img/editions-big-desktop.gif" alt="">
+			<img class="static" src="<?php bloginfo('template_url'); ?>/img/editions.png" alt="">
+			<img class="hover" src="<?php bloginfo('template_url'); ?>/img/editions.gif" alt="">
 		</a>
 	</div>
 
@@ -73,15 +73,15 @@
 	<?php else: ?>
 	<div class="gif-item editions big-desktop">
 		<a href="<?php bloginfo('url'); ?>/editions/">
-			<img class="static" src="<?php bloginfo('template_url'); ?>/img/editions-big-desktop-english.png" alt="">
-			<img class="hover" src="<?php bloginfo('template_url'); ?>/img/editions-big-desktop-english.gif" alt="">
+			<img class="static" src="<?php bloginfo('template_url'); ?>/img/editions-english.png" alt="">
+			<img class="hover" src="<?php bloginfo('template_url'); ?>/img/editions-english.gif" alt="">
 		</a>
 	</div>
 
 	<div class="gif-item editions desktop">
 		<a href="<?php bloginfo('url'); ?>/editions/">
-			<img class="static" src="<?php bloginfo('template_url'); ?>/img/editions-big-desktop-english.png" alt="">
-			<img class="hover" src="<?php bloginfo('template_url'); ?>/img/editions-big-desktop-english.gif" alt="">
+			<img class="static" src="<?php bloginfo('template_url'); ?>/img/editions-english.png" alt="">
+			<img class="hover" src="<?php bloginfo('template_url'); ?>/img/editions-english.gif" alt="">
 		</a>
 	</div>
 
