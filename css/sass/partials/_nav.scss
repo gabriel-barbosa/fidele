@@ -40,7 +40,7 @@
     color: $fideleblue;
     border-right: 1px solid $fideleblue;
     padding: 3px 9px 0;
-    background: $white;
+    background: linear-gradient(90deg, $white 0%, $white 100%);
     transition: all 0.5s ease;
     font-size: 18px;
 

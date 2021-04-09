@@ -2,8 +2,18 @@
 
 	$(function () {
 		$(document).ready(function() {
+			/* CORRECT SLICK DOTS ON MOBILE */
+			if(('.slick-dots li').length > 11) {
+				$(".product-gallery").addClass("break-dots");
+			}
 		});
 		/* END DOCUMENT READY */
+
+		/* PREORDER BAR */
+		if($('.ancr-sticky').length > 0) {
+			var announce = $('.ancr-sticky').outerHeight(true);
+			$('.head-title').css('top','+=' + announce);
+		}
 
 		/* 	CONVERT IMAGES ON INLINE SVG */
 		const convertImages = (query, callback) => {
@@ -144,6 +154,14 @@
 		if(colourcount >= 10) {
 			$('.product-colours .colour-pallette').addClass('break-line');
 		}
+
+		/* SINGLE PRODUCT - CHANGE FIXED PRICE ON CLICK */
+		$('.variable-item').click(function() {
+			setTimeout(function() {
+				var currentprice = $(".woocommerce-variation-price").find('.woocommerce-Price-amount').html();
+				$('p.price').html(currentprice);
+			}, 50);
+		});
 
 		/* SINGLE PRODUCT - TWITTER FACEBOOK SHARE */
 		$('.twitter-share').on( "click", function(event) {

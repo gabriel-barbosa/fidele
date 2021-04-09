@@ -115,7 +115,7 @@
 
 .editions, .post-type-archive-product, .tax-product_cat, .single-product, .simulateur-de-devis, .cart, .my-account, .home {
   .footer {
-    display: none;
+    display: none !important;
   }
 
   nav .footer {

@@ -56,7 +56,7 @@ body.single-product {
   }
 
   .slick-dots {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -73,8 +73,8 @@ body.single-product {
 
       a {
         color: $fideleblue;
-        width: 30px;
-        height: 30px;
+        width: 35px;
+        height: 35px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -129,8 +129,8 @@ body.single-product {
   overflow-y: scroll;
   margin: 0;
 
-  .price {
-    display: none;
+  .cart {
+    display: block;
   }
 
   .product_title {
@@ -244,22 +244,115 @@ body.single-product {
  }
 }
 
-.add-to-cart {
+.variations {
+  padding: .75vw 0;
+  border-bottom: 1px solid !important;
+  margin-bottom: 0;
+
+  .label label {
+    text-transform: capitalize;
+    font-size: 1.5vw;
+    font-weight: 400 !important;
+
+    &:after {
+      content: ":";
+    }
+  }
+}
+
+.woo-variation-swatches.wvs-style-squared .variable-items-wrapper .variable-item.button-variable-item {
+  min-width: 0;
+  padding: 0;
+  box-shadow: none !important;
+  border: 1px solid $fideleblue;
+  border-radius: 50%;
+  width: 3vw !important;
+  height: 3vw;
+
+  .variable-item-span {
+    padding: .75vw !important;
+    font-size: 2vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+  }
+
+  &.selected {
+    text-decoration: underline;
+    background: $fideleblue;
+    color: $white;
+  }
+}
+
+[data-wvstooltip]:before, [data-wvstooltip]:after {
+  display: none !important;
+}
+
+.woocommerce div.product div.summary {
+  .reset_variations, .single_variation, .quantity, .woo-selected-variation-item-name, .stock.in-stock {
+    display: none !important;
+  }
+}
+
+.woocommerce div.product div.summary .cart {
+  margin-bottom: 0;
+
+  .variations {
+    margin-bottom: 0;
+  }
+
+  .reset_variations, .single_variation, .quantity, .woo-selected-variation-item-name, .stock.in-stock {
+    display: none !important;
+  }
+}
+
+.single-product div.product .woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover {
+  background: none !important;
+  color: $fideleblue !important;
+}
+
+.single-product div.product .single_add_to_cart_button {
+  position: fixed;
+  z-index: 1000;
+  left: 61vw;
+  bottom: 0;
+  padding: 12px 10px;
+  font-weight: 400;
+  background: 0;
+  font-size: 2vw;
+  color: $fideleblue;
+
+  &.disabled {
+    background: none;
+    color: $fideleblue;
+  }
+}
+
+.woocommerce div.product p.price {
   width: 40%;
   padding: 60px 20px 10px;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  justify-content: flex-end;
+  align-items: center;
   font-size: 2vw;
+  color: $fideleblue;
   position: fixed;
   z-index: 1000;
   bottom: 0;
   right: 0;
   background: linear-gradient(0deg, #FFFFFF 50%, rgba(255, 255, 255, 0) 100%);
 
+  bdi {
+    display: flex;
+    align-items: center;
+  }
+
   span {
     line-height: 1;
     display: flex;
+    font-size: 2vw;
+    color: $fideleblue;
 
     bdi {
     display: flex;
@@ -306,6 +399,10 @@ body.single-product {
     position: relative;
     z-index: 3;
 
+    &.break-dots {
+      padding-bottom: 35px !important;
+    }
+
     .img-wrapper {
       width: 100%;
       height: calc(100% - 15vw);
@@ -315,9 +412,14 @@ body.single-product {
       justify-content: flex-start;
       position: relative;
       top: -15vw;
+      flex-wrap: wrap;
       background: none;
       border-top: 1px solid;
       padding: 4vw 15px 0vw;
+
+      li {
+        margin-bottom: 5px;
+      }
 
       li a {
         padding-top: 5px;
@@ -406,8 +508,12 @@ body.single-product {
     display: none;
   }
 
-  .add-to-cart {
+  .woocommerce div.product p.price {
     width: 100%;
     font-size: var(--font-size1);
+
+    span {
+      font-size: var(--font-size1);
+    }
   }
 }
