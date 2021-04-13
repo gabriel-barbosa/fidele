@@ -29,4 +29,12 @@ global $product; ?>
 		foreach( $attachment_ids as $attachment_id ) : ?>
 		 <div class="img-wrapper"><img class="gallery-img" src="<?php echo wp_get_attachment_image_src( $attachment_id, 'full' )[0]; ?>" alt=""></div>
 	 <?php endforeach; endif; ?>
+
+	 <?php if($product->has_child()):
+		 $variations = $product->get_available_variations(); foreach ($variations as $variation): ?>
+		 <?php $image_id = $variation['image_id']; $post_image_id = get_post_thumbnail_id();
+		 	if($image_id != $post_image_id): ?>
+	  		<div class="img-wrapper" data-option="<?php print_r($variation['attributes']['attribute_pa_option']); ?>"><img class="gallery-img" src="<?php echo $variation['image']['url']; ?>" alt=""></div>
+			<?php endif; ?>
+	  <?php endforeach; endif; ?>
 </div>

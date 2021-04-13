@@ -237,6 +237,12 @@ button:focus {
       content: none;
     }
   }
+
+  @include responsive(tablet-portrait) {
+    .woocommerce-error, .woocommerce-info, .woocommerce-message {
+      padding: 40px 15px 15px;
+    }
+  }
 }
 
 .woocommerce-message {

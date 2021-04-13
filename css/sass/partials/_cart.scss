@@ -82,6 +82,15 @@
         font-weight: 600;
         margin-right: 0.5vw;
       }
+
+      @include responsive(tablet-portrait) {
+        flex-direction: column-reverse;
+        text-align: center;
+
+        a {
+          margin-top: 1.5vw;
+        }
+      }
     }
   }
 

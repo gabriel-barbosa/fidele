@@ -500,3 +500,11 @@ add_filter( 'woocommerce_product_add_to_cart_text', function( $text ) {
 
     return $text;
 } );
+
+//add ACF rule
+add_filter('acf/location/rule_values/post_type', 'acf_location_rule_values_Post');
+function acf_location_rule_values_Post( $choices ) {
+	$choices['product_variation'] = 'Product Variation';
+    //print_r($choices);
+    return $choices;
+}

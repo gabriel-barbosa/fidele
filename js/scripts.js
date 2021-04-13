@@ -156,7 +156,7 @@
 		}
 
 		/* SINGLE PRODUCT - CHANGE FIXED PRICE ON CLICK */
-		$('.variable-item').click(function() {
+		$('.variations select').change(function() {
 			setTimeout(function() {
 				var currentprice = $(".woocommerce-variation-price").find('.woocommerce-Price-amount').html();
 				$('p.price').html(currentprice);
@@ -177,7 +177,20 @@
 		});
 
 		/* SINGLE PRODUCT - GALLERY */
+		$("#pa_option").change(function(){
+			if($(this).val()) {
+				var pa_option = $(this).val();
+				var optionphoto = $(".product-gallery [data-option='" + pa_option + "']");
+				var optionindex = optionphoto.data("slick-index");
+				$(".product-gallery").slick("goTo", optionindex);
+			}
+			else {
+				$(".product-gallery").slick("goTo", 0);
+			}
+		});
+
 		$(".product-gallery").slick({
+		selector: ".woocommerce-product-gallery__image",
 		autoplay: false,
 		fade: true,
 		dots: true,
