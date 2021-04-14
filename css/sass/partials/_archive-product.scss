@@ -225,7 +225,15 @@
        @include linear-gradient(to top, #FFFFFF 40%, rgba(255, 255, 255, 0) 100%);
 
        .title-wrapper {
-         line-height: 1;
+         line-height: 1.1;
+       }
+
+       .price-wrapper {
+         align-self: flex-end;
+       }
+
+       span.price {
+         display: flex;
        }
 
        &.stop {
@@ -262,13 +270,15 @@
 
          .title {
            grid-column: span 4;
-           font-size: var(--font-size2);;
+           font-size: var(--font-size2);
            border-bottom: 1px solid;
+           line-height: 1.1;
+           padding-bottom: 0.5vw;
          }
 
          .description {
            grid-column: span 3;
-           font-size: var(--font-size3);;
+           font-size: var(--font-size3);
            border-right: 1px solid;
            padding: 0.8vw 0.8vw 0 0;
            line-height: 1.1;
@@ -276,7 +286,7 @@
 
          .details {
            grid-column: span 1;
-           font-size: var(--font-size4);;
+           font-size: var(--font-size4);
            padding: 0.8vw 0 0 0.8vw;
          }
        }
