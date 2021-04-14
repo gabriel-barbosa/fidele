@@ -177,7 +177,7 @@
 		});
 
 		/* SINGLE PRODUCT - GALLERY */
-		$("#pa_option").change(function(){
+		$(".value select").change(function(){
 			if($(this).val()) {
 				var pa_option = $(this).val();
 				var optionphoto = $(".product-gallery [data-option='" + pa_option + "']");
