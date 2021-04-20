@@ -16,7 +16,7 @@
 					$('.gpay-button-container').detach().appendTo('.payment_box.payment_method_stripe_googlepay');
 					clearInterval(checkGooglePay);
 				}
-			}, 1500);
+			}, 2000);
  		});
 
 		/* PREORDER BAR */

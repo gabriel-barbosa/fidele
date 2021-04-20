@@ -160,7 +160,7 @@ body.cart, body.checkout {
   border-collapse: collapse;
 
   .product-thumbnail {
-    width: 10vw;
+    width: 12vw;
     height: auto;
 
     img {
@@ -189,11 +189,12 @@ body.cart, body.checkout {
   }
 
   tr td {
-    font-size: var(--font-size2);;
+    font-size: var(--font-size2);
     vertical-align: top;
     padding: 20px;
     border-right: 1px solid $fideleblue;
     border-top: 1px solid $fideleblue;
+    line-height: 1.2;
 
     &:last-of-type {
       border-right: 0;
@@ -212,7 +213,7 @@ body.cart, body.checkout {
   .product-quantity {
       .quantity .qty {
         color: $fideleblue;
-        font-size: var(--font-size1);
+        font-size: var(--font-size2);
         border: 0;
         padding: 0;
         width: 10vw;
@@ -222,6 +223,14 @@ body.cart, body.checkout {
           outline: none;
         }
       }
+  }
+
+  .product-name {
+    .variation {
+      display: flex;
+      align-items: center;
+      text-transform: capitalize;
+    }
   }
 
   td.actions .coupon input.input-text {

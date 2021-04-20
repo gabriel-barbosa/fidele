@@ -9,6 +9,7 @@
 
     .product-total {
       padding-left: 1vw;
+      width: 55%;
     }
 
     tr:first-of-type td {
@@ -22,7 +23,7 @@
     }
 
     tr td {
-      padding: 0.5vw 0;
+      padding: 0.8vw 0;
       line-height: 1.1;
     }
 
@@ -96,7 +97,6 @@
       padding: 0;
       flex-grow: 1;
       border-bottom: 0;
-      margin-right: -6vw;
     }
 
     .woocommerce-terms-and-conditions-wrapper {
@@ -251,6 +251,16 @@
 
   #place_order {
     display: none;
+  }
+
+  ul#shipping_method li {
+    margin: 0;
+  }
+
+  .place-order {
+    .submit-button {
+      top: 0;
+    }
   }
 }
 
