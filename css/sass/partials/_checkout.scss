@@ -1,5 +1,5 @@
 /* WOOCOMMERCE CHECKOUT - PAGE */
-.checkout {
+.woocommerce-checkout.checkout {
   .woocommerce-form-coupon-toggle {
     display: none;
   }
@@ -16,7 +16,7 @@
     }
 
     tr th {
-      font-size: var(--font-size3);;
+      font-size: var(--font-size3);
       font-weight: 400;
       padding: 0.5vw 0;
     }
@@ -87,9 +87,9 @@
     width: 50%;
   }
 
-  #payment {
+  .woocommerce-checkout #payment {
     background: 0;
-    font-size: var(--font-size2);;
+    font-size: var(--font-size2);
     display: flex;
 
     ul.payment_methods {
@@ -104,8 +104,6 @@
     }
 
     li {
-      display: flex;
-      align-items: center;
       border-bottom: 1px solid;
       padding: 1vw 0;
 
@@ -118,7 +116,7 @@
         width: auto;
         margin: 0;
         padding: 0;
-        margin-left: 1vw;
+        margin-left: 2.2vw;
         color: $fideleblue;
         font-size: var(--font-size3);;
         max-width: 70%;
@@ -136,7 +134,11 @@
         display: none;
       }
 
-      label:before {
+      &.payment_method_stripe_googlepay label img {
+        margin-top: 0.3em;
+      }
+
+      label:before, .save-source-checkbox:after {
         content: " ";
         display: inline-block;
         position: relative;
@@ -160,6 +162,86 @@
         display: inline-block;
         background-color: blue;
       }
+
+      .save-source-checkbox:after {
+        content: " ";
+        display: inline-block;
+        position: relative;
+        top: -2px;
+        margin: 0 5px 0 0;
+        width: 20px;
+        height: 20px;
+        border-radius: 11px;
+        border: 1px solid $fideleblue;
+        background-color: transparent;
+      }
+
+      .wc-stripe-save-source input[type=checkbox]:checked+.save-source-checkbox:after {
+        position: relative;
+        border: 1px solid $fideleblue;
+        border-radius: 11px;
+        width: 20px;
+        height: 20px;
+        top: -2px;
+        left: 0;
+        content: " ";
+        display: inline-block;
+        background-color: blue;
+      }
+    }
+
+    .wc-stripe_cc-new-method-container {
+      margin-bottom: 0.5em;
+    }
+
+    ul.payment_methods li .wc-stripe-simple-form {
+      margin: 0 0 30px;
+      padding: 0;
+
+      label {
+        font-family: "Unica77 LL", sans-serif;
+        color: $fideleblue;
+        font-weight: 400;
+
+        &:before {
+          content: none;
+        }
+      }
+
+      .row {
+        margin: 0 0 10px;
+      }
+
+      .field {
+        margin: 0 10px 0 0;
+      }
+
+      .input {
+        font-family: "Unica77 LL", sans-serif;
+        color: $fideleblue;
+        font-weight: 400;
+      }
+
+      .baseline {
+        background: $fideleblue;
+      }
+    }
+
+    .wc-stripe_cc-container .StripeElement {
+      padding: 10px 0;
+    }
+
+    .wc-stripe-save-source .save-source-label {
+      margin: 0 0 0 10px;
+      line-height: 1;
+    }
+
+    .wc-stripe-save-source .save-source-checkbox {
+      border: 0;
+    }
+
+    .wc-stripe-save-source label::before {
+      content: none;
     }
 
     .payment_method_paypal label img {
@@ -289,7 +371,7 @@
 }
 
 @include responsive(tablet-portrait) {
-  .checkout {
+  .woocommerce-checkout.checkout  {
     .woocommerce-billing-fields h3 {
       margin: 6vw 0 2vw;
     }
@@ -327,7 +409,7 @@
       width: 100%;
     }
 
-    #payment {
+    .woocommerce-checkout #payment {
       flex-direction: column;
 
       ul.payment_methods {
@@ -336,6 +418,7 @@
         li {
           flex-direction: column;
           align-items: flex-start;
+          padding: 3vw 0;
 
           .payment_box {
             max-width: 100%;

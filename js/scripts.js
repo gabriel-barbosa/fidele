@@ -9,6 +9,16 @@
 		});
 		/* END DOCUMENT READY */
 
+		$(window).on('load', function () {
+			var checkGooglePay = setTimeout(function() {
+				console.log("oi");
+				if($('.gpay-button-container').length > 0) {
+					$('.gpay-button-container').detach().appendTo('.payment_box.payment_method_stripe_googlepay');
+					clearInterval(checkGooglePay);
+				}
+			}, 1500);
+ 		});
+
 		/* PREORDER BAR */
 		if($('.ancr-sticky').length > 0) {
 			var announce = $('.ancr-sticky').outerHeight(true);
